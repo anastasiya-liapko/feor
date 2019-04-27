@@ -1,0 +1,213 @@
+.news
+    z-index: 1
+    position: absolute
+    top: 20vw
+    right: 9.4vw
+    width: 37.2vw
+    border: 1px solid red
+
+.news__block
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+.news__item
+    position: relative
+    display: flex
+    flex-direction: column
+    margin-bottom: 1.5vw
+    background-color: $color-text
+    overflow: hidden
+    border: 1px solid yellow
+
+.news__block-title
+    width: 100%
+    font-family: $font-main
+    font-size: 2.1vw
+    font-weight: 700
+    line-height: 1
+    color: $color-text
+
+.news__item_size_large
+    width: 37.2vw
+    height: 23vw
+
+.news__item_size_small
+    width: 17.8vw
+    height: 15.7vw
+
+.news__item-img
+    object-fit: cover
+    border: 1px solid pink
+
+.news__item-descr
+    flex-grow: 1
+    display: flex
+    flex-direction: column
+    align-items: start
+    justify-content: center
+
+.news__item_type_events
+    color: $color-lightblue
+    background-color: $color-text
+    .news__item-descr
+        justify-content: start
+        padding: 1.8vw
+        padding-right: 2.4vw
+    .news__item-date
+        margin-bottom: 0.5vw
+        font-family: $font-main
+        font-size: 1vw
+        font-weight: 400
+        line-height: 1
+        color: $color-grey
+    .news__item-title
+        margin-bottom: 0
+        font-family: $font-main
+        font-weight: 700
+        line-height: 1.33
+    &.news__item_size_large
+        .news__item-img-wrapper,
+        .news__item-img
+            width: 37.2vw
+            height: 14.8vw
+        .news__item-title
+            font-size: 1.3vw
+    &.news__item_size_small
+        .news__item-img-wrapper,
+        .news__item-img
+            width: 17.8vw
+            height: 15.7vw
+        .news__item-title
+            font-size: 1.2vw
+
+.news__item_type_activity
+    color: $color-text
+    background-color: $color-blue-transparent
+    .news__item-title
+        margin-bottom: 0
+        font-family: $font-main
+        font-weight: 700
+        line-height: 1.33
+    &.news__item_size_large
+        .news__item-img-wrapper,
+        .news__item-img
+            width: 37.2vw
+            height: 14.8vw
+        .news__item-descr
+            padding-left: 3.9vw
+        .news__item-title
+            font-size: 1.5vw
+    &.news__item_size_small
+        .news__item-img-wrapper,
+        .news__item-img
+            width: 17.8vw
+            height: 10.7vw
+        .news__item-descr
+            padding-left: 1.8vw
+        .news__item-title
+            font-size: 1.2vw
+            
+.news__item_design_lightblue
+    background-image: $color-gradient-lightblue
+    .news__item-date
+        color: $color-text
+        opacity: 0.74
+    .news__item-title
+        color: $color-text
+
+.news__item_design_red
+    background-image: $color-gradient-red
+    .news__item-date
+        color: $color-text
+    .news__item-title
+        color: $color-text
+
+.news__item_design_transparent
+    background-color: $color-transparent
+    border: 0.2vw solid $color-text
+    .news__item-date
+        color: $color-text
+    .news__item-title
+        color: $color-text
+
+.news__item_design_img
+    position: relative
+    background-color: $color-transparent
+    .news__item-descr
+        position: absolute
+        top: 0
+        left: 0
+    .news__item-date
+        color: $color-text
+    .news__item-title
+        color: $color-text
+    
+
+@media(max-width: $mobile-width)
+    .news
+        position: static
+        width: 100%
+
+    .news__block-title
+        font-size: 5.25vw
+
+    .news__item
+        margin-bottom: 3.75vw
+
+    .news__item_size_large
+        width: 95vw
+        height: 57.5vw
+
+    .news__item_size_small
+        width: 44.5vw
+        height: 39.2vw
+
+    .news__item_type_events
+        .news__item-descr
+            padding: 4.5vw
+            padding-right: 6vw
+        .news__item-date
+            margin-bottom: 1.25vw
+            font-size: 2.5vw
+        &.news__item_size_large
+            .news__item-img-wrapper,
+            .news__item-img
+                width: 95vw
+                height: 37vw
+            .news__item-title
+                font-size: 3.25vw
+        &.news__item_size_small
+            .news__item-img-wrapper,
+            .news__item-img
+                width: 44.5vw
+                height: 39.2vw
+            .news__item-title
+                font-size: 3vw
+
+    .news__item_type_activity
+        &.news__item_size_large
+            .news__item-img-wrapper,
+            .news__item-img
+                width: 95vw
+                height: 37vw
+            .news__item-descr
+                padding-left: 9.75vw
+            .news__item-title
+                font-size: 3.75vw
+        &.news__item_size_small
+            .news__item-img-wrapper,
+            .news__item-img
+                width: 44.5vw
+                height: 26.7vw
+            .news__item-descr
+                padding-left: 4.5vw
+            .news__item-title
+                font-size: 3vw
+
+    .news__item_design_transparent
+        border: 0.5vw solid $color-text
+
+
+
+

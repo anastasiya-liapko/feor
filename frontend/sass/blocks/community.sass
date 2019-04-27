@@ -1,0 +1,172 @@
+.community
+    width: 100%
+    border: 1px solid red
+
+.community
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+
+.community_main
+    flex-grow: 1
+    background-image: url(../img/main.png)
+
+.community_central
+    background-image: url(../img/central.png)
+
+.community:first-child
+    padding-top: $height-header
+
+.community:last-child
+    padding-bottom: $height-footer
+
+.community__container
+    height: 52vw
+
+.community__content
+    display: flex
+    flex-direction: column
+    align-items: start
+    width: 40.8vw
+    margin-top: 20vw
+    border: 1px solid white
+
+.community__content_main
+    padding-left: 5vw
+    padding-right: 5vw
+
+.community__title
+    margin-bottom: 2.3vw
+    font-family: $font-main
+    font-size: 3.7vw
+    font-weight: 700
+    line-height: 1
+    text-transform: uppercase
+    text-align: left
+
+.community__title_main
+    margin-bottom: 0
+    opacity: 0.8
+    text-align: center
+
+.community__title_decoration_underline
+    position: relative
+    padding-bottom: 2.3vw
+
+.community__title_decoration_underline::after
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 50%
+    width: 14vw
+    height: 0.2vw
+    margin-left: -7vw
+    background-color: $color-text
+
+.community__title_decoration_point
+    position: relative
+    padding-left: 3vw
+
+.community__title_decoration_point::before
+    content: ''
+    position: absolute
+    top: 0.4vw
+    left: 0
+    width: 1.5vw
+    height: 1.5vw
+    border: 0.4vw solid $color-text
+    border-radius: 50%
+
+.community__subtitle
+    width: 7.3vw
+    height: 2.7vw
+    margin-left: 10.5vw
+    margin-bottom: 2.3vw
+    font-family: $font-main
+    font-size: 1.2vw
+    font-weight: 700
+    line-height: 2.7vw
+    text-transform: uppercase
+    text-align: center
+    color: $color-text
+    background-color: $color-lightblue
+
+.community__descr
+    margin-bottom: 6.4vw
+    padding-left: 3vw
+    font-family: $font-main
+    font-size: 1.2vw
+    font-weight: 400
+    line-height: 1
+
+.community__button
+    margin-left: 4.5vw
+
+@media(max-width: $mobile-width)
+    .community:first-child
+        padding-top: 0
+
+    .community:last-child
+        padding-bottom: 0
+
+    .community__container
+        height: 95vw
+
+    .community__content
+        align-items: center
+        width: 100%
+
+    .community__content_main
+        padding-left: 12.5vw
+        padding-right: 12.5vw
+
+    .community__title
+        margin-bottom: 5.7vw
+        font-size: 9.2vw
+        text-align: center
+
+    .community__title_main
+        margin-bottom: 0
+
+    .community__title_decoration_underline
+        padding-bottom: 5.7vw
+
+    .community__title_decoration_underline::after
+        width: 35vw
+        height: 0.5vw
+        margin-left: -17.5vw
+
+    .community__title_decoration_point
+        padding-left: 7.5vw
+
+    .community__title_decoration_point::before
+        top: 1vw
+        width: 3.75vw
+        height: 3.75vw
+        border: 1vw solid $color-text
+
+    .community__subtitle
+        width: 18.2vw
+        height: 6.7vw
+        margin-left: 0
+        margin-bottom: 5.7vw
+        font-size: 3vw
+        line-height: 6.7vw
+
+    .community__descr
+        margin-bottom: 13.5vw
+        padding-left: 0
+        font-size: 3vw
+        text-align: center
+
+    .community__button
+        margin-left: 0
+
+
+
+
+
+
+
+
+
