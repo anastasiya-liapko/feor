@@ -1,7 +1,8 @@
 .news
     z-index: 1
     position: absolute
-    top: 20vw
+    // top: 20vw
+    top: 360px
     right: 9.4vw
     width: 37.2vw
     border: 1px solid red
@@ -11,22 +12,23 @@
     flex-wrap: wrap
     justify-content: space-between
 
-.news__item
-    position: relative
-    display: flex
-    flex-direction: column
-    margin-bottom: 1.5vw
-    background-color: $color-text
-    overflow: hidden
-    border: 1px solid yellow
-
 .news__block-title
     width: 100%
+    margin-top: 2.5vw
+    margin-bottom: 2.5vw
     font-family: $font-main
     font-size: 2.1vw
     font-weight: 700
     line-height: 1
     color: $color-text
+
+.news__item
+    position: relative
+    display: flex
+    flex-direction: column
+    margin-bottom: 1.5vw
+    overflow: hidden
+    border: 1px solid yellow
 
 .news__item_size_large
     width: 37.2vw
@@ -48,8 +50,6 @@
     justify-content: center
 
 .news__item_type_events
-    color: $color-lightblue
-    background-color: $color-text
     .news__item-descr
         justify-content: start
         padding: 1.8vw
@@ -60,7 +60,6 @@
         font-size: 1vw
         font-weight: 400
         line-height: 1
-        color: $color-grey
     .news__item-title
         margin-bottom: 0
         font-family: $font-main
@@ -82,8 +81,6 @@
             font-size: 1.2vw
 
 .news__item_type_activity
-    color: $color-text
-    background-color: $color-blue-transparent
     .news__item-title
         margin-bottom: 0
         font-family: $font-main
@@ -107,7 +104,17 @@
             padding-left: 1.8vw
         .news__item-title
             font-size: 1.2vw
-            
+
+.news__item_design_blue
+    color: $color-text
+    background-color: $color-blue-transparent
+
+.news__item_design_white
+    color: $color-lightblue
+    background-color: $color-text
+    .news__item-date
+        color: $color-grey
+
 .news__item_design_lightblue
     background-image: $color-gradient-lightblue
     .news__item-date
@@ -148,9 +155,13 @@
     .news
         position: static
         width: 100%
+        padding-top: 2.5vw
+        background-color: $color-lightblue
 
     .news__block-title
         font-size: 5.25vw
+        margin-top: 6.5vw
+        margin-bottom: 6.5vw
 
     .news__item
         margin-bottom: 3.75vw
@@ -160,8 +171,8 @@
         height: 57.5vw
 
     .news__item_size_small
-        width: 44.5vw
-        height: 39.2vw
+        width: 45.5vw
+        height: 40vw
 
     .news__item_type_events
         .news__item-descr
@@ -180,8 +191,8 @@
         &.news__item_size_small
             .news__item-img-wrapper,
             .news__item-img
-                width: 44.5vw
-                height: 39.2vw
+                width: 45.5vw
+                height: 40vw
             .news__item-title
                 font-size: 3vw
 
@@ -198,15 +209,19 @@
         &.news__item_size_small
             .news__item-img-wrapper,
             .news__item-img
-                width: 44.5vw
-                height: 26.7vw
+                width: 45.5vw
+                height: 27.7vw
             .news__item-descr
                 padding-left: 4.5vw
             .news__item-title
                 font-size: 3vw
 
-    .news__item_design_transparent
+    .news__item_design_lightblue
         border: 0.5vw solid $color-text
+
+    .news__item_design_transparent
+        background-image: $color-gradient-red
+        border: none
 
 
 

@@ -6,8 +6,34 @@
     border: 1px solid red
 
 .footer__container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
     height: $height-footer
+    padding-bottom: 70px
+
+.footer__menu
+    width: 81%
+    font-family: $font-footer
+    font-size: 13px
+
+.footer__search
+    margin-left: 12.5vw
+
+.footer__logo
+    width: 85px
+    height: 85px
 
 @media(max-width: $mobile-width)
     .footer
-        position: static
+        position: relative
+        background-color: $color-lightblue
+
+    .footer__container
+        justify-content: center
+        height: auto
+        padding: 0
+
+    .footer__menu
+        width: 100%

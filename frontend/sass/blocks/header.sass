@@ -6,8 +6,106 @@
     border: 1px solid red
 
 .header__container
+    display: flex
+    flex-wrap: wrap
+    justify-content: stretch
+    align-items: center
     height: $height-header
+
+.header__wrapper
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+
+.header__wrapper_position_top
+    flex-grow: 1
+
+.header__wrapper_position_bottom
+    justify-content: center
+
+.header__hamburger
+    order: 1
+
+.header__logo
+    order: 2
+    width: 100px
+    height: 100px
+    margin-top: 15px
+    margin-bottom: 15px
+    margin-right: 2vw
+    border: 1px solid red
+
+.header__menu
+    order: 3
+    flex-grow: 1
+    font-family: $font-main
+    font-size: 17px
+
+.header__search
+    order: 4
+    margin-left: 4vw
+    margin-right: 2vw
+
+.header__button
+    margin-top: 15px
+    margin-bottom: 15px
+
+@media(min-width: 992px)
+    .header__menu
+        display: flex !important
+
+@media(max-width: $tablet-width)
+    .header__container
+        height: auto
+
+    .header__wrapper_position_bottom
+        width: 100%
+
+    .header__menu
+        display: none
+
+    .header__search
+        margin-right: 0
+
+    .header__button
+        margin-left: auto
 
 @media(max-width: $mobile-width)
     .header
-        position: static
+        position: relative
+
+    .header__container
+        padding: 0
+
+    .header__wrapper_position_top
+        background-color: $color-lightblue
+
+    .header__hamburger
+        margin-left: 15px
+
+    .header__logo
+        margin-right: 0
+
+    .header__menu
+        order: 4
+
+    .header__search
+        order: 3
+        margin-left: 0
+        margin-right: 15px
+
+    .header__button
+        margin-left: 0
+        
+
+
+
+
+
+
+
+
+
+
+

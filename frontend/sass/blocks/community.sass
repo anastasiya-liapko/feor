@@ -59,7 +59,7 @@
     bottom: 0
     left: 50%
     width: 14vw
-    height: 0.2vw
+    height: 2px
     margin-left: -7vw
     background-color: $color-text
 
@@ -102,6 +102,19 @@
 .community__button
     margin-left: 4.5vw
 
+@media(max-width: $tablet-width)
+    .community__content
+        align-items: center
+
+    .community__subtitle
+        margin-left: 0
+
+    .community__descr
+        padding-left: 0
+
+    .community__button
+        margin-left: 0
+
 @media(max-width: $mobile-width)
     .community:first-child
         padding-top: 0
@@ -113,7 +126,6 @@
         height: 95vw
 
     .community__content
-        align-items: center
         width: 100%
 
     .community__content_main
@@ -123,7 +135,6 @@
     .community__title
         margin-bottom: 5.7vw
         font-size: 9.2vw
-        text-align: center
 
     .community__title_main
         margin-bottom: 0
@@ -148,19 +159,18 @@
     .community__subtitle
         width: 18.2vw
         height: 6.7vw
-        margin-left: 0
+        // width: 27.3vw
+        // height: 10vw
         margin-bottom: 5.7vw
         font-size: 3vw
+        // font-size: 4.5vw
         line-height: 6.7vw
+        // line-height: 10vw
 
     .community__descr
-        margin-bottom: 13.5vw
-        padding-left: 0
+        margin-bottom: 8vw
         font-size: 3vw
-        text-align: center
 
-    .community__button
-        margin-left: 0
 
 
 
