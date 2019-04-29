@@ -8,9 +8,9 @@
     padding: 0
     font-weight: 700
     list-style: none
-    border: 1px solid red
 
 .menu__link
+    position: relative
     display: block
     width: 100%
     height: 68px
@@ -18,10 +18,30 @@
     text-transform: uppercase
     text-align: center
     color: $color-text
-    border: 1px solid white
+
+.menu__link::after
+    content: ''
+    position: absolute
+    left: 50%
+    bottom: 15px
+    width: 0
+    height: 2px
+    background-color: $color-text
+    transition: all 0.5s ease
+
+.menu__link:hover
+    color: $color-text
+    text-decoration: none
+    &.menu__link::after
+        left: 0
+        right: 0
+        width: 100%
 
 @media(max-width: $mobile-width)
     .menu
         flex-direction: column
         align-items: stretch
         width: 100%
+
+    .menu__link::after
+        display: none

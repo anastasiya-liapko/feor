@@ -12,12 +12,19 @@
     background-color: transparent
     border: 0
     overflow: visible
-    border: 1px solid red
-.hamburger:hover
-    opacity: 0.7
+.hamburger:hover,
+.hamburger.active:hover
+    .hamburger-inner,
+    .hamburger-inner::before, 
+    .hamburger-inner::after
+        background-color: $color-blue
 
-.hamburger.is-active:hover
-    opacity: 0.7
+.hamburger:active,
+.hamburger.active:active
+    .hamburger-inner,
+    .hamburger-inner::before, 
+    .hamburger-inner::after
+        opacity: 0.7
 
 .hamburger.active .hamburger-inner,
 .hamburger.active .hamburger-inner::before,

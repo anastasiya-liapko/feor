@@ -3,7 +3,16 @@
     height: 20px
     padding: 0
     background-color: transparent
-    border: 1px solid red
+    border: none
+
+.search:hover
+    cursor: pointer
+    .search__icon::before
+        color: $color-blue
+
+.search:active
+    .search__icon::before
+        opacity: 0.7
 
 .search__text
     font-size: 0
@@ -15,4 +24,4 @@
         padding: 15px
 
     .search__icon
-        font-size: 40px
+        font-size: 30px

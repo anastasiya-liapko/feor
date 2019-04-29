@@ -1,35 +1,42 @@
 .community
     width: 100%
-    border: 1px solid red
-
-.community
     background-position: center
     background-repeat: no-repeat
     background-size: cover
+    box-sizing: border-box
 
 .community_main
     flex-grow: 1
     background-image: url(../img/main.png)
 
-.community_central
+.community_central,
+.community_ural,
+.community_volga,
+.community_caucasian
     background-image: url(../img/central.png)
 
-.community:first-child
-    padding-top: $height-header
+.community_siberian,
+.community_west,
+.community_south,
+.community_eastern
+    background-image: url(../img/caucasian.png)
 
 .community:last-child
-    padding-bottom: $height-footer
+    .community__container
+        padding-bottom: $height-footer
 
 .community__container
-    height: 52vw
+    height: 1000px
+
+.community__container_main
+    padding-top: $height-header
 
 .community__content
     display: flex
     flex-direction: column
     align-items: start
     width: 40.8vw
-    margin-top: 20vw
-    border: 1px solid white
+    padding-top: 270px
 
 .community__content_main
     padding-left: 5vw
@@ -59,8 +66,10 @@
     bottom: 0
     left: 50%
     width: 14vw
+    // width: 270px
     height: 2px
     margin-left: -7vw
+    // margin-left: -135px
     background-color: $color-text
 
 .community__title_decoration_point
@@ -78,14 +87,18 @@
     border-radius: 50%
 
 .community__subtitle
-    width: 7.3vw
-    height: 2.7vw
+    // width: 7.3vw
+    // height: 2.7vw
+    width: 140px
+    height: 50px
     margin-left: 10.5vw
     margin-bottom: 2.3vw
     font-family: $font-main
-    font-size: 1.2vw
+    // font-size: 1.2vw
+    font-size: 24px
     font-weight: 700
-    line-height: 2.7vw
+    // line-height: 2.7vw
+    line-height: 50px
     text-transform: uppercase
     text-align: center
     color: $color-text
@@ -103,6 +116,14 @@
     margin-left: 4.5vw
 
 @media(max-width: $tablet-width)
+    .community:last-child
+        .community__container
+            padding-bottom: $height-footer
+
+    .community__container_main
+        padding-top: $height-header-tablet
+        // margin-top: $height-header-tablet
+
     .community__content
         align-items: center
 
@@ -111,22 +132,23 @@
 
     .community__descr
         padding-left: 0
+        font-size: 1.8vw
 
     .community__button
         margin-left: 0
 
 @media(max-width: $mobile-width)
-    .community:first-child
-        padding-top: 0
-
     .community:last-child
         padding-bottom: 0
 
-    .community__container
-        height: 95vw
+    .community__container_main
+        margin-top: $height-header-tablet
+        padding-top: 0
+        // padding-top: $height-header-tablet
 
     .community__content
         width: 100%
+        // margin-top: 40vw
 
     .community__content_main
         padding-left: 12.5vw
@@ -134,17 +156,18 @@
 
     .community__title
         margin-bottom: 5.7vw
-        font-size: 9.2vw
+        // font-size: 9.2vw
+        font-size: 8vw
 
     .community__title_main
         margin-bottom: 0
+        font-size: 10vw
 
     .community__title_decoration_underline
         padding-bottom: 5.7vw
 
     .community__title_decoration_underline::after
         width: 35vw
-        height: 0.5vw
         margin-left: -17.5vw
 
     .community__title_decoration_point
@@ -157,19 +180,25 @@
         border: 1vw solid $color-text
 
     .community__subtitle
-        width: 18.2vw
-        height: 6.7vw
-        // width: 27.3vw
-        // height: 10vw
+        // width: 18.2vw
+        // height: 6.7vw
         margin-bottom: 5.7vw
-        font-size: 3vw
-        // font-size: 4.5vw
-        line-height: 6.7vw
-        // line-height: 10vw
+        // font-size: 3vw
+        // line-height: 6.7vw
 
     .community__descr
         margin-bottom: 8vw
-        font-size: 3vw
+        font-size: 3.5vw
+
+@media(max-width: 575px)
+    .community__container
+        height: 500px
+
+    .community__content
+        padding-top: 110px
+
+    .community__content_main
+        padding-top: 60px
 
 
 

@@ -1,11 +1,9 @@
 .news
     z-index: 1
     position: absolute
-    // top: 20vw
-    top: 360px
+    top: 340px
     right: 9.4vw
     width: 37.2vw
-    border: 1px solid red
 
 .news__block
     display: flex
@@ -28,19 +26,69 @@
     flex-direction: column
     margin-bottom: 1.5vw
     overflow: hidden
-    border: 1px solid yellow
+    box-sizing: border-box
+
+.news__item:hover,
+    cursor: pointer
+    text-decoration: none
+
+.news__item_type_activity:hover,
+.news__item_type_events:hover.news__item_size_large
+    .news__item-img-wrapper::after
+        transform: translateX(0)
+    .news__item-title
+        letter-spacing: 1.2px
 
 .news__item_size_large
     width: 37.2vw
-    height: 23vw
+    height: auto
 
 .news__item_size_small
     width: 17.8vw
-    height: 15.7vw
+    min-height: 15.7vw
+    height: auto
+
+.news__item-img-wrapper,
+.news__item-descr
+    position: relative
+    overflow: hidden
+
+.news__item-img-wrapper::after
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    width: 100%
+    bottom: 0
+    background-color: $color-text
+    opacity: 0.3
+    pointer-events: none
+    transform: translateX(100%)
+    transition: all 0.5s ease
+    
+.news__item-img-wrapper_decor
+    position: relative
+
+.news__item-img-decor
+    position: absolute
+    right: 2.3vw
+    bottom: 1.7vw
+    display: block
+    width: 13.5vw
+    height: 2.6vw
+    font-family: $font-main
+    font-size: 1vw
+    font-weight: 700
+    line-height: 2.6vw
+    text-align: center
+    text-transform: uppercase
+    color: $color-text
+    background-color: $color-transparent
+    border: 2px solid $color-text
 
 .news__item-img
     object-fit: cover
-    border: 1px solid pink
+    transition: all 0.5s ease
 
 .news__item-descr
     flex-grow: 1
@@ -49,10 +97,15 @@
     align-items: start
     justify-content: center
 
+.news__item-title
+    transition: all 0.5s ease
+
 .news__item_type_events
     .news__item-descr
         justify-content: start
         padding: 1.8vw
+        padding-top: 30px
+        padding-bottom: 30px
         padding-right: 2.4vw
     .news__item-date
         margin-bottom: 0.5vw
@@ -92,6 +145,8 @@
             width: 37.2vw
             height: 14.8vw
         .news__item-descr
+            padding-top: 2.6vw
+            padding-bottom: 2.6vw
             padding-left: 3.9vw
         .news__item-title
             font-size: 1.5vw
@@ -105,17 +160,37 @@
         .news__item-title
             font-size: 1.2vw
 
-.news__item_design_blue
+.news__item_design_blue,
+.news__item_design_blue:hover
     color: $color-text
     background-color: $color-blue-transparent
 
-.news__item_design_white
+.news__item_design_blue::after
+    content: ''
+    position: absolute
+    right: 0
+    left: 0
+    bottom: 0
+    width: 0
+    height: 2px
+    background-color: $color-text
+    transition: all 0.5s ease
+
+.news__item_design_blue:hover
+    &.news__item_design_blue::after
+        left: 0
+        right: 0
+        width: 100%
+
+.news__item_design_white,
+.news__item_design_white:hover
     color: $color-lightblue
     background-color: $color-text
     .news__item-date
         color: $color-grey
 
-.news__item_design_lightblue
+.news__item_design_lightblue,
+.news__item_design_lightblue:hover
     background-image: $color-gradient-lightblue
     .news__item-date
         color: $color-text
@@ -123,16 +198,18 @@
     .news__item-title
         color: $color-text
 
-.news__item_design_red
+.news__item_design_red,
+.news__item_design_red:hover
     background-image: $color-gradient-red
     .news__item-date
         color: $color-text
     .news__item-title
         color: $color-text
 
-.news__item_design_transparent
+.news__item_design_transparent,
+.news__item_design_transparent:hover
     background-color: $color-transparent
-    border: 0.2vw solid $color-text
+    border: 5px solid $color-text
     .news__item-date
         color: $color-text
     .news__item-title
@@ -149,17 +226,23 @@
         color: $color-text
     .news__item-title
         color: $color-text
-    
+
+@media(max-width: $tablet-width)
+    .news
+        top: 438px
+
+    .news__block-title
+        font-size: 3.1vw
 
 @media(max-width: $mobile-width)
     .news
         position: static
         width: 100%
-        padding-top: 2.5vw
+        padding-top: 50px
         background-color: $color-lightblue
 
     .news__block-title
-        font-size: 5.25vw
+        font-size: 5.85vw
         margin-top: 6.5vw
         margin-bottom: 6.5vw
 
@@ -168,11 +251,18 @@
 
     .news__item_size_large
         width: 95vw
-        height: 57.5vw
 
     .news__item_size_small
         width: 45.5vw
         height: 40vw
+
+    .news__item-img-decor
+        right: 5.7vw
+        bottom: 4.2vw
+        width: 33.7vw
+        height: 6.5vw
+        font-size: 2.5vw
+        line-height: 6.5vw
 
     .news__item_type_events
         .news__item-descr
@@ -180,32 +270,34 @@
             padding-right: 6vw
         .news__item-date
             margin-bottom: 1.25vw
-            font-size: 2.5vw
+            font-size: 3.1vw
         &.news__item_size_large
             .news__item-img-wrapper,
             .news__item-img
-                width: 95vw
+                width: 97vw
                 height: 37vw
             .news__item-title
-                font-size: 3.25vw
+                font-size: 3.85vw
         &.news__item_size_small
             .news__item-img-wrapper,
             .news__item-img
                 width: 45.5vw
                 height: 40vw
             .news__item-title
-                font-size: 3vw
+                font-size: 3.6vw
 
     .news__item_type_activity
         &.news__item_size_large
             .news__item-img-wrapper,
             .news__item-img
-                width: 95vw
+                width: 97vw
                 height: 37vw
             .news__item-descr
+                padding-top: 6.5vw
+                padding-bottom: 6.5vw
                 padding-left: 9.75vw
             .news__item-title
-                font-size: 3.75vw
+                font-size: 4.3vw
         &.news__item_size_small
             .news__item-img-wrapper,
             .news__item-img
@@ -214,15 +306,15 @@
             .news__item-descr
                 padding-left: 4.5vw
             .news__item-title
-                font-size: 3vw
+                font-size: 3.6vw
 
     .news__item_design_lightblue
-        border: 0.5vw solid $color-text
+        border: 5px solid $color-text
 
-    .news__item_design_transparent
+    .news__item_design_transparent,
+    .news__item_design_transparent:hover
         background-image: $color-gradient-red
         border: none
-
 
 
 
