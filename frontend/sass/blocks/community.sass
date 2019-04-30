@@ -1,9 +1,11 @@
 .community
     width: 100%
+    height: 100%
     background-position: center
     background-repeat: no-repeat
     background-size: cover
-    box-sizing: border-box
+    // box-sizing: border-box
+    border: 1px solid red
 
 .community_main
     flex-grow: 1
@@ -23,22 +25,25 @@
 
 .community:last-child
     .community__container
-        padding-bottom: $height-footer
+        // padding-bottom: $height-footer
 
 .community__container
-    height: 1000px
+    // height: 1000px
+    // height: 25vw
 
 .community__container_main
-    padding-top: $height-header
+    // padding-top: $height-header
 
 .community__content
     display: flex
     flex-direction: column
     align-items: start
     width: 40.8vw
-    padding-top: 270px
+    // padding-top: 270px
+    padding-top: 0
 
 .community__content_main
+    // padding-top: 270px
     padding-left: 5vw
     padding-right: 5vw
 
@@ -118,10 +123,10 @@
 @media(max-width: $tablet-width)
     .community:last-child
         .community__container
-            padding-bottom: $height-footer
+            // padding-bottom: $height-footer-tablet
 
     .community__container_main
-        padding-top: $height-header-tablet
+        // padding-top: $height-header-tablet
         // margin-top: $height-header-tablet
 
     .community__content
@@ -142,7 +147,7 @@
         padding-bottom: 0
 
     .community__container_main
-        margin-top: $height-header-tablet
+        // margin-top: $height-header-tablet
         padding-top: 0
         // padding-top: $height-header-tablet
 

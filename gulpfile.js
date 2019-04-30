@@ -69,7 +69,7 @@ gulp.task('watch', function() {
 
 gulp.task('serve', function() {
   browserSync.init({
-    server: 'public'
+    server: ''
   });
   browserSync.watch('public/**/*.*').on('change', browserSync.reload);
 }); 

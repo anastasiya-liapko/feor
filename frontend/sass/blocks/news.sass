@@ -1,14 +1,22 @@
 .news
     z-index: 1
-    position: absolute
-    top: 340px
-    right: 9.4vw
-    width: 37.2vw
+    // position: absolute
+    position: relative
+    // top: 340px
+    // right: 9.4vw
+    // width: 37.2vw
+    height: auto
+    margin-top: 242px
+    margin-bottom: 260px
+    pointer-events: none
 
 .news__block
     display: flex
     flex-wrap: wrap
     justify-content: space-between
+    width: 37.2vw
+    margin-left: auto
+    pointer-events: auto
 
 .news__block-title
     width: 100%
@@ -228,8 +236,9 @@
         color: $color-text
 
 @media(max-width: $tablet-width)
-    .news
-        top: 438px
+    // .news
+    //     // top: 438px
+    //     margin-top: 438px
 
     .news__block-title
         font-size: 3.1vw

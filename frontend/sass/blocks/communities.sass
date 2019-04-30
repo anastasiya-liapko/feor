@@ -1,6 +1,26 @@
 .communities
+    // position: fixed
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    display: flex
+    flex-direction: column
+    // justify-content: stretch
+    width: 100%
+    min-height: 100vh
+    overflow: hidden
+    border: 5px solid red
+
+.communities__back
+    position: relative
+    // min-height: 25vh
     flex-grow: 1
-    height: auto
+
+.communities__back_main
+    // flex-grow: 0
+    // height: 1000px
 
 @media(max-width: $mobile-width)
     .communities

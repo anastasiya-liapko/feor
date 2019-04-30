@@ -3,12 +3,13 @@ body
     min-height: 100%
 
 body
-    display: flex
-    flex-direction: column
+    // min-height: 600vh
+    height: 100%
+    margin: 0
+    padding: 0
     font-family: $font-main
     color: $color-text
-    perspective: 1px
-    transform-style: preserve-3d
+    background-color: green
 
 img
     width: 100%
@@ -17,12 +18,16 @@ img
 button:focus
     outline: none
 
+*, ::after, ::before
+    box-sizing: border-box
+
 .container
     max-width: 81vw
     // width: 100%
     margin-left: auto
     margin-right: auto
     padding: 0
+    box-sizing: border-box
 
 @media(max-width: $mobile-width)
     .container
