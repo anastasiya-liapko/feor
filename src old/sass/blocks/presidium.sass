@@ -1,0 +1,167 @@
+.presidium
+    .content-inner__block-title
+        margin-top: 10px
+        margin-bottom: 70px
+
+.presidium__items
+    display: flex
+    flex-wrap: wrap
+
+.presidium__item
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 25vw
+    height: 20.31vw
+    margin-right: 3.5vw
+    margin-bottom: 3.64vw
+    &:nth-child(2n)
+        margin-right: 0
+    &:hover
+        .presidium__img::after
+            left: 150%
+            transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1)
+        .presidium__name,
+        .presidium__descr
+            &::after
+                opacity: 1
+    &:active
+        .presidium__name,
+        .presidium__descr
+            &::after
+                opacity: 0
+
+.presidium__img
+    position: relative
+    width: 13.542vw
+    height: 13.542vw
+    margin-bottom: 1.719vw
+    overflow: hidden
+    img
+        width: 13.542vw
+        height: 13.542vw
+        object-fit: cover
+    &::after
+        content: ''
+        position: absolute
+        top: -30%
+        left: -120%
+        width: calc(13.542vw / 3)
+        height: calc(13.542vw * 2.5)
+        background: #fff
+        opacity: 0.2
+        transform: rotate(35deg)
+        transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1)        
+
+.presidium__name
+    margin-bottom: 0.52vw
+    font-size: 1.25vw
+    line-height: normal
+    font-weight: 700
+    text-transform: uppercase
+    text-align: center
+    color: $color-text-dark
+
+.presidium__descr
+    margin-bottom: 0
+    font-size: 1.25vw
+    line-height: normal
+    font-weight: 400
+    text-align: center
+    color: $color-text-dark
+
+.presidium__name,
+.presidium__descr
+    position: relative
+    transition: all 0.3s ease
+    &::after
+        content: ''
+        position: absolute
+        left: 0
+        bottom: 0
+        width: 100%
+        height: 2px
+        background-color: $color-text-dark
+        opacity: 0
+        transition: all 0.3s ease
+    &:hover
+        color: $color-text-dark
+        text-decoration: none 
+
+@media(max-width: $tablet-width)
+    .presidium__item
+        width: calc(25vw * #{$tablet-gain})
+        height: calc(20.31vw * #{$tablet-gain})
+        margin-right: calc(3.5vw * #{$tablet-gain})
+        margin-bottom: calc(3.63vw * #{$tablet-gain})
+
+    .presidium__img
+        width: calc(13.542vw * #{$tablet-gain})
+        height: calc(13.542vw * #{$tablet-gain})
+        margin-bottom: calc(1.719vw * #{$tablet-gain})
+        img
+            width: calc(13.542vw * #{$tablet-gain})
+            height: calc(13.542vw * #{$tablet-gain})
+        &::after
+            top: -30%
+            left: -120%
+            width: calc(13.542vw * #{$tablet-gain} / 3)
+            height: calc(13.542vw * #{$tablet-gain} * 2.5)    
+
+    .presidium__name
+        margin-bottom: calc(0.52vw * #{$tablet-gain})
+        font-size: calc(1.25vw * #{$tablet-gain})
+
+    .presidium__descr
+        font-size: calc(1.25vw * #{$tablet-gain})
+
+@media(max-width: $mobile-width)
+    .presidium__item
+        width: calc(25vw * #{$mobile-gain-m})
+        height: calc(20.31vw * #{$mobile-gain-m})
+        margin-right: calc(3.5vw * #{$mobile-gain-m})
+        margin-bottom: calc(3.63vw * #{$mobile-gain-m})
+
+    .presidium__img
+        width: calc(13.542vw * #{$mobile-gain-m})
+        height: calc(13.542vw * #{$mobile-gain-m})
+        margin-bottom: calc(1.719vw * #{$mobile-gain-m})
+        img
+            width: calc(13.542vw * #{$mobile-gain-m})
+            height: calc(13.542vw * #{$mobile-gain-m})
+        &::after
+            width: calc(13.542vw * #{$mobile-gain-m} / 3)
+            height: calc(13.542vw * #{$mobile-gain-m} * 2.5)    
+
+    .presidium__name
+        margin-bottom: calc(0.52vw * #{$mobile-gain-m})
+        font-size: calc(1.25vw * #{$mobile-gain-m})
+
+    .presidium__descr
+        font-size: calc(1.25vw * #{$mobile-gain-m})
+
+@media(max-width: $mobile-width-s)
+    .presidium__item
+        width: calc(25vw * #{$mobile-gain})
+        height: calc(20.31vw * #{$mobile-gain})
+        margin-right: 0
+        margin-bottom: calc(3.63vw * #{$mobile-gain})
+
+    .presidium__img
+        width: calc(13.542vw * #{$mobile-gain})
+        height: calc(13.542vw * #{$mobile-gain})
+        margin-bottom: calc(1.719vw * #{$mobile-gain})
+        img
+            width: calc(13.542vw * #{$mobile-gain})
+            height: calc(13.542vw * #{$mobile-gain})
+        &::after
+            width: calc(13.542vw * #{$mobile-gain} / 3)
+            height: calc(13.542vw * #{$mobile-gain} * 2.5)    
+
+    .presidium__name
+        margin-bottom: calc(0.52vw * #{$mobile-gain})
+        font-size: calc(1.25vw * #{$mobile-gain})
+
+    .presidium__descr
+        font-size: calc(1.25vw * #{$mobile-gain})
+

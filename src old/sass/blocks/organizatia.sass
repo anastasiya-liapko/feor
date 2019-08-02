@@ -1,0 +1,183 @@
+.organizatia
+    display: flex
+    flex-direction: column
+    width: calc(16.563vw + 3.8vw / 2)
+    height: calc(16vw / 1.15)
+    padding-bottom: calc(1.875vw / 2)
+    padding-right: 0.78vw
+    border-bottom: 2px solid $color-medium-grey
+
+.organizatia__title
+    margin-bottom: .633vw
+    font-size: 1.042vw
+    line-height: 1
+    font-weight: 700
+    color: $color-text-dark
+
+.organizatia__descr,
+.organizatia__contact-link
+    margin-bottom: .633vw
+    font-size: 0.938vw
+    line-height: 1
+    font-weight: 400
+    color: $color-text-dark
+
+.organizatia__social
+    display: flex
+    flex-wrap: nowrap
+    justify-content: flex-start
+    margin-top: 0
+
+.organizatia__social-link
+    margin-right: 1.302vw
+    .organizatia__social-icon
+        margin-right: 0
+    &:hover .organizatia__social-icon::before
+        color: $color-text-dark
+
+.organizatia__social-icon
+    width: calc(1.302vw / 1.5)
+    height: calc(1.302vw / 1.5)
+    margin: 0
+    line-height: 1.302vw
+    text-align: center
+    &::before
+        font-size: calc(1.402vw / 1.5)
+        color: $color-medium-grey
+
+.organizatia__social-link_font-size_s
+    .organizatia__social-icon::before
+        font-size: calc(1.302vw / 1.5)
+
+.organizatia__social-link_font-size_m
+    margin-top: 0.1vw
+    .organizatia__social-icon::before
+        font-size: calc(1.602vw / 1.5)
+
+.organizatia__contact-link_phone
+    .link__icon
+        width: auto
+        height: calc(1.146vw)
+        margin-right: 1.406vw
+        line-height: calc(1.146vw)
+        &::before
+            color: $color-medium-grey
+            font-size: calc(1.146vw / 1.2)
+
+.organizatia__contact-link_map
+    .link__icon
+        width: 1.146vw
+        // height: 1.563vw
+        height: calc(1.146vw / 1.2)
+        margin-right: 1.406vw
+        // line-height: 1.563vw
+        line-height: calc(1.146vw / 1.2)
+        &::before
+            color: $color-medium-grey
+            font-size: calc(1.146vw / 1.2)
+
+.empty-data
+    color: #000
+
+@media(max-width: $mobile-width)
+    .organizatia
+        width: calc(16.563vw * 1.64)
+        height: calc(16vw * 1.64 / 1.15)
+        padding-right: calc(0.78vw * 1.64)
+        padding-bottom: calc(1.875vw * 1.64)
+
+    .organizatia__title
+        margin-bottom: calc(0.833vw * 1.64)
+        font-size: calc(1.042vw * 1.64)
+
+    .organizatia__descr,
+    .organizatia__contact-link
+        font-size: calc(0.938vw * 1.64)
+
+    .organizatia__social-link
+        margin-right: calc(1.302vw * 1.64)
+
+    .organizatia__social-icon
+        width: calc(1.302vw * 1.64 / 1.5)
+        height: calc(1.302vw * 1.64 / 1.5)
+        line-height: calc(1.302vw * 1.64)
+        &::before
+            font-size: calc(1.402vw * 1.64 / 1.5)
+
+    .organizatia__contact-link_map
+        .link__icon
+            width: calc(1.146vw * 1.64)
+            height: calc(1.563vw * 1.64)
+            margin-right: calc(1.406vw * 1.64)
+            line-height: calc(1.563vw * 1.64)
+            &::before
+                font-size: calc(1.146vw * 1.64 / 1.2)
+
+    .organizatia__contact-link_phone
+        .link__icon
+            margin-right: calc(1.406vw * 1.64)
+            &::before
+                font-size: calc(1.146vw * 1.64 / 1.2)
+
+    .organizatia__social-link_font-size_s
+        .organizatia__social-icon::before
+            font-size: calc(1.302vw * 1.64 / 1.5)
+
+    .organizatia__social-link_font-size_m
+        .organizatia__social-icon::before
+            font-size: calc(1.602vw * 1.64 / 1.5)
+
+@media(max-width: $mobile-width-s)
+    .organizatia
+        width: calc(16.563vw * 2.5)
+        height: calc(16vw * 2.5 / 1.15)
+        padding-right: calc(0.78vw * 2.5)
+        padding-bottom: calc(1.875vw * 2.5)
+
+    .organizatia__title
+        margin-bottom: calc(0.833vw * 2.5)
+        font-size: calc(1.042vw * 2.5)
+
+    .organizatia__descr,
+    .organizatia__contact-link
+        font-size: calc(0.938vw * 2.5)
+
+    .organizatia__social-link
+        margin-right: calc(1.302vw * 2.5)
+
+    .organizatia__social-icon
+        width: calc(1.302vw * 2.5 / 1.5)
+        height: calc(1.302vw * 2.5 / 1.5)
+        line-height: calc(1.302vw * 2.5)
+        &::before
+            font-size: calc(1.402vw * 2.5 / 1.5)
+
+    .organizatia__contact-link_map
+        .link__icon
+            width: calc(1.146vw * 2.5)
+            height: calc(1.563vw * 2.5)
+            margin-right: calc(1.406vw * 2.5)
+            line-height: calc(1.563vw * 2.5)
+            &::before
+                font-size: calc(1.146vw * 2.5 / 1.2)
+
+    .organizatia__contact-link_phone
+        .link__icon
+            margin-right: calc(1.406vw * 2.5)
+            &::before
+                font-size: calc(1.146vw * 2.5 / 1.2)
+
+    .organizatia__social-link_font-size_s
+        .organizatia__social-icon::before
+            font-size: calc(1.302vw * 2.5 / 1.5)
+
+    .organizatia__social-link_font-size_m
+        .organizatia__social-icon::before
+            font-size: calc(1.602vw * 1.64 / 1.5)
+
+
+
+
+
+
+

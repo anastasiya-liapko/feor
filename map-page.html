@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>FEOR</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="shortcut icon" href="public/img/fav-feor.png" type="image/png">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800|Roboto:400,700,900&amp;subset=cyrillic-ext,latin-ext" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
+        <link rel="stylesheet" href="public/css/main.min.css">
+        <link rel="stylesheet" href="public/css/map-page.css">
+    </head>
+
+    <body class="map-page">
+        <div class="page">
+            <div class="header page__header">
+                <div class="container header__container">
+                    <div id="js-lang" class="lang header__lang">
+                        <ul id="js-langList" class="lang__list">
+                            <li class="lang__item" data-text="English">English</li>
+                            <li class="lang__item" data-text="Russian">Russian</li>
+                        </ul>
+
+                        <span id="js-langPicked" class="lang__picked">English</span>
+                    </div>
+
+                    <div class="header__content header__content_position_top">
+                        <button id="js-hamburger" class="hamburger hamburger_squeeze header__hamburger" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+
+                        <a href="/" class="logo header__logo">
+                            <!-- <img src="public/img/logo.png" class="header__logo-img" alt="FEOR"> -->
+                        </a>
+
+                        <ul id="js-menu" class="menu header__menu">
+                            <li class="menu__item header__menu-item">
+                                <a href="about-us.html" class="menu__link header__menu-link">о федерации</a>
+                            </li>
+                            <li class="menu__item header__menu-item">
+                                <a href="#" class="menu__link header__menu-link">Общины</a>
+                            </li>
+                            <li class="menu__item header__menu-item">
+                                <a href="#" class="menu__link header__menu-link">Традиции</a>
+                            </li>
+                            <li class="menu__item header__menu-item">
+                                <a href="#" class="menu__link header__menu-link">календарь</a>
+                            </li>
+                            <li class="menu__item header__menu-item">
+                                <a href="organizatii.html" class="menu__link header__menu-link">Организации</a>
+                            </li>
+                        </ul>
+
+                        <button class="search header__search" data-toggle="modal" data-target="#js-modalSearch">
+                            <span class="search__icon icon-search"></span>
+                            <span class="search__text">Поиск</span>
+                        </button>
+                    </div>
+
+                    <div class="header__content header__content_position_bottom">
+                        <a href="donate-pay.html" class="button button_color_blue header__button" data-text="Поддержать">Поддержать</a>
+                    </div>
+                </div>
+            </div>
+            <!-- header -->
+
+            <div class="map-page__map-wrapper content-title content-title_type_news d-flex flex-column flex-grow-1">
+
+                <div id="map" class="map-page__map flex-grow-1">
+                    <button id="js-mapHamburger" class="hamburger hamburger--squeeze" type="button" style="display: none">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </div>
+
+                <template id="js-templatePopupMenu" style="display: none">
+                    <div class="popup popup-menu">
+                        <form id="js-mapPageSearch" class="popup-menu__search-wrapper d-flex">
+                            <div class="popup-menu__search d-flex">
+                                <input class="popup-menu__search-input flex-grow-1" type="text" name="city" placeholder="Поиск">
+                                <button class="popup-menu__search-submit flex-shrink-0 d-flex align-items-center justify-content-center" type="submit">
+                                    <span class="popup-menu__search-icon icon-search"></span>
+                                </button>
+                            </div>
+                        </form>
+                        <div class="popup-menu__scrollbar">
+                            <ul class="popup-menu__list"></ul>
+                        </div>
+                    </div>
+                </template>
+            
+                <template id="js-templatePopupMenuItem" style="display: none">
+                    <li class="popup-menu__list-item">
+                        <a class="popup-menu__list-link"></a>
+                        <ul class="popup-menu__dropdown"></ul>
+                    </li>
+                </template>
+            
+                <template id="js-templatePopupCity" style="display: none">
+                    <div class="popup popup-city">
+                        <span class="popup__close"></span>
+                        <img src="" class="popup__img"/> <br/>
+                        <strong class="popup__name"></strong> <br/>
+                        <span class="popup__address"></span>
+                        <p class="popup__descr"></p>
+                        <a href="" class="popup__more" target="_blank">Подробнее</a>
+                    </div>
+                </template>
+
+                <template id="js-templatePopupPlace" style="display: none">
+                    <div class="popup popup-place d-flex flex-column">
+                        <p class="popup__name"></span>
+                        <p class="popup__person d-flex align-items-start">
+                            <span class="popup__icon icon-map-person d-flex align-items-center justify-content-center"></span>
+                            <span class="popup__text d-flex align-items-center"></span>
+                        </p>
+                        <a href="" class="popup__address d-flex align-items-start" target="_blank">
+                            <span class="popup__icon icon-map d-flex align-items-center justify-content-center"></span>
+                            <span class="popup__text d-flex align-items-center"></span>
+                        </a>
+                        <a href="" class="popup__phone d-flex align-items-start" target="_blank">
+                            <span class="popup__icon icon-phone d-flex align-items-center justify-content-center"></span>
+                            <span class="popup__text d-flex align-items-center"></span>
+                        </a>
+                    </div>
+                </template>
+
+            </div>
+            <!-- map-page -->
+
+            <div class="map-page__footer footer">
+                <div class="container footer__container">
+                    <div class="footer__content">
+                        <!-- <ul id="js-menuFooter" class="menu footer__menu">
+                            <li class="menu__item footer__menu-item">
+                                <a href="deiatelnosti.html" class="menu__link footer__menu-link" data-text="Деятельность">Деятельность</a>
+                            </li>
+                            <li class="menu__item footer__menu-item">
+                                <a href="blog-ravin.html" class="menu__link footer__menu-link" data-text="Блог президента">Блог президента</a>
+                            </li>
+                            <li class="menu__item footer__menu-item">
+                                <a href="scripach.html" class="menu__link footer__menu-link" data-text="Скрипач на крыше">Скрипач на крыше</a>
+                            </li>
+                            <li class="menu__item footer__menu-item">
+                                <a href="press-center.html" class="menu__link footer__menu-link" data-text="Пресс-центр">Пресс-центр</a>
+                            </li>
+                            <li class="menu__item footer__menu-item">
+                                <a href="otchet.html" class="menu__link footer__menu-link" data-text="Отчеты">Отчеты</a>
+                            </li>
+                        </ul> -->
+
+                        <!-- <button class="search search_design_dark footer__search" data-toggle="modal" data-target="#js-modalSearch">
+                            <span class="search__icon icon-search"></span>
+                            <span class="search__text">Поиск</span>
+                        </button> -->
+
+                        <a href="/" class="logo logo_design_dark footer__logo">
+                            <!-- <img src="public/img/logo.png" class="logo__img footer__logo-img" alt="FEOR"> -->
+                        </a>
+
+                        <ul id="js-menuFooter" class="menu footer__menu footer-menu-one">
+							<li class="menu__item footer__menu-item">
+								<a href="/reports" class="menu__link footer__menu-link">Отчетность</a>
+							</li>
+						</ul>
+
+                        <div class="contacts contacts_design_dark footer__contacts">
+                            <!-- <div class="contacts__content contacts__content_position_top">
+                                <p class="contacts__item contacts__item_address">Адрес: 127055 г. Москва, ул. Образцова д.19-а.</p>
+                                <a href="tel:+74957302791" class="contacts__item contacts__item_phones" data-text="Tелефоны: +7 (495) 730-2791 (-92, -93)">
+                                    Tелефоны: +7 (495) 730-2791 (-92, -93)
+                                </a>
+                                <span class="contacts__separator">|</span>
+                                <a href="mailto:info@feor.ru" class="contacts__item contacts__item_email" data-text="E-mail: info@feor.ru">E-mail: info@feor.ru</a>
+                            </div> -->
+                            <div class="contacts__content contacts__content_position_bottom">
+                                <p class="contacts__item contacts__item_descr">Федерация еврейских общин России © 2004-2019</p>
+                                <p class="contacts__item contacts__item_rights">При использовании материалов сайта, ссылка на feor.ru обязательна. При цитировании в сети Интернет гиперссылка на www.feor.ru обязательна.</p>
+                            </div>
+                        </div>
+
+                        <div class="footer__button-wrapper">
+                            <a href="donate-pay.html" class="button button_color_blue footer__button" data-text="Поддержать">Поддержать</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--footer-->
+        </div>
+        <!-- page -->
+
+        <div id="js-modalSearch" class="modal modal_search fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content container">
+                    <div class="modal-header">
+                        <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">
+                          <span class="modal-close__icon" aria-hidden="true"></span>
+                        </button>
+
+                        <form class="modal-form form-search" name="form-search" action="">
+                            <input id="js-modalSearchInput" type="text" class="input_search form-search__input" name="input-search" placeholder="Что ищем?">
+                            <button type="submit" class="form-search__submit">Найти</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="public/js/parallax.js"></script>
+        <script src="public/js/show-menu.js"></script>
+        <script src="public/js/show-lang.js"></script>
+        <script src="public/js/show-button.js"></script>
+        <script src="public/js/modal-search.js"></script>
+        <script src="public/js/add-active-class.js"></script>
+        <script src="public/js/scroll.js"></script>
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
+        <script type="text/javascript" src="public/js/map-page-mapbox/fill_template_popup_place.js"> </script>
+        <script type="text/javascript" src="public/js/map-page-mapbox/fill_template_popup_city.js"> </script>
+        <script type="text/javascript" src="public/js/map-page-mapbox/fill_template_popup_menu.js"> </script>
+        <script type="text/javascript" src="public/js/map-page-mapbox/add_popup_place.js"> </script>
+        <script type="text/javascript" src="public/js/map-page-mapbox/add_popup_city.js"> </script>
+        <script type="text/javascript" src="public/js/map-page-mapbox/add_popup_menu.js"> </script>
+        <script type="text/javascript" src="public/js/map-page-mapbox/util.js"> </script>
+        <script type="text/javascript" src="public/js/map-page-mapbox/add_markers.js"> </script>
+        <script type="text/javascript" src="public/js/map-page-mapbox/maps_logic.js"> </script>
+    </body>
+</html>

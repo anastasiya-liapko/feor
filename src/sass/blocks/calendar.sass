@@ -1,0 +1,479 @@
+.calendar
+    color: $color-blue
+
+.icon-calendar-kdoshim img
+    height: 15px
+    width: auto
+
+.calendar__title
+    position: relative
+    &::before
+        z-index: -1
+        content: ''
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 0
+        // height: 80px
+        height: 4.167vw
+        background-color: #0f1c2e
+        // box-shadow: 0 0 160px 160px #0f1c2e
+        box-shadow: 0 0 8.333vw 8.333vw #0f1c2e
+
+.calendar__header-wrapper
+    position: relative
+    // margin-bottom: 38px
+    margin-bottom: 1.979vw
+    color: #ffffff
+    background-color: #0f1c2e
+    .container
+        // height: 300px
+        // padding-left: 70px
+        // padding-right: 70px
+        // height: 15.625vw
+        padding-left: 3.646vw
+        padding-right: 3.646vw
+    
+.calendar__header-date-wrapper
+    // width: 430px
+    width: 22.396vw
+
+.calendar__header-current-date
+    // margin-bottom: 50px
+    margin-bottom: 2.604vw
+    .month,
+    .year
+        // font-size: 30px
+        font-size: 1.263vw
+        font-weight: 400
+        line-height: 1
+        text-align: right
+        color: #ffffff
+    .day
+        // margin-left: 24px
+        // font-size: 100px
+        margin-left: 1.250vw
+        font-size: 4.008vw
+        font-weight: 700
+        line-height: 1
+        color: #ffffff
+    
+.calendar__header-date-button
+    // margin-bottom: 51px
+    margin-bottom: 2.656vw
+    padding: 0
+    color: #ffffff
+    background-color: transparent
+    border: 0
+    transition: opacity 0.3s
+    .month,
+    .year
+        // font-size: 30px
+        font-size: 1.263vw
+        font-weight: 400
+        line-height: 1
+        color: #ffffff
+    .icon
+        display: flex
+        align-items: center
+        // width: 32px
+        // height: 23px
+        // margin-right: 29px
+        // font-size: 20px
+        width: 1.667vw
+        height: 1.198vw
+        margin-right: 1.510vw
+        font-size: 1.042vw
+    &:hover
+        cursor: pointer
+        opacity: 0.7
+
+.icon-img img
+    width: auto
+    height: 15px
+
+.calendar__header-current-month
+    // margin-bottom: 32px
+    margin-bottom: 1.667vw
+    white-space: nowrap
+    .text,
+    .month,
+    .year
+        // font-size: 20px
+        font-size: 0.8vw
+        font-weight: 400
+        line-height: 1
+        text-transform: uppercase
+        color: #ffffff
+
+.calendar__header-date-wrapper_right
+    .calendar__header-current-date
+        // margin-right: -35px
+        margin-right: -1.823vw
+        .day
+            // margin-right: 24px
+            margin-right: 1.250vw
+    .calendar__header-date-button
+        .icon
+            margin-right: 0
+            // margin-left: 29px
+            margin-left: 1.510vw
+
+.calendar__header-button-converter
+    // width: 553px
+    // height: 68px
+    // margin-bottom: 63px
+    width: 28.802vw
+    height: 3.542vw
+    margin-bottom: 3.281vw
+    padding: 0
+    // font-size: 20px
+    font-size: 1.042vw
+    font-weight: 700
+    // line-height: 68px
+    line-height: 3.542vw
+    text-align: center
+    text-transform: uppercase
+    color: $color-blue
+    background-color: #ffffff
+    // border: 1px solid transparent
+    border: 0.052vw solid transparent
+    transition: color 0.3s, background-color 0.3s, border 0.3s
+    &:hover
+        color: #ffffff
+        background-color: #0f1c2e
+        // border: 1px solid #ffffff
+        border: 0.052vw solid #ffffff
+        cursor: pointer
+
+.calendar__header-search
+    margin-left: 0
+    margin-bottom: 0
+
+.day-block
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+
+.calendar__table-wrapper
+    table
+        border: none
+    th
+        // width: 214px
+        // height: 80px
+        width: 11.146vw
+        height: 4.167vw
+        padding: 0
+        // padding-left: 6px
+        // padding-right: 6px
+        padding-left: 0.313vw
+        padding-right: 0.313vw
+        border: none !important
+        .calendar__table-header-elem
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            width: 100%
+            height: 100%
+            background-color: #efefef
+            .rus
+                // margin-bottom: 10px
+                // font-size: 16px
+                margin-bottom: 0.521vw
+                font-size: 0.833vw
+                font-weight: 700
+                line-height: 1
+                text-align: center
+                text-transform: uppercase
+                color: #1e374c
+            .jew
+                // font-size: 14px
+                font-size: 0.729vw
+                font-weight: 400
+                line-height: 1
+                text-align: center
+                text-transform: uppercase
+                color: #1e374c
+    td
+        padding: 0
+        // padding-left: 6px
+        // padding-right: 6px
+        padding-left: 0.313vw
+        padding-right: 0.313vw
+        border: none
+        .elem-wrapper
+            // width: 214px
+            // height: 214px
+            // padding: 35px 18px
+            // border-bottom: 1px solid $color-medium-grey
+            width: 100%
+            height: 11.146vw
+            padding: 1.823vw 0.938vw
+            border-bottom: 0.052vw solid $color-medium-grey
+            border-left: 0.052vw solid #efefef
+            border-right: 0.052vw solid #efefef
+            .day-jew
+                // height: 40px
+                // font-size: 12px
+                font-size: 0.825vw
+                font-weight: 400
+                line-height: 1
+                text-align: left
+                color: #1e374c
+            .day
+                // font-size: 40px
+                font-size: 2.583vw
+                font-weight: 700
+                line-height: 0.8
+                text-align: center
+                order: 1
+                color: #1e374c
+        &.border-top
+            border: none !important
+        .images
+            margin-top: auto
+            .image
+                // margin-bottom: 13px
+                margin-bottom: 0.3vw
+                &:last-child
+                    margin-bottom: 0
+            .icon
+                // margin-right: 7px
+                // font-size: 18px
+                margin-right: 0.365vw
+                font-size: 0.938vw
+            .text
+                // font-size: 12px
+                font-size: 0.825vw
+                font-weight: 400
+                line-height: 1
+                color: #1e374c
+        &.disabled,
+        &.others
+            opacity: 0.5
+        &.sat
+            position: relative
+            .day-jew
+                color: #5598ce
+            .day
+                color: #5598ce
+            &::before
+                content: ''
+                position: absolute
+                // top: 11px
+                top: 0.573vw
+                left: 50%
+                // width: 89px
+                // height: 10px
+                // margin-left: -45px
+                width: 4.635vw
+                height: 0.521vw
+                margin-left: -2.344vw
+                background-color: rgba(228, 34, 34, 0.8)
+                // border-radius: 0 0 100px 100px
+                border-radius: 0 0 5.208vw 5.208vw
+
+@media(max-width: $mobile-width)
+    .calendar__header-date-wrapper_right
+        .calendar__header-current-date
+            margin-right: 0
+
+    .calendar__header-button-converter
+        width: calc(28.802vw * #{$tablet-gain})
+        height: calc(3.542vw * #{$tablet-gain})
+        margin-bottom: calc(3.281vw * #{$tablet-gain})
+        font-size: calc(1.042vw * #{$tablet-gain})
+        line-height: calc(3.542vw * #{$tablet-gain})
+        border: calc(0.052vw * #{$tablet-gain}) solid transparent
+        &:hover
+            border: calc(0.052vw * #{$tablet-gain}) solid #ffffff
+        
+    .calendar__header-search
+        width: calc(28.802vw * #{$tablet-gain})
+        height: calc(6.823vw * #{$tablet-gain})
+        .form-search-main__search
+            width: calc(28.802vw * #{$tablet-gain})
+            height: calc(3.177vw * #{$tablet-gain})
+        .form-search-main__input
+            padding-left: calc(1.458vw * #{$tablet-gain})
+            padding-top: calc(0.677vw * #{$tablet-gain})
+            padding-bottom: calc(0.781vw * #{$tablet-gain})
+            padding-right: calc(1.458vw * #{$tablet-gain})
+            font-size: calc(1.250vw * #{$tablet-gain})
+            &::placeholder
+                font-size: calc(1.250vw * #{$tablet-gain})
+        .form-search-main__submit
+            width: calc(3.073vw * #{$tablet-gain})
+            height: calc(3.073vw * #{$tablet-gain})
+        .form-search-main__icon-search
+            font-size: calc(1.312vw * #{$tablet-gain})
+        .form-search-main__error
+            font-size: calc(1vw * #{$tablet-gain})
+
+    .calendar__header-current-month
+        .text,
+        .month,
+        .year
+            font-size: calc(1.042vw * 1.2)
+
+    .calendar__table-wrapper
+        th
+            width: 11.146vw
+            height: 4.167vw
+            padding-left: 0.313vw
+            padding-right: 0.313vw
+            .calendar__table-header-elem
+                .rus
+                    margin-bottom: 0.521vw
+                    font-size: calc(0.833vw * 1.2)
+                .jew
+                    font-size: calc(0.729vw * 1.2)
+        td
+            padding-left: 0.313vw
+            padding-right: 0.313vw
+            .elem-wrapper
+                height: 11.146vw
+                padding: 1.823vw 0.938vw
+                border-bottom: 0.052vw solid $color-medium-grey
+                .day-jew
+                    height: 2.083vw
+                    font-size: calc(0.625vw * 1.7)
+                .day
+                    font-size: calc(2.083vw * 1.2)
+            .images
+                .image
+                    margin-bottom: 0.677vw
+                .icon
+                    margin-right: 0.365vw
+                    font-size: calc(0.938vw * 1.2)
+                .text
+                    font-size: calc(0.625vw * 1.3)
+
+@media(max-width: 575px)
+    .calendar__header-date-wrapper_right
+        .calendar__header-current-date
+            margin-right: 0
+
+    .calendar__header
+        flex-wrap: wrap
+
+    .calendar__header-buttons
+        width: 100%
+        order: 1
+
+    .calendar__header-date-wrapper_left
+        width: 48%
+        order: 2
+
+    .calendar__header-date-wrapper_right
+        width: 48%
+        order: 3
+
+    .calendar__header-wrapper
+        margin-bottom: calc(1.979vw * 2)
+        .container
+            padding-left: 15px
+            padding-right: 15px
+    
+    .calendar__header-current-date
+        margin-bottom: calc(2.604vw * 2)
+        .month,
+        .year
+            font-size: calc(1.563vw * 2)
+        .day
+            margin-left: calc(1.250vw * 2)
+            font-size: calc(5.208vw * 2)
+        
+    .calendar__header-date-button
+        margin-bottom: calc(2.656vw * 2)
+        .month,
+        .year
+            font-size: calc(1.563vw * 2)
+        .icon
+            width: calc(1.667vw * 2)
+            height: calc(1.198vw * 2)
+            margin-right: calc(1.510vw * 2)
+            font-size: calc(1.042vw * 2)
+
+    .calendar__header-current-month
+        margin-bottom: calc(1.667vw * 2)
+        .text,
+        .month,
+        .year
+            font-size: calc(1.042vw * 1.5)
+
+    .calendar__header-date-wrapper_right
+        .calendar__header-current-date
+            margin-right: 0
+            .day
+                margin-right: calc(1.250vw * 2)
+        .calendar__header-date-button
+            .icon
+                margin-left: calc(1.510vw * 2)
+
+    .calendar__header-button-converter
+        width: calc(28.802vw * 2.5)
+        height: calc(3.542vw * 2.5)
+        margin-bottom: calc(3.281vw * 2.5)
+        font-size: calc(1.042vw * 2.5)
+        line-height: calc(3.542vw * 2.5)
+        border: calc(0.052vw * 2.5) solid transparent
+        &:hover
+            border: calc(0.052vw * 2.5) solid #ffffff
+        
+    .calendar__header-search
+        width: calc(28.802vw * 2.5)
+        height: calc(6.823vw * 2.5)
+        .form-search-main__search
+            width: calc(28.802vw * 2.5)
+            height: calc(3.177vw * 2.5)
+        .form-search-main__input
+            padding-left: calc(1.458vw * 2.5)
+            padding-top: calc(0.677vw * 2.5)
+            padding-bottom: calc(0.781vw * 2.5)
+            padding-right: calc(1.458vw * 2.5)
+            font-size: calc(1.250vw * 2.5)
+            &::placeholder
+                font-size: calc(1.250vw * 2.5)
+        .form-search-main__submit
+            width: calc(3.073vw * 2.5)
+            height: calc(3.073vw * 2.5)
+        .form-search-main__icon-search
+            font-size: calc(1.312vw * 2.5)
+        .form-search-main__error
+            font-size: calc(1vw * 2.5)
+
+    .calendar__header-current-month
+        .text,
+        .month,
+        .year
+            font-size: calc(1.042vw * 2.5)
+
+    .calendar__table-wrapper
+        th
+            width: 11.146vw
+            height: calc(4.167vw * 2)
+            padding-left: 0.313vw
+            padding-right: 0.313vw
+            .calendar__table-header-elem
+                .rus
+                    margin-bottom: 0.521vw
+                    font-size: calc(0.833vw * 2.2)
+                .jew
+                    font-size: calc(0.729vw * 2.2)
+        td
+            padding-left: 0.313vw
+            padding-right: 0.313vw
+            .elem-wrapper
+                height: calc(11.146vw * 1.3)
+                padding: 1.823vw 0.938vw
+                border-bottom: 0.052vw solid $color-medium-grey
+                div
+                    height: 100%
+                .day-jew
+                    height: 2.083vw
+                    font-size: calc(0.625vw * 3.5)
+                .day
+                    font-size: calc(2.083vw * 2.3)

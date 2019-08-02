@@ -1,0 +1,14 @@
+.videos
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+.videos__item
+    margin-bottom: 1.97vw
+
+@media(max-width: $mobile-width)
+    .videos
+        flex-direction: column
+
+    .videos__item
+        margin-bottom: calc(1.97vw * #{$mobile-gain})

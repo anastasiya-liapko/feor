@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>FEOR</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="shortcut icon" href="public/img/fav-feor.png" type="image/png">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800|Roboto:400,700,900&amp;subset=cyrillic-ext,latin-ext" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="public/css/nice-select.css">
+        <link rel="stylesheet" href="public/css/main.min.css">
+    </head>
+
+    <body>
+        <div class="content content_type_news">
+            <div class="header page__header">
+                <div class="container header__container">
+                    <div id="js-lang" class="lang header__lang">
+                        <ul id="js-langList" class="lang__list">
+                            <li class="lang__item" data-text="English">English</li>
+                            <li class="lang__item" data-text="Russian">Russian</li>
+                        </ul>
+
+                        <span id="js-langPicked" class="lang__picked">English</span>
+                    </div>
+
+                    <div class="header__content header__content_position_top">
+                        <button id="js-hamburger" class="hamburger hamburger_squeeze header__hamburger" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+
+                        <a href="/" class="logo header__logo">
+                            <!-- <img src="public/img/logo.png" class="header__logo-img" alt="FEOR"> -->
+                        </a>
+
+                        <ul id="js-menu" class="menu header__menu">
+                            <li class="menu__item header__menu-item">
+                                <a href="about-us.html" class="menu__link header__menu-link">о федерации</a>
+                            </li>
+                            <li class="menu__item header__menu-item">
+                                <a href="#" class="menu__link header__menu-link">Общины</a>
+                            </li>
+                            <li class="menu__item header__menu-item">
+                                <a href="#" class="menu__link header__menu-link">Традиции</a>
+                            </li>
+                            <li class="menu__item header__menu-item">
+                                <a href="#" class="menu__link header__menu-link">календарь</a>
+                            </li>
+                            <li class="menu__item header__menu-item">
+                                <a href="organizatii.html" class="menu__link header__menu-link">Организации</a>
+                            </li>
+                        </ul>
+
+                        <button class="search header__search" data-toggle="modal" data-target="#js-modalSearch">
+                            <span class="search__icon icon-search"></span>
+                            <span class="search__text">Поиск</span>
+                        </button>
+                    </div>
+
+                    <div class="header__content header__content_position_bottom">
+                        <a href="donate-pay.html" class="button button_color_blue header__button" data-text="Поддержать">Поддержать</a>
+                    </div>
+                </div>
+            </div>
+            <!-- header -->
+
+            <div 
+                class="calendar__title content-title content-title_type_news content-title_font-size_m content__title" 
+                style="background-image: url('public/img/main.png');">
+                <div class="container container_content container_content_small content-title__container">
+                    <h1 class="content-title__title">Еврейский календарь</h1>
+                </div>
+            </div>
+            <!-- content__title -->
+
+            <div class="calendar pb-0 pb-md-5">          
+          
+                <div class="calendar__header-wrapper">
+                    <div class="calendar__header container d-flex align-items-start justify-content-between">
+                        <div class="calendar__header-date-wrapper calendar__header-date-wrapper_left">
+                            <div class="calendar__header-date">
+                                <div class="calendar__header-current-date d-flex flex-row">
+                                    <div class="d-flex flex-column justify-content-center align-items-end">
+                                        <span class="month">Мая</span>
+                                        <span class="year">2019</span>
+                                    </div>
+                                    <div class="day">2</div>
+                                    <span id="calendar-picked-date" class="d-none"></span>
+                                </div>
+                                <button id="js-prevMonthButton" class="calendar__header-date-button calendar__header-date-button_prev d-flex align-items-center flex-nowrap">
+                                    <span class="icon icon-calendar-left"></span>
+                                    <span class="month">Апрель</span>&nbsp;
+                                    <span class="year">2019</span>
+                                </button>
+                                <div class="calendar__header-current-month">
+                                    <span class="text">Текущий месяц: </span>
+                                    <span class="month">Май</span>
+                                    <span class="year">2019</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="calendar__header-buttons d-flex flex-column align-items-center justify-content-start">
+                            <button type="button" class="calendar__header-button-converter" data-toggle="modal" data-target="#js-modalConverter">Конвертер дат</button>
+
+                            <form class="calendar__header-search form-search-main">
+                                <div class="form-search-main__search d-flex">
+                                    <input class="form-search-main__input flex-grow-1" type="text" name="city" placeholder="Москва">
+                                    <button class="form-search-main__submit flex-shrink-0" type="submit">
+                                        <span class="form-search-main__icon-search icon-search"></span>
+                                    </button>
+                                </div>
+                                <span class="form-search-main__error"></span>
+                            </form>
+                        </div>
+
+                        <div class="calendar__header-date-wrapper calendar__header-date-wrapper_right">
+                            <div class="calendar__header-date  d-flex flex-column align-items-end">
+                                <div class="calendar__header-current-date d-flex flex-row">
+                                    <div class="day">27</div>
+                                    <div class="d-flex flex-column justify-content-center align-items-start">
+                                        <span class="month">Нисана</span>
+                                        <span class="year">5779</span>
+                                    </div>
+                                </div>
+                                <button id="js-nextMonthButton" class="calendar__header-date-button calendar__header-date-button_next d-flex align-items-center flex-nowrap">
+                                    <span class="month">Июнь</span>&nbsp;
+                                    <span class="year">2019</span>
+                                    <span class="icon icon-calendar-right"></span>
+                                </button>
+                                <div class="calendar__header-current-month">
+                                    <span class="text">26 нисана 5779 - 26 ияра 5779</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="col-12 col-md-6 col-lg-5 p-0 row justify-content-around  m-0 mb-4 mb-md-0">
+                            <div class="date date_border d-flex flex-nowrap">
+                                <span class="day align-self-center">27</span>
+                                <p class="month align-self-center m-0">
+                                    July<br>
+                                    2018
+                                </p>
+                            </div>
+                            <div class="date-border mt-2 mb-2"></div>
+                            <div class="date d-flex">
+                                <span class="day align-self-center">27</span>
+                                <p class="month align-self-center m-0"><span>AVA</span><br>
+                                    <span>5587</span>
+                                </p>
+                            </div>
+                        </div> -->
+                
+                        <!-- <div class="col-12 col-md-6 col-lg-7 p-0 m-0">
+                            <div class="text-center text-md-right">
+                                <button class="btn btn_square" type="button" class="date-converter__button" data-toggle="modal" data-target=".date-converter">Date converter</button>
+                            </div>
+                
+                            <div class="pick-date ml-auto mr-auto mr-md-0 d-flex justify-content-around align-items-center pl-3 pr-3">
+                                <button class="calendar__button calendar__button_prev"><img src="img/prev-grey.svg"></button>
+                                    <span id="calendar-picked-date" class="d-block text-center"></span>
+                                <button class="calendar__button calendar__button_next"><img src="img/next-grey.svg"></button>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+
+                <div class="calendar__table-wrapper container">
+                    <table id="calendar2" class="calendar__table table table-bordered mb-5">
+                        <thead>
+                            <tr>
+                                <th scope="col">
+                                    <div class="calendar__table-header-elem">
+                                        <span class="rus">Воскресенье</span>
+                                        <span class="jew">йом ришон</span>
+                                    </div>
+                                </th>
+                                <th scope="col">
+                                    <div class="calendar__table-header-elem">
+                                        <span class="rus">понедельник</span>
+                                        <span class="jew">йом шени</span>
+                                    </div>
+                                </th>
+                                <th scope="col">
+                                    <div class="calendar__table-header-elem">
+                                        <span class="rus">Вторник</span>
+                                        <span class="jew">йом шлиши</span>
+                                    </div>
+                                </th>
+                                <th scope="col">
+                                    <div class="calendar__table-header-elem">
+                                        <span class="rus">среда</span>
+                                        <span class="jew">йом ревии</span>
+                                    </div>
+                                </th>
+                                <th scope="col">
+                                    <div class="calendar__table-header-elem">
+                                        <span class="rus">четверг</span>
+                                        <span class="jew">йом хамиши</span>
+                                    </div>
+                                </th>
+                                <th scope="col">
+                                    <div class="calendar__table-header-elem">
+                                        <span class="rus">Пятница</span>
+                                        <span class="jew">йом шиши</span>
+                                    </div>
+                                </th>
+                                <th scope="col">
+                                    <div class="calendar__table-header-elem">
+                                        <span class="rus">суббота</span>
+                                        <span class="jew">шаббат</span>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+          
+            </div>
+
+            <div class="footer footer_design_dark content__footer">
+                <div class="container footer__container">
+                    <div class="footer__content">
+                        <!-- <ul id="js-menuFooter" class="menu footer__menu">
+                            <li class="menu__item footer__menu-item">
+                                <a href="deiatelnosti.html" class="menu__link footer__menu-link" data-text="Деятельность">Деятельность</a>
+                            </li>
+                            <li class="menu__item footer__menu-item">
+                                <a href="blog-ravin.html" class="menu__link footer__menu-link" data-text="Блог президента">Блог президента</a>
+                            </li>
+                            <li class="menu__item footer__menu-item">
+                                <a href="scripach.html" class="menu__link footer__menu-link" data-text="Скрипач на крыше">Скрипач на крыше</a>
+                            </li>
+                            <li class="menu__item footer__menu-item">
+                                <a href="press-center.html" class="menu__link footer__menu-link" data-text="Пресс-центр">Пресс-центр</a>
+                            </li>
+                            <li class="menu__item footer__menu-item">
+                                <a href="otchet.html" class="menu__link footer__menu-link" data-text="Отчеты">Отчеты</a>
+                            </li>
+                        </ul> -->
+
+                        <!-- <button class="search search_design_dark footer__search" data-toggle="modal" data-target="#js-modalSearch">
+                            <span class="search__icon icon-search"></span>
+                            <span class="search__text">Поиск</span>
+                        </button> -->
+
+                        <a href="/" class="logo logo_design_dark footer__logo">
+                            <!-- <img src="public/img/logo.png" class="logo__img footer__logo-img" alt="FEOR"> -->
+                        </a>
+
+                        <ul id="js-menuFooter" class="menu footer__menu footer-menu-one">
+							<li class="menu__item footer__menu-item">
+								<a href="/reports" class="menu__link footer__menu-link">Отчетность</a>
+							</li>
+						</ul>
+
+                        <div class="contacts contacts_design_dark footer__contacts">
+                            <!-- <div class="contacts__content contacts__content_position_top">
+                                <p class="contacts__item contacts__item_address">Адрес: 127055 г. Москва, ул. Образцова д.19-а.</p>
+                                <a href="tel:+74957302791" class="contacts__item contacts__item_phones" data-text="Tелефоны: +7 (495) 730-2791 (-92, -93)">
+                                    Tелефоны: +7 (495) 730-2791 (-92, -93)
+                                </a>
+                                <span class="contacts__separator">|</span>
+                                <a href="mailto:info@feor.ru" class="contacts__item contacts__item_email" data-text="E-mail: info@feor.ru">E-mail: info@feor.ru</a>
+                            </div> -->
+                            <div class="contacts__content contacts__content_position_bottom">
+                                <p class="contacts__item contacts__item_descr">Федерация еврейских общин России © 2004-2019</p>
+                                <p class="contacts__item contacts__item_rights">При использовании материалов сайта, ссылка на feor.ru обязательна. При цитировании в сети Интернет гиперссылка на www.feor.ru обязательна.</p>
+                            </div>
+                        </div>
+
+                        <div class="footer__button-wrapper">
+                            <a href="donate-pay.html" class="button button_color_blue footer__button" data-text="Поддержать">Поддержать</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--footer-->
+        </div>
+        <!-- page -->
+
+        <div id="js-modalSearch" class="modal modal_search fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content container">
+                    <div class="modal-header">
+                        <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">
+                          <span class="modal-close__icon" aria-hidden="true"></span>
+                        </button>
+
+                        <form class="modal-form form-search" name="form-search" action="">
+                            <input id="js-modalSearchInput" type="text" class="input_search form-search__input" name="input-search" placeholder="Что ищем?">
+                            <button type="submit" class="form-search__submit">Найти</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="js-modalVeteran" class="modal modal-veteran fade" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content modal-veteran__content">
+                    <button type="button" class="close modal__close modal-veteran__close d-flex align-items-center justify-content-center" data-dismiss="modal" aria-label="Close">
+                    <span class="icon icon-modal-close d-flex align-items-center justify-content-center" aria-hidden="true"></span>
+                    </button>
+                    <div class="modal-veteran__main">
+                        <h2 class="modal-veteran__name">Имя Фамилия</h2>
+                        <p class="modal-veteran__descr">Ветеран войны</p>
+                        <div class="modal-veteran__text">
+                            <p>С помощью конвертера дат вы можете узнать нужную дату по еврейскому календарю. Например вычислить        ваш еврейский день рождения, или дату смерти человека и любые другие даты.
+                                С помощью конвертера дат вы можете узнать нужную дату по еврейскому календарю. Например вычислить ваш еврейский день рождения, или дату смерти человека и любые другие даты.
+                                С помощью конвертера дат вы можете узнать
+                            </p>
+                            
+                            <p>нужную дату по еврейскому календарю. Например вычислить ваш еврейский день рождения, или дату смерти     человека и любые другие даты.
+                                С помощью конвертера дат вы можете узнать нужную дату по еврейскому календарю. Например вычислить ваш еврейский день рождения, или дату смерти человека и любые другие даты.
+                                С помощью конвертера дат вы можете узнать нужную дату по еврейскому календарю. Например вычислить ваш еврейский день рождения, или дату смерти человека и любые другие даты.
+                                С помощью конвертера дат вы можете узнать нужную дату по еврейскому календарю. Например вычислить ваш еврейский день рождения, или дату смерти человека и любые другие даты.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="js-modalConverter" class="modal modal-converter fade" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content modal-converter__content">
+                    <button type="button" class="close modal__close modal-converter__close d-flex align-items-center justify-content-center" data-dismiss="modal" aria-label="Close">
+                    <span class="icon icon-modal-close d-flex align-items-center justify-content-center" aria-hidden="true"></span>
+                    </button>
+                    <div class="modal-converter__main">
+                        <h2 class="modal-converter__name">Конвертер дат</h2>
+                        <div class="modal-converter__text">
+                            <p>С помощью конвертера дат вы можете узнать нужную дату по еврейскому календарю. Например вычислить ваш еврейский день рождения, или дату смерти человека и любые другие даты.</p>
+                        </div>
+                    </div>
+                    <div class="modal-converter__form-wrapper d-flex flex-column align-items-center">
+                        <form id="russianDate" class="modal-converter__form">
+                            <div class="row m-0 justify-content-between select-wrapper">
+                                <select class="modal-converter__select modal-converter__select_day russian-date-day" name="day-converted" id="day-converted">
+                                    <option class="text-center" value="">1</option>
+                                    <option class="text-center" value="">2</option>
+                                    <option class="text-center" value="">3</option>
+                                    <option class="text-center" value="">4</option>
+                                    <option class="text-center" value="">5</option>
+                                    <option class="text-center" value="">6</option>
+                                    <option class="text-center" value="">7</option>
+                                    <option class="text-center" value="">8</option>
+                                    <option class="text-center" value="">9</option>
+                                    <option class="text-center" value="">10</option>
+                                </select>
+                                <select class="modal-converter__select modal-converter__select_month russian-date-month" name="month-converted" id="month-converted">
+                                    <option class="text-center" value="">Январь</option>
+                                    <option class="text-center" value="">Февраль</option>
+                                    <option class="text-center" value="">Март</option>
+                                    <option class="text-center" value="">Апрель</option>
+                                </select>
+                                <select class="modal-converter__select modal-converter__select_year russian-date-year" name="month-converted" id="month-converted">
+                                    <option class="text-center" value="">2000</option>
+                                    <option class="text-center" value="">2001</option>
+                                    <option class="text-center" value="">2001</option>
+                                    <option class="text-center" value="">2001</option>
+                                </select>
+                            </div>
+                        </form>
+
+                        <div class="modal-converter__form-button_convert convert">
+                            <span class="icon icon-convert d-flex align-items-center"></span>
+                        </div>
+
+                        <form id="jewishDate" class="modal-converter__form">
+                            <div class="row m-0 justify-content-between select-wrapper">
+                                <select class="modal-converter__select modal-converter__select_day jewish-date-day" name="day-converted" id="day-converted">
+                                    <option class="text-center" value="">1</option>
+                                    <option class="text-center" value="">2</option>
+                                    <option class="text-center" value="">10</option>
+                                    <option class="text-center" value="">12</option>
+                                </select>
+                                <select class="modal-converter__select modal-converter__select_month jewish-date-month" name="month-converted" id="month-converted">
+                                    <option class="text-center" value="">Январь</option>
+                                    <option class="text-center" value="">Февраль</option>
+                                    <option class="text-center" value="">Март</option>
+                                    <option class="text-center" value="">Апрель</option>
+                                </select>
+                                <select class="modal-converter__select modal-converter__select_year jewish-date-year" name="month-converted" id="month-converted">
+                                    <option class="text-center" value="">2000</option>
+                                    <option class="text-center" value="">2001</option>
+                                    <option class="text-center" value="">2001</option>
+                                    <option class="text-center" value="">2001</option>
+                                </select>
+                            </div>
+                        </form>
+
+                        <button class="modal-converter__form-button_calendar" type="button">Показать эту дату в календаре</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="public/js/jquery.nice-select.js"></script>
+
+        <script src="public/js/parallax.js"></script>
+        <script src="public/js/show-menu.js"></script>
+        <script src="public/js/show-lang.js"></script>
+        <script src="public/js/show-button.js"></script>
+        <script src="public/js/modal-search.js"></script>
+        <script src="public/js/add-active-class.js"></script>
+        <script src="public/js/show-veterans.js"></script>
+        <script src="public/js/select.js"></script>
+        <script src="public/js/converter.js"></script>
+        <script src="public/js/calendar.js"></script>
+        <script src="public/js/form-search-main.js"></script>
+    </body>
+</html>

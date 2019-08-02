@@ -1,0 +1,60 @@
+.press-center
+    padding-top: 100px
+    padding-bottom: 100px
+    .content-inner__block-img
+        width: 26vw
+        height: 13.8vw
+        img
+            width: 26vw
+            height: 13.8vw
+    .content-inner__block-column_position_left
+        .content-inner__block-title
+            margin-bottom: 20px
+    .content-inner__block-column_position_right
+        margin-top: 40px
+        .content-inner__block-title
+            margin-bottom: 90px
+    .content-inner__block-title
+        font-size: 2.08vw
+    .link__text
+        font-size: 1.25vw
+    .link__icon::before
+        font-size: 1.56vw
+
+@media(max-width: $tablet-width)
+    .press-center
+        padding-top: 100px
+        padding-bottom: 100px
+        .content-inner__block-img
+            width: calc(26vw * #{$tablet-gain})
+            height: calc(13.8vw * #{$tablet-gain})
+            img
+                width: calc(26vw * #{$tablet-gain})
+                height: calc(13.8vw * #{$tablet-gain})
+        .content-inner__block-title
+            font-size: 40px
+        .link__text
+            font-size: 24px
+        .link__icon::before
+            font-size: 30px
+        
+
+@media(max-width: $mobile-width)
+    .press-center
+        padding-top: 50px
+        padding-bottom: 50px
+        .content-inner__block-img
+            width: 100%
+            height: auto
+            img
+                width: 100%
+                height: auto
+        .content-inner__block-column_position_right
+            .content-inner__block-title
+                margin-bottom: 45px
+        .content-inner__block-title
+            font-size: 26px
+        .link__text
+            font-size: 18px
+        .link__icon::before
+            font-size: 20px

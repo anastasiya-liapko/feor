@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>FEOR</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="shortcut icon" href="public/img/fav-feor.png" type="image/png">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800|Roboto:400,700,900&amp;subset=cyrillic-ext,latin-ext" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="public/css/main.min.css">
+    </head>
+
+    <body>
+        <div class="content content_type_news">
+            <div class="header page__header">
+                <div class="container header__container">
+                    <div id="js-lang" class="lang header__lang">
+                        <ul id="js-langList" class="lang__list">
+                            <li class="lang__item" data-text="English">English</li>
+                            <li class="lang__item" data-text="Russian">Russian</li>
+                        </ul>
+
+                        <span id="js-langPicked" class="lang__picked">English</span>
+                    </div>
+
+                    <div class="header__content header__content_position_top">
+                        <button id="js-hamburger" class="hamburger hamburger_squeeze header__hamburger" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+
+                        <a href="/" class="logo header__logo">
+                            <!-- <img src="public/img/logo.png" class="header__logo-img" alt="FEOR"> -->
+                        </a>
+
+                        <ul id="js-menu" class="menu header__menu">
+                            <li class="menu__item header__menu-item">
+                                <a href="about-us.html" class="menu__link header__menu-link">о федерации</a>
+                            </li>
+                            <li class="menu__item header__menu-item">
+                                <a href="#" class="menu__link header__menu-link">Общины</a>
+                            </li>
+                            <li class="menu__item header__menu-item">
+                                <a href="#" class="menu__link header__menu-link">Традиции</a>
+                            </li>
+                            <li class="menu__item header__menu-item">
+                                <a href="#" class="menu__link header__menu-link">календарь</a>
+                            </li>
+                            <li class="menu__item header__menu-item">
+                                <a href="organizatii.html" class="menu__link header__menu-link">Организации</a>
+                            </li>
+                        </ul>
+
+                        <button class="search header__search" data-toggle="modal" data-target="#js-modalSearch">
+                            <span class="search__icon icon-search"></span>
+                            <span class="search__text">Поиск</span>
+                        </button>
+                    </div>
+
+                    <div class="header__content header__content_position_bottom">
+                        <a href="donate-pay.html" class="button button_color_blue header__button" data-text="Поддержать">Поддержать</a>
+                    </div>
+                </div>
+            </div>
+            <!-- header -->
+
+            <div class="traditions map map_position_right map_size_xs content-title content-title_font-size_l content__title">
+
+                <div id="js-mapPins" class="traditions__back map__layer map__layer_back" style="background-image: url('public/img/map-4.png');">
+                
+                    <div class="traditions__front map__layer map__layer_front">
+                        <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+                            <div class="map__header flex-grow-0">
+                                <h2 class="map__title content-title__title">Традиции</h2>
+                            </div>
+
+                            <ul id="js-traditionsList" class="traditions__list map__list list list_size_s">
+                                <li class="list__item" data-href="js-scrollToShabbat">
+                                    <a href="#" class="list__link">Шаббат</a>
+                                </li>
+                                <li class="list__item" data-href="js-scrollToCalendar">
+                                    <a href="#" class="list__link">Еврейский календарь</a>
+                                </li>
+                                <li class="list__item" data-href="js-scrollToHolidays">
+                                    <a href="#" class="list__link">Праздники</a>
+                                </li>
+                                <li class="list__item" data-href="js-scrollToRites">
+                                    <a href="#" class="list__link">Обряды</a>
+                                </li>
+                                <li class="list__item" data-href="js-scrollToKashrut">
+                                    <a href="#" class="list__link">Кашрут</a>
+                                </li>
+                                <li class="list__item" data-href="js-scrollToJudaism">
+                                    <a href="#" class="list__link">Атрибутика иудаизма</a>
+                                </li>
+                                <li class="list__item" data-href="js-scrollToTsdaka">
+                                    <a href="#" class="list__link">Цдака</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- trafitions__front -->
+                </div>
+                <!-- traditions__back -->
+            </div>
+            <!-- traditions -->
+
+            <div class="content-inner content-inner_type_activity-religion content__inner">
+                <div class="container container_content content-inner__container">
+
+                    <p class="content-descr content-inner__descr container container_content container_content_small container_content_inner">
+                        Генеральная задача ФЕОР как организации ортодоксального иудаизма – возрождение религиозной и национальной культурной жизни евреев России. Религиозные программы ФЕОР служат становлению и развитию общин, способствуют вовлечению еврейского населения в родную среду. По мере их реализации растет количество еврейских общин, увеличивается число их членов, люди все больше тянутся к национальным корням, культуре своего народа. В этой связи особенно важен тот факт, что в последнее время в это движение влилось много молодежи, стремящейся решить вопрос своей самоидентификации. 
+                    </p>
+
+                    <div id="js-scrollToShabbat"  class="content-inner__block">
+                        <p class="content-inner__block-title container container_content container_content_small container_content_inner">Шаббат</p>
+                        <div class="content-inner__block-img content-inner__block-img_position_center">
+                            <img src="public/img/sobitie.jpg" alt="">
+                        </div>
+                        <p class="content-inner__block-paragraph container container_content container_content_small container_content_inner">
+                            При поддержке федеральных и региональных властей ФЕОР реализует программу восстановления старых и 
+                            строительства новых синагог и общинных центров в тех городах, где проживают больше 1000 евреев, всемерно развивая религиозную, благотворительную и культурно-просветительскую деятельность. За последние годы федеральные и местные власти передали ФЕОР целый ряд зданий и сооружений, до революции принадлежавших иудейским общинам России.
+                        </p>
+                        <p class="content-inner__block-paragraph container container_content container_content_small container_content_inner">
+                            В ряде случаев общинам Федерации были выделены земельные участки для строительства культовых, культурно-образовательных и благотворительных учреждений. Благодаря этому по всей стране развернулось строительство новых синагог, общинных и культурных центров. Так Московский еврейский общинный центр в Марьиной Роще, открытый в Элуле (сентябре) 5760 (2000) года, стал крупнейшим не только в России, но и во всей Европе.
+                        </p>
+                    </div>
+                    <!-- content-inner__block -->
+
+                    <div id="js-scrollToCalendar" class="content-inner__block content-inner__block_border_top">
+                        <p class="content-inner__block-title container container_content container_content_small container_content_inner d-flex flex-column flex-md-row justify-content-md-between align-items-center">
+                            <span class="d-inline-block mb-4 mb-md-0">Еврейский календарь</span>
+                            <a href="#" class="button button_color_blue footer__button" data-text="Календарь">Календарь</a>
+                        </p>
+                        <!-- <div class="footer__button-wrapper">
+                            <a href="donate-pay.html" class="button button_color_blue footer__button" data-text="Календарь">Календарь</a>
+                        </div> -->
+                        <div class="content-inner__block-img content-inner__block-img_position_center">
+                            <img src="public/img/religion-del-2.jpg" alt="">
+                        </div>
+                        <p class="content-inner__block-paragraph container container_content container_content_small container_content_inner">
+                            Cоблюдение шабата, или Субботы, – основа еврейской религии. Суббота – это знак союза, заключенного Вс-вышним с народом Израиля. Соблюдение ее приравнивается к исполнению всех заповедей Торы. 
+                        </p>
+                        <p class="content-inner__block-paragraph container container_content container_content_small container_content_inner">
+                            Стремясь возродить и укрепить в общинах еврейскую религиозную традицию, ФЕОР уделяет большое внимание встрече Субботы в общинах страны, оказывает для этого необходимую методическую и материальную помощь. Все больше молодежи принимает участие в праздновании Субботы. В некоторых общинах сложилась традиция проводить кабалат шабат (встречу Субботы) по возрастным группам; популярен и молодежный шабат. 
+                        </p>
+                        <p class="content-inner__block-paragraph container container_content container_content_small container_content_inner">
+                            В ряде городов работает программа "Шабат" для пожилых и малоподвижных людей, в силу ряда причин не способных присутствовать на общинных молитвах. Теперь их посещают волонтеры и празднование Субботы проводят у них на дому. 
+                        </p>
+                    </div>
+                    <!-- content-inner__block -->
+
+                    <div id="js-scrollToHolidays" class="content-inner__block content-inner__block_border_top">
+                        <p class="content-inner__block-title container container_content container_content_small container_content_inner">Праздники</p>
+                        <div class="content-inner__block-img content-inner__block-img_position_center">
+                            <img src="public/img/religion-del-3.jpg" alt="">
+                            <div class="traditions-inner map__layer map__layer_front d-flex flex-row align-items-center">
+                                <ul class="traditions-inner__list map__list list list_size_s">
+                                    <li class="list__item">
+                                        <a href="#" class="list__link">Рош-а-шана</a>
+                                    </li>
+                                    <li class="list__item">
+                                        <a href="#" class="list__link">Йом кипур</a>
+                                    </li>
+                                    <li class="list__item">
+                                        <a href="#" class="list__link">Суккот</a>
+                                    </li>
+                                    <li class="list__item">
+                                        <a href="#" class="list__link">Симхат тора</a>
+                                    </li>
+                                    <li class="list__item">
+                                        <a href="#" class="list__link">Ханука</a>
+                                    </li>
+                                    <li class="list__item">
+                                        <a href="#" class="list__link">Пурим</a>
+                                    </li>
+                                    <li class="list__item">
+                                        <a href="#" class="list__link">Песах</a>
+                                    </li>
+                                    <li class="list__item">
+                                        <a href="#" class="list__link">Шавуот</a>
+                                    </li>
+                                    <li class="list__item">
+                                        <a href="#" class="list__link">Девятое ава</a>
+                                    </li>
+                                    <li class="list__item">
+                                        <a href="#" class="list__link">Лаг-ба-омер</a>
+                                    </li>
+                                    <li class="list__item">
+                                        <a href="#" class="list__link">Ту би-шват</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- trafitions-inner -->
+                        </div>
+                        <p class="content-inner__block-paragraph container container_content container_content_small container_content_inner">
+                            Cоблюдение шабата, или Субботы, – основа еврейской религии. Суббота – это знак союза, заключенного Вс-вышним с народом Израиля. Соблюдение ее приравнивается к исполнению всех заповедей Торы. 
+                        </p>
+                        <p class="content-inner__block-paragraph container container_content container_content_small container_content_inner">
+                            Стремясь возродить и укрепить в общинах еврейскую религиозную традицию, ФЕОР уделяет большое внимание встрече Субботы в общинах страны, оказывает для этого необходимую методическую и материальную помощь. Все больше молодежи принимает участие в праздновании Субботы. В некоторых общинах сложилась традиция проводить кабалат шабат (встречу Субботы) по возрастным группам; популярен и молодежный шабат. 
+                        </p>
+                        <p class="content-inner__block-paragraph container container_content container_content_small container_content_inner">
+                            В ряде городов работает программа "Шабат" для пожилых и малоподвижных людей, в силу ряда причин не способных присутствовать на общинных молитвах. Теперь их посещают волонтеры и празднование Субботы проводят у них на дому. 
+                        </p>
+                    </div>
+                    <!-- content-inner__block -->
+
+                    <div id="js-scrollToRites" class="content-inner__block content-inner__block_border_top">
+                        <p class="content-inner__block-title container container_content container_content_small container_content_inner">Обряды</p>
+                        <div class="content-inner__block-img content-inner__block-img_position_center">
+                            <img src="public/img/religion-del-4.jpg" alt="">
+                            <div class="traditions-inner map__layer map__layer_front d-flex flex-row align-items-center">
+                                <ul class="traditions-inner__list map__list list list_size_s">
+                                    <li class="list__item">
+                                        <a href="#" class="list__link">Брит-мила</a>
+                                    </li>
+                                    <li class="list__item">
+                                        <a href="#" class="list__link">Выкуп первенца</a>
+                                    </li>
+                                    <li class="list__item">
+                                        <a href="#" class="list__link">Опшернеш</a>
+                                    </li>
+                                    <li class="list__item">
+                                        <a href="#" class="list__link">Совершеннолетие</a>
+                                    </li>
+                                    <li class="list__item">
+                                        <a href="#" class="list__link">Хупа</a>
+                                    </li>
+                                    <li class="list__item">
+                                        <a href="#" class="list__link">Похороны</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- trafitions-inner -->
+                        </div>
+                        <p class="content-inner__block-paragraph container container_content container_content_small container_content_inner">
+                            Общины с помощью Федерации постепенновосстанавливают во всей полноте и богатстве еврейские традиции и обычаи.
+                        </p>
+                        <p class="content-inner__block-paragraph container container_content container_content_small container_content_inner">
+                            Федерация помогает общинам обеспечивать кашерование пищи, посуды и кухонного инвентаря. Появились предприятия по производству кошерных мяса, хлеба, вина. Евреи России должны иметь возможность соблюдать законы кашрута. 
+                        </p>
+                        <p class="content-inner__block-paragraph container container_content container_content_small container_content_inner">
+                            Большую популярность в общинах приобрела церемония бар- и бат-мицвы (совершеннолетия – мальчиков в 13, и девочек – в 12 лет), ее проведение становится вполне привычным обрядом. Во многих общинах уже проводится опшерниш (обряд пострижения мальчиков, достигших 3 лет). Обряд бритмилы (обрезания) все чаще проходят не только новорожденные мальчики на 8-й день жизни, но и дети старшего возраста, а также взрослые мужчины. 
+                        </p>
+                        <p class="content-inner__block-paragraph container container_content container_content_small container_content_inner">
+                            В городах, где появляются миквы (бассейны для ритуального омовения), становится возможным соблюдение законов чистоты семейной жизни. 
+                        </p>
+                        <p class="content-inner__block-paragraph container container_content container_content_small container_content_inner">
+                            ФЕОР осуществляет проект "Мезуза в каждый еврейский дом", благодаря которому все желающие могут бесплатно установить на входной двери в еврейский дом красочную мезузу – символ охраны Вс-вышнего и семейного благополучия.
+                        </p>
+                        <p class="content-inner__block-paragraph container container_content container_content_small container_content_inner">
+                            Во многих городах проводят обряды хупы (бракосочетание под свадебным балдахином). И, конечно, великим событием становится внесение свитка Торы в синагогу. 
+                        </p>
+                        <p class="content-inner__block-paragraph container container_content container_content_small container_content_inner">
+                            Все общины стремятся проводить похороны с соблюдением еврейских законов. Для многих общин настоящим событием стало, что над еврейскими могилами стал читаться Кадиш. Провожать усопших стали так, как это положено по традиции.
+                        </p>
+                    </div>
+                    <!-- content-inner__block -->
+
+                    <div id="js-scrollToKashrut" class="content-inner__block content-inner__block_border_top">
+                        <p class="content-inner__block-title container container_content container_content_small container_content_inner">Кашрут</p>
+                        <div class="content-inner__block-img content-inner__block-img_position_center">
+                            <img src="public/img/religion-del-5.jpg" alt="">
+                        </div>
+                        <p class="content-inner__block-paragraph container container_content container_content_small container_content_inner">
+                            Проведение еврейских праздников – одно из важнейших 
+                            направлений деятельности Федерации. Для помощи в 
+                            подготовке праздников ФЕОР направляет в общины инструкторов, оказывает финансовую поддержку в организации праздничного стола, обеспечивает общины религиозной атрибутикой.
+                        </p>
+                        <p class="content-inner__block-paragraph container container_content container_content_small container_content_inner">
+                            Благодаря заботе ФЕОР, соблюдение праздников еврейского календаря стало традиционным для всех общин. Число их активных членов, участвующих в их подготовке и проведении неизменно растет. В некоторых общинах проводят праздники "открытых дверей" – приглашают в гости представителей других конфессий, проявляющих интерес к еврейской жизни. 
+                        </p>
+                        <p class="content-inner__block-paragraph container container_content container_content_small container_content_inner">
+                            Песах – один из самых важных праздников в еврейском календаре. Для помощи в организации пасхального седера Федерация каждый год направляет в общины инструкторов. Ведется также рассылка мацы, вина и сока. Поскольку в Песах особенно серьезен вопрос кашрута, то в общины направляются и кошерные продукты. Задача Федерации сделать так, чтобы все евреи могли провести праздник с соблюдением всех традиций, как делали это на протяжении тысячелетий их предки.
+                        </p>
+                    </div>
+                    <!-- content-inner__block -->
+
+                    <div id="js-scrollToJudaism" class="content-inner__block content-inner__block_border_top">
+                        <p class="content-inner__block-title container container_content container_content_small container_content_inner">Атрибутика иудаизма</p>
+                        <div class="content-inner__block-img content-inner__block-img_position_center">
+                            <img src="public/img/religion-del-5.jpg" alt="">
+                            <div class="traditions-inner map__layer map__layer_front d-flex flex-row align-items-center">
+                                <ul class="traditions-inner__list map__list list list_size_s">
+                                    <li class="list__item">
+                                        <a href="#" class="list__link">Кипа</a>
+                                    </li>
+                                    <li class="list__item">
+                                        <a href="#" class="list__link">Тфилин</a>
+                                    </li>
+                                    <li class="list__item">
+                                        <a href="#" class="list__link">Цицит</a>
+                                    </li>
+                                    <li class="list__item">
+                                        <a href="#" class="list__link">Мезуза</a>
+                                    </li>
+                                    <li class="list__item">
+                                        <a href="#" class="list__link">Ханукия</a>
+                                    </li>
+                                    <li class="list__item">
+                                        <a href="#" class="list__link">Маца</a>
+                                    </li>
+                                    <li class="list__item">
+                                        <a href="#" class="list__link">Шофар</a>
+                                    </li>
+                                    <li class="list__item">
+                                        <a href="#" class="list__link">Кеара</a>
+                                    </li>
+                                    <li class="list__item">
+                                        <a href="#" class="list__link">Арбаа миним/лулав</a>
+                                    </li>
+                                    <li class="list__item">
+                                        <a href="#" class="list__link">Свиток эстер</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- trafitions-inner -->
+                        </div>
+                        <p class="content-inner__block-paragraph container container_content container_content_small container_content_inner">
+                            Проведение еврейских праздников – одно из важнейших 
+                            направлений деятельности Федерации. Для помощи в 
+                            подготовке праздников ФЕОР направляет в общины инструкторов, оказывает финансовую поддержку в организации праздничного стола, обеспечивает общины религиозной атрибутикой.
+                        </p>
+                        <p class="content-inner__block-paragraph container container_content container_content_small container_content_inner">
+                            Благодаря заботе ФЕОР, соблюдение праздников еврейского календаря стало традиционным для всех общин. Число их активных членов, участвующих в их подготовке и проведении неизменно растет. В некоторых общинах проводят праздники "открытых дверей" – приглашают в гости представителей других конфессий, проявляющих интерес к еврейской жизни. 
+                        </p>
+                        <p class="content-inner__block-paragraph container container_content container_content_small container_content_inner">
+                            Песах – один из самых важных праздников в еврейском календаре. Для помощи в организации пасхального седера Федерация каждый год направляет в общины инструкторов. Ведется также рассылка мацы, вина и сока. Поскольку в Песах особенно серьезен вопрос кашрута, то в общины направляются и кошерные продукты. Задача Федерации сделать так, чтобы все евреи могли провести праздник с соблюдением всех традиций, как делали это на протяжении тысячелетий их предки.
+                        </p>
+                    </div>
+                    <!-- content-inner__block -->
+
+                    <div id="js-scrollToTsdaka" class="content-inner__block content-inner__block_border_top">
+                        <p class="content-inner__block-title container container_content container_content_small container_content_inner">Цдака</p>
+                        <div class="content-inner__block-img content-inner__block-img_position_center">
+                            <img src="public/img/religion-del-5.jpg" alt="">
+                        </div>
+                        <p class="content-inner__block-paragraph container container_content container_content_small container_content_inner">
+                            Проведение еврейских праздников – одно из важнейших 
+                            направлений деятельности Федерации. Для помощи в 
+                            подготовке праздников ФЕОР направляет в общины инструкторов, оказывает финансовую поддержку в организации праздничного стола, обеспечивает общины религиозной атрибутикой.
+                        </p>
+                        <p class="content-inner__block-paragraph container container_content container_content_small container_content_inner">
+                            Благодаря заботе ФЕОР, соблюдение праздников еврейского календаря стало традиционным для всех общин. Число их активных членов, участвующих в их подготовке и проведении неизменно растет. В некоторых общинах проводят праздники "открытых дверей" – приглашают в гости представителей других конфессий, проявляющих интерес к еврейской жизни. 
+                        </p>
+                        <p class="content-inner__block-paragraph container container_content container_content_small container_content_inner">
+                            Песах – один из самых важных праздников в еврейском календаре. Для помощи в организации пасхального седера Федерация каждый год направляет в общины инструкторов. Ведется также рассылка мацы, вина и сока. Поскольку в Песах особенно серьезен вопрос кашрута, то в общины направляются и кошерные продукты. Задача Федерации сделать так, чтобы все евреи могли провести праздник с соблюдением всех традиций, как делали это на протяжении тысячелетий их предки.
+                        </p>
+                    </div>
+                    <!-- content-inner__block -->
+                    
+                </div>
+            </div>
+            <!-- content__inner -->
+
+            <div class="footer footer_design_dark content__footer">
+                <div class="container footer__container">
+                    <div class="footer__content">
+                        <!-- <ul id="js-menuFooter" class="menu footer__menu">
+                            <li class="menu__item footer__menu-item">
+                                <a href="deiatelnosti.html" class="menu__link footer__menu-link" data-text="Деятельность">Деятельность</a>
+                            </li>
+                            <li class="menu__item footer__menu-item">
+                                <a href="blog-ravin.html" class="menu__link footer__menu-link" data-text="Блог президента">Блог президента</a>
+                            </li>
+                            <li class="menu__item footer__menu-item">
+                                <a href="scripach.html" class="menu__link footer__menu-link" data-text="Скрипач на крыше">Скрипач на крыше</a>
+                            </li>
+                            <li class="menu__item footer__menu-item">
+                                <a href="press-center.html" class="menu__link footer__menu-link" data-text="Пресс-центр">Пресс-центр</a>
+                            </li>
+                            <li class="menu__item footer__menu-item">
+                                <a href="otchet.html" class="menu__link footer__menu-link" data-text="Отчеты">Отчеты</a>
+                            </li>
+                        </ul> -->
+
+                        <!-- <button class="search search_design_dark footer__search" data-toggle="modal" data-target="#js-modalSearch">
+                            <span class="search__icon icon-search"></span>
+                            <span class="search__text">Поиск</span>
+                        </button> -->
+
+                        <a href="/" class="logo logo_design_dark footer__logo">
+                            <!-- <img src="public/img/logo.png" class="logo__img footer__logo-img" alt="FEOR"> -->
+                        </a>
+
+                        <ul id="js-menuFooter" class="menu footer__menu footer-menu-one">
+							<li class="menu__item footer__menu-item">
+								<a href="/reports" class="menu__link footer__menu-link">Отчетность</a>
+							</li>
+						</ul>
+
+                        <div class="contacts contacts_design_dark footer__contacts">
+                            <!-- <div class="contacts__content contacts__content_position_top">
+                                <p class="contacts__item contacts__item_address">Адрес: 127055 г. Москва, ул. Образцова д.19-а.</p>
+                                <a href="tel:+74957302791" class="contacts__item contacts__item_phones" data-text="Tелефоны: +7 (495) 730-2791 (-92, -93)">
+                                    Tелефоны: +7 (495) 730-2791 (-92, -93)
+                                </a>
+                                <span class="contacts__separator">|</span>
+                                <a href="mailto:info@feor.ru" class="contacts__item contacts__item_email" data-text="E-mail: info@feor.ru">E-mail: info@feor.ru</a>
+                            </div> -->
+                            <div class="contacts__content contacts__content_position_bottom">
+                                <p class="contacts__item contacts__item_descr">Федерация еврейских общин России © 2004-2019</p>
+                                <p class="contacts__item contacts__item_rights">При использовании материалов сайта, ссылка на feor.ru обязательна. При цитировании в сети Интернет гиперссылка на www.feor.ru обязательна.</p>
+                            </div>
+                        </div>
+
+                        <div class="footer__button-wrapper">
+                            <a href="donate-pay.html" class="button button_color_blue footer__button" data-text="Поддержать">Поддержать</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--footer-->
+        </div>
+        <!-- page -->
+
+        <div id="js-modalSearch" class="modal modal_search fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content container">
+                    <div class="modal-header">
+                        <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">
+                          <span class="modal-close__icon" aria-hidden="true"></span>
+                        </button>
+
+                        <form class="modal-form form-search" name="form-search" action="">
+                            <input id="js-modalSearchInput" type="text" class="input_search form-search__input" name="input-search" placeholder="Что ищем?">
+                            <button type="submit" class="form-search__submit">Найти</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="public/js/parallax.js"></script>
+        <script src="public/js/show-menu.js"></script>
+        <script src="public/js/show-lang.js"></script>
+        <script src="public/js/show-button.js"></script>
+        <script src="public/js/modal-search.js"></script>
+        <script src="public/js/add-active-class.js"></script>
+        <script src="public/js/scroll.js"></script>
+    </body>
+</html>

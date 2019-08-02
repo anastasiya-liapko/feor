@@ -1,0 +1,113 @@
+.traditions__back
+    width: 100%
+    height: 618px
+
+.traditions__front
+    position: static
+    width: 100%
+    height: 100%
+    padding-top: $height-header
+    padding-bottom: calc(#{$height-header} / 2)
+    .container
+        height: 100%
+        padding-left: 13vw
+
+.traditions__list
+    width: 400px
+    .list__item
+        width: 100%
+    .list__link
+        padding-top: 5px
+        padding-bottom: 5px
+        font-weight: 400
+
+.traditions-inner
+    top: 0
+    left: auto
+    right: 3.906vw
+    width: 100%
+    height: 100%
+
+.traditions-inner__list
+    // width: 30%
+    width: 22.917vw
+    max-height: 100%
+    height: auto
+    margin-left: auto
+    margin-bottom: 0
+    // overflow-y: scroll
+    .list__item
+        width: 100%
+    .list__link
+        padding-left: 2.344vw
+        padding-top: 0.417vw
+        padding-bottom: 0.417vw
+        padding-right: 0.781vw
+        font-size: 0.93vw
+        // border: 0.052vw solid transparent
+        border: 1px solid transparent
+        border-radius: 0.677vw
+        text-transform: uppercase
+        &::before
+            left: 0.781vw
+            width: 0.677vw
+            height: 0.677vw
+            margin-top: -0.365vw
+            border: 0.260vw solid $color-text
+        &:hover,
+        &.active,
+        &.hover
+            color: $color-text
+            // border: 0.052vw solid $color-text
+            border: 1px solid $color-text
+            border-radius: 0.677vw
+            cursor: pointer
+            &::before
+                border: 0.260vw solid $color-text
+
+@media(max-width: $tablet-width)
+    .traditions__front
+        padding-top: $height-header-tablet
+        padding-bottom: calc(#{$height-header-tablet} / 2)
+
+    .traditions__list
+        width: 300px
+        margin-top: 85px
+
+@media(max-width: $mobile-width)
+    .traditions__back
+        height: auto
+
+    .traditions
+        margin-top: $height-header-mobile-new
+
+    .traditions__front
+        padding-top: 50px
+        padding-bottom: 50px
+        background-color: transparent
+        .container
+            padding-left: 0
+
+    .traditions__list 
+        width: 100%   
+        .list__item
+            width: 50%
+
+    .traditions-inner
+        position: absolute
+        right: 0
+        background-color: transparent
+
+    .traditions-inner__list
+        margin-right: 0
+        .list__link
+            border: 0.5px solid transparent
+            &:hover,
+            &.active,
+            &.hover
+                border: 0.5px solid $color-text
+
+@media(max-width: $mobile-width-s)
+    .traditions__list 
+        .list__item
+            width: 100%

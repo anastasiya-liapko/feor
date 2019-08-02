@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>FEOR</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="shortcut icon" href="public/img/fav-feor.png" type="image/png">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800|Roboto:400,700,900&amp;subset=cyrillic-ext,latin-ext" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="public/css/main.min.css">
+    </head>
+
+    <body>
+        <div class="content content_type_news">
+            <div class="header page__header">
+                <div class="container header__container">
+                    <div id="js-lang" class="lang header__lang">
+                        <ul id="js-langList" class="lang__list">
+                            <li class="lang__item" data-text="English">English</li>
+                            <li class="lang__item" data-text="Russian">Russian</li>
+                        </ul>
+
+                        <span id="js-langPicked" class="lang__picked">English</span>
+                    </div>
+
+                    <div class="header__content header__content_position_top">
+                        <button id="js-hamburger" class="hamburger hamburger_squeeze header__hamburger" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+
+                        <a href="/" class="logo header__logo">
+                            <!-- <img src="public/img/logo.png" class="header__logo-img" alt="FEOR"> -->
+                        </a>
+
+                        <ul id="js-menu" class="menu header__menu">
+                            <li class="menu__item header__menu-item">
+                                <a href="about-us.html" class="menu__link header__menu-link">о федерации</a>
+                            </li>
+                            <li class="menu__item header__menu-item">
+                                <a href="#" class="menu__link header__menu-link">Общины</a>
+                            </li>
+                            <li class="menu__item header__menu-item">
+                                <a href="#" class="menu__link header__menu-link">Традиции</a>
+                            </li>
+                            <li class="menu__item header__menu-item">
+                                <a href="#" class="menu__link header__menu-link">календарь</a>
+                            </li>
+                            <li class="menu__item header__menu-item">
+                                <a href="organizatii.html" class="menu__link header__menu-link">Организации</a>
+                            </li>
+                        </ul>
+
+                        <button class="search header__search" data-toggle="modal" data-target="#js-modalSearch">
+                            <span class="search__icon icon-search"></span>
+                            <span class="search__text">Поиск</span>
+                        </button>
+                    </div>
+
+                    <div class="header__content header__content_position_bottom">
+                        <a href="donate-pay.html" class="button button_color_blue header__button" data-text="Поддержать">Поддержать</a>
+                    </div>
+                </div>
+            </div>
+            <!-- header -->
+
+            <div class="content-title content-title_type_news content-title_font-size_m content__title content-title_height_s" 
+                style="background-image: url('public/img/donate-pay.jpg');">
+                <div class="container container_content container_content_small content-title__container">
+                    <h1 class="content-title__title">Пожертвования</h1>
+                </div>
+            </div>
+            <!-- content__title -->
+
+            <div class="donate-pay content-inner content-inner_type_blog content__inner">
+                <div class="container container_content content-inner__container">
+
+                    <div class="content-inner__block container container_content container_content_small container_content_inner">
+                        <p class="donate-pay__title content-inner__block-title">Дорогой друг!</p>
+                        <p class="donate-pay__descr content-descr">Если ты перешел на эту страницу, то, возможно, ты не раз задумывался над тем, как помочь нашей общине. Сделать это можно следующими способами:
+                        </p>
+                        <ul class="donate-pay__list content-inner__block-list content-inner__block-paragraph">
+                            <li>через универсальный платежный сервис QIWI</li>
+                            <li>в терминале находящемся в Синагоге Жуковка по адресу: РФ, Московская обл., Одинцовский р-н, д. Жуковка, ш Рублево-Успенское д. 207, там обратиться к администратору</li>
+                            <li>через отделения сбербанка:</li>
+                        </ul>
+                        <div class="donate-paay__bank-details bank-details">
+                            <p class="bank-details__item">Организация:  Централизованная религиозная организация ортодоксального иудаизма «Федерация еврейских общин России»</p>
+                            <p class="bank-details__item">ИНН:  7715201396</p>
+                            <p class="bank-details__item">КПП:  771501001</p>
+                            <p class="bank-details__item">БАНК: ПАО «СБЕРБАНК РОССИИ»</p>
+                            <p class="bank-details__item">БИК:  044525225</p>
+                            <p class="bank-details__item">к.\счет:  30101810400000000225</p>
+                            <p class="bank-details__item">р\счет:   40703810738000001212</p>
+                            <p class="bank-details__item">Назначение платежа:   Благотворительный взнос ( Пожертвование) на уставные цели. НДС не облагается.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- content__inner -->
+
+            <div class="form-donate">
+                <div class="container container_content container_content_small more__container">
+                    <p class="form-donate__title">Я готов поддержать на сумму:</p>
+
+                    <form id="js-formDonate" class="form-donate__form" action="" method="" enctype="multipart/form-data">
+
+                        <div class="form-donate__sum">
+                            <label for="sum100" class="radio-wrapper text-left">
+                                <input id="sum100" class="radio" type="radio" name="sum" checked>
+                                <span class="radio-custom"></span>
+                                <span class="radio-label">100  руб.</span>
+                            </label>
+
+                            <label for="sum300" class="radio-wrapper text-left">
+                                <input id="sum300" class="radio" type="radio" name="sum">
+                                <span class="radio-custom"></span>
+                                <span class="radio-label">300  руб.</span>
+                            </label>
+
+                            <label for="sum1000" class="radio-wrapper text-left">
+                                <input id="sum1000" class="radio" type="radio" name="sum">
+                                <span class="radio-custom"></span>
+                                <span class="radio-label">1000  руб.</span>
+                            </label>
+
+                            <label id="js-sumOther" for="sumOther" class="radio-wrapper radio-wrapper_sum-other text-left">
+                                <div class="d-flex flex-row align-items-center">
+                                    <input id="js-sumOtherRadio" class="radio" type="radio" name="sum">
+                                    <span class="radio-custom"></span>
+                                    <input class="field__input input_donate input_sum-other" id="sumOtherInput" type="text" name="sumOtherInput" placeholder="Своя сумма">
+                                </div>
+                                <div>
+                                    <span id="valid-sumOtherInput" class="error-text"></span>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="form-donate__times">
+                            <label for="once" class="radio-wrapper text-left">
+                                <input id="once" class="radio" type="radio" name="times" checked>
+                                <span class="radio-custom"></span>
+                                <span class="radio-label">Единоразовая поддержка</span>
+                            </label>
+
+                            <label for="daily" class="radio-wrapper text-left">
+                                <input id="daily" class="radio" type="radio" name="times">
+                                <span class="radio-custom"></span>
+                                <span class="radio-label">Ежедневная поддержка</span>
+                            </label>
+
+                            <label for="monthly" class="radio-wrapper text-left">
+                                <input id="monthly" class="radio" type="radio" name="times">
+                                <span class="radio-custom"></span>
+                                <span class="radio-label">Ежемесечная поддержка</span>
+                            </label>
+                        </div>
+
+                        <div class="form-donate__data">
+                            <div class="form-donate__data-name input-wrapper">
+                                <input class="field__input input_donate input_name" id="name" type="text" name="name" placeholder="Имя">
+                                <span id="valid-name" class="error-text"></span>
+                            </div>
+
+                            <div class="form-donate__data-last-name input-wrapper">
+                                <input class="field__input input_donate input_last-name" id="lastName" type="text" name="lastName" placeholder="Фамилия">
+                                <span id="valid-lastName" class="error-text"></span>
+                            </div>
+
+                            <div class="form-donate__data-email input-wrapper">
+                              <input class="field__input input_donate input_email" id="email" type="text" name="email" placeholder="Ваш Email">
+                              <span id="valid-email" class="error-text"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-donate__button-wrapper">
+                            <button class="form-donate__button button button_color_blue submit disabled" type="submit" data-text="Поддержать" disabled>Поддержать</button>
+                        </div>
+
+                        <a href="#" class="form-donate__link">Условия возврата</a>
+
+                        <p class="content-inner__block-paragraph">
+                            Собранные деньги пойдут на оказание помощи общинам входящих в состав Федерации, благотворительную и культурно-просветительную деятельность, строительство и восстановление синагог.  И сказано в Сефер а-Мидот: Цдака так важна, что она приближает Грядущее Избавление. Она спасает от смерти того, который её даёт, делая его способным принимать благословение Б-га
+                        </p>
+
+                    </form>
+                </div>
+            </div>
+            <!-- more -->
+
+            <div class="footer footer_design_dark content__footer">
+                <div class="container footer__container">
+                    <div class="footer__content">
+                        <!-- <ul id="js-menuFooter" class="menu footer__menu">
+                            <li class="menu__item footer__menu-item">
+                                <a href="deiatelnosti.html" class="menu__link footer__menu-link" data-text="Деятельность">Деятельность</a>
+                            </li>
+                            <li class="menu__item footer__menu-item">
+                                <a href="blog-ravin.html" class="menu__link footer__menu-link" data-text="Блог президента">Блог президента</a>
+                            </li>
+                            <li class="menu__item footer__menu-item">
+                                <a href="scripach.html" class="menu__link footer__menu-link" data-text="Скрипач на крыше">Скрипач на крыше</a>
+                            </li>
+                            <li class="menu__item footer__menu-item">
+                                <a href="press-center.html" class="menu__link footer__menu-link" data-text="Пресс-центр">Пресс-центр</a>
+                            </li>
+                            <li class="menu__item footer__menu-item">
+                                <a href="otchet.html" class="menu__link footer__menu-link" data-text="Отчеты">Отчеты</a>
+                            </li>
+                        </ul> -->
+
+                        <!-- <button class="search search_design_dark footer__search" data-toggle="modal" data-target="#js-modalSearch">
+                            <span class="search__icon icon-search"></span>
+                            <span class="search__text">Поиск</span>
+                        </button> -->
+
+                        <a href="/" class="logo logo_design_dark footer__logo">
+                            <!-- <img src="public/img/logo.png" class="logo__img footer__logo-img" alt="FEOR"> -->
+                        </a>
+
+                        <ul id="js-menuFooter" class="menu footer__menu footer-menu-one">
+							<li class="menu__item footer__menu-item">
+								<a href="/reports" class="menu__link footer__menu-link">Отчетность</a>
+							</li>
+						</ul>
+
+                        <div class="contacts contacts_design_dark footer__contacts">
+                            <!-- <div class="contacts__content contacts__content_position_top">
+                                <p class="contacts__item contacts__item_address">Адрес: 127055 г. Москва, ул. Образцова д.19-а.</p>
+                                <a href="tel:+74957302791" class="contacts__item contacts__item_phones" data-text="Tелефоны: +7 (495) 730-2791 (-92, -93)">
+                                    Tелефоны: +7 (495) 730-2791 (-92, -93)
+                                </a>
+                                <span class="contacts__separator">|</span>
+                                <a href="mailto:info@feor.ru" class="contacts__item contacts__item_email" data-text="E-mail: info@feor.ru">E-mail: info@feor.ru</a>
+                            </div> -->
+                            <div class="contacts__content contacts__content_position_bottom">
+                                <p class="contacts__item contacts__item_descr">Федерация еврейских общин России © 2004-2019</p>
+                                <p class="contacts__item contacts__item_rights">При использовании материалов сайта, ссылка на feor.ru обязательна. При цитировании в сети Интернет гиперссылка на www.feor.ru обязательна.</p>
+                            </div>
+                        </div>
+
+                        <div class="footer__button-wrapper">
+                            <a href="donate-pay.html" class="button button_color_blue footer__button" data-text="Поддержать">Поддержать</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--footer-->
+        </div>
+        <!-- page -->
+
+        <div id="js-modalSearch" class="modal modal_search fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content container">
+                    <div class="modal-header">
+                        <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">
+                          <span class="modal-close__icon" aria-hidden="true"></span>
+                        </button>
+
+                        <form class="modal-form form-search" name="form-search" action="">
+                            <input id="js-modalSearchInput" type="text" class="input_search form-search__input" name="input-search" placeholder="Что ищем?">
+                            <button type="submit" class="form-search__submit">Найти</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="public/js/parallax.js"></script>
+        <script src="public/js/show-menu.js"></script>
+        <script src="public/js/show-lang.js"></script>
+        <script src="public/js/show-button.js"></script>
+        <script src="public/js/modal-search.js"></script>
+        <script src="public/js/form-donate.js"></script>
+        <script src="public/js/add-active-class.js"></script>
+    </body>
+</html>

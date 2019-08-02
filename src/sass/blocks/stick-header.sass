@@ -1,0 +1,35 @@
+@media(min-width: $mobile-width)
+    .header
+        position: fixed
+        top: 0
+        width: 100%
+        background: transparent
+        transition: all 0.3s ease
+        z-index: 99
+    &.sticky
+        position: fixed
+        background: $color-blue-transparent
+        transition: all 0.3s ease
+        .top-menu
+            height: 100%
+            li:hover
+                background: transparent
+            a+div
+                background: $color-blue-transparent
+        .header__logo
+            width: 100px
+            height: 70px
+            background-size: 50px 50px
+            margin-top: 0px
+            margin-bottom: 0px
+            margin-right: 2vw
+            transition: all 0.3s ease
+        .header__container
+            height: 70px
+            transition: all 0.3s ease
+        .header__menu
+            font-size: 12px
+        .header__content_position_top
+            height: 100%
+        .header__logo, .header__container
+            transition: all 0.3s ease

@@ -1,0 +1,142 @@
+.lang
+    z-index: 2
+    position: absolute
+    top: 0
+    right: 3.6vw
+    width: 141px
+    height: auto
+    transition: all 0.3s ease
+    &:hover
+        cursor: pointer
+    &:hover .lang__list
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.9)
+
+.lang__list
+    z-index: 3
+    position: absolute
+    top: -92px
+    left: 0
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    width: 100%
+    height: 100px
+    margin: 0
+    padding-left: 0
+    color: $color-lightblue
+    background-color: $color-text
+    list-style: none
+    transition: all 0.3s ease  
+
+.lang__list.active
+    top: 0
+    &:hover
+        box-shadow: none
+
+.lang__item
+    position: relative
+    width: auto
+    height: 23px
+    margin: 5px 0
+    font-size: 17px
+    line-height: 23px
+    text-align: center
+    color: $color-blue
+    transition: all 0.25s ease
+    overflow: hidden
+    &:hover
+        line-height: 69px
+        cursor: pointer 
+    &::before
+        content: attr(data-text)
+        position: absolute
+        top: -23px
+        color: $color-blue
+        box-sizing: border-box
+
+.lang__picked
+    display: block
+    width: 100%
+    height: 23px
+    margin-top: 13px
+    font-size: 17px
+    line-height: 23px
+    text-align: center
+    color: $color-text
+
+@media(max-width: $tablet-width)
+    .lang
+        right: 3.6vw
+        width: 9.792vw
+        &:hover .lang__list
+            box-shadow: 0 0 0.694vw rgba(255, 255, 255, 0.9)
+
+    .lang__list
+        top: -6.389vw
+        height: 6.944vw
+
+    .lang__item
+        height: 1.597vw
+        margin: 50.347vw 0
+        font-size: 1.181vw
+        line-height: 1.597vw
+        &:hover
+            line-height: 4.792vw
+        &::before
+            top: -1.597vw
+
+    .lang__picked
+        height: 1.597vw
+        margin-top: 0.903vw
+        font-size: 1.181vw
+        line-height: 1.597vw
+
+@media (max-width: $mobile-width)
+    .lang
+        right: 3.6vw
+        width: 141px
+        &:hover .lang__list
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.9)
+
+    .lang__list
+        top: -92px
+        height: 100px
+
+    .lang__item
+        height: 23px
+        margin: 5px 0
+        font-size: 17px
+        line-height: 23px
+        &:hover
+            line-height: 69px
+        &::before
+            top: -23px
+
+    .lang__picked
+        height: 23px
+        margin-top: 13px
+        font-size: 17px
+        line-height: 23px
+
+    .lang
+        right: 0
+        &:hover .lang__list
+            box-shadow: 0 0 10px rgba(38, 70, 95, 0.9)
+
+    .lang__list
+        color: $color-text
+        background-color: $color-blue
+
+    .lang__item
+        color: $color-text
+        &::before
+            color: $color-text
+
+    .lang__picked
+        color: $color-text-dark
+
+
+
+
+

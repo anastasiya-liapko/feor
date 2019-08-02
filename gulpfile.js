@@ -18,7 +18,7 @@ var concat = require('gulp-concat');
 var isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
 
 gulp.task('styles', function() {
-  return gulp.src('frontend/sass/style.sass')
+  return gulp.src('src/sass/style.sass')
   .pipe(gulpIf(isDevelopment, sourcemaps.init()))
   .pipe(plumber())
   .pipe(sass())
@@ -33,7 +33,7 @@ gulp.task('styles', function() {
 });
 
 gulp.task('js', function () {
-    return gulp.src('frontend/assets/js/**/*.js')
+    return gulp.src('src/assets/js/**/*.js')
       .pipe(sourcemaps.init())
       .pipe(concat('main.min.js'))
       .pipe(uglify())
@@ -42,17 +42,17 @@ gulp.task('js', function () {
   });
 
 gulp.task('images', function() {
-  return gulp.src('frontend/assets/img/*.{png,jpg,svg}')
+  return gulp.src('src/assets/img/*.{png,jpg,svg}')
   .pipe(imagemin([
     imagemin.optipng({optimizationLevel: 3}),
     imagemin.jpegtran({progressive: true}),
     imagemin.svgo()
     ]))
-  .pipe(gulp.dest('frontend/assets/img'));
+  .pipe(gulp.dest('src/assets/img'));
 })
 
 gulp.task('assets', function() {
-  return gulp.src('frontend/assets/**')
+  return gulp.src('src/assets/**')
   .pipe(gulp.dest('public'));
 })
 
@@ -63,8 +63,8 @@ gulp.task('clean', function() {
 gulp.task('build', gulp.series('clean', 'images', gulp.parallel('styles', 'assets')));
 
 gulp.task('watch', function() {
-  gulp.watch('frontend/sass/**/*.*', gulp.series('styles'));
-  gulp.watch('frontend/assets/**/*.*', gulp.series('assets'));
+  gulp.watch('src/sass/**/*.*', gulp.series('styles'));
+  gulp.watch('src/assets/**/*.*', gulp.series('assets'));
 })
 
 gulp.task('serve', function() {

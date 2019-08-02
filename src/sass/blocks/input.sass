@@ -1,0 +1,76 @@
+.input:focus
+    outline: none
+
+.input_donate
+    height: 78px
+    padding-left: 33px
+    padding-top: 22px
+    padding-bottom: 23px
+    font-size: 24px
+    font-weight: 400
+    line-height: 78px
+    color: $color-text-dark
+    background-color: $color-lightgrey
+    border: 1px solid $color-medium-grey
+    -webkit-appearance: none
+    border-radius: 10px
+    &::placeholder
+        font-size: 24px
+        line-height: 78px
+        font-weight: 400
+        color: $color-grey
+    &:focus::placeholder
+        opacity: 0
+    &:focus
+        outline: none
+
+.input-wrapper
+    position: relative
+    display: flex
+    flex-direction: column
+
+.input_sum-other
+    width: 248px
+
+.input_name,
+.input_last-name
+    width: 368px
+
+.input_name
+    margin-right: 32px
+
+.input_email
+    width: 768px
+    margin-top: 22px
+
+.input_search
+    padding-left: 15px
+    -webkit-appearance: none
+    border-radius: 0
+    &:focus
+        outline: none
+
+@media(max-width: 1700px)
+    .input_name,
+    .input_last-name,
+    .input_email
+        width: 100%
+
+@media(max-width: $mobile-width)
+    .input_donate
+        height: 60px
+        padding-top: 13px
+        padding-bottom: 14px
+        font-size: 20px
+        line-height: 60px
+        &::placeholder
+            font-size: 20px
+
+@media(max-width: $mobile-width-s)
+    .input_last-name
+        margin-top: 22px
+
+    .input_sum-other
+        width: 100%
+
+    

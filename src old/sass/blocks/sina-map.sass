@@ -1,0 +1,316 @@
+.sina-map
+    &>.container
+        // padding-top: 74px
+        // padding-bottom: 71px
+        padding-top: 3.854vw
+        padding-bottom: 3.698vw
+
+.sina-map__map
+    width: 100%
+    height: 575px
+    // height: 29.948vw
+    #map
+        position: relative
+        width: 100%
+        height: 100%
+
+.sina-map__text
+    // max-height: 590px
+    // max-height: 30.729vw
+    overflow: hidden
+    transition: max-height 2s
+    p
+        margin-bottom: 0
+        // font-size: 24px
+        font-size: 1.250vw
+        font-weight: 600
+        line-height: normal
+        color: #000000
+
+.link__phones a
+    display: block
+
+.sina-map__map
+    // margin-top: 120px
+    margin-top: 6.250vw
+    margin-bottom: 0
+
+.sina-map__button-more,
+.sina-map__button-less
+    margin: 0 auto
+    // margin-top: 71px
+    margin-top: 3.698vw
+
+.sina-map__orgs-wrapper
+    background-color: #ffffff
+    .container
+        // border-top: 2px solid $color-medium-grey
+        border-top: 0.104vw solid $color-medium-grey
+
+.sina-map__orgs-title
+    // margin-top: 60px
+    // margin-bottom: 60px
+    // font-size: 40px
+    margin-top: 3.125vw
+    margin-bottom: 3.125vw
+    font-size: 2.083vw
+    font-weight: 700
+    line-height: 1
+    color: #120d17
+    text-transform: none
+
+.sina-map__org
+    position: relative
+    // width: 404px
+    // height: 384px
+    // margin-right: 120px
+    // margin-bottom: 52px
+    width: 21.042vw
+    min-height: 16vw
+    margin-right: 6.250vw
+    margin-bottom: 2.708vw
+    &::before
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 0
+        // width: 318px
+        // height: 2px
+        width: 16.563vw
+        height: 0.104vw
+        background-color: $color-medium-grey
+    &:nth-child(2n)
+        // margin-right: 100px
+        margin-right: 5.208vw
+
+.sina-map__org-title
+    // margin-bottom: 18px
+    margin-bottom: 0.938vw
+    // font-size: 20px
+    font-size: 1.042vw
+    font-weight: 700
+    line-height: 1
+    color: #120d17
+
+.sina-map__org-text
+    // margin-bottom: 18px
+    // font-size: 18px
+    margin-bottom: 0.938vw
+    font-size: 0.938vw
+    font-weight: 400
+    line-height: 1.33
+    color: #120d17
+    .link__icon
+        // width: 20px
+        // height: 20px
+        // margin-right: 13px
+        width: 1.042vw
+        height: 1.042vw
+        margin-right: 0.677vw
+        &::before
+            // font-size: 20px
+            font-size: 1.042vw
+            color: #000000
+    .icon-metro
+        &::before
+            // font-size: 17px
+            font-size: 0.885vw
+
+.sina-map__org-person
+    // min-height: 48px
+    min-height: 2.500vw
+
+.sina-map__org-social
+    // margin-top: 46px
+    margin-top: 2.396vw
+
+.sina-map__org-social-link
+    // width: 25px
+    // height: 25px
+    // margin-right: 25px
+    width: 1.302vw
+    height: 1.302vw
+    margin-right: 1.302vw
+    .sina-map__org-social-icon
+        // width: 25px
+        // height: 25px
+        width: 1.302vw
+        height: 1.302vw
+        &::before
+            // font-size: 25px
+            font-size: 1.302vw
+            color: $color-medium-grey
+    .sina-map__org-social-icon_font_s
+        &::before
+            // font-size: 30px
+            font-size: 1.563vw
+    &:hover
+        .sina-map__org-social-icon
+            &::before
+                color: $color-text-dark
+
+.mapboxgl-ctrl-bottom-right,
+.mapboxgl-ctrl-bottom-left
+    display: none
+
+@media(max-width: $tablet-width)
+    .sina-map
+        &>.container
+            padding-top: calc(3.854vw * #{$tablet-gain})
+            padding-bottom: calc(3.698vw * #{$tablet-gain})
+
+    // .sina-map__map
+    //     height: calc(29.948vw * #{$tablet-gain})
+
+    .sina-map__text
+        p
+            font-size: calc(1.250vw * #{$tablet-gain})
+
+    .sina-map__map
+        margin-top: calc(6.250vw * #{$tablet-gain})
+
+    .sina-map__button-more,
+    .sina-map__button-less
+        margin-top: calc(3.698vw * #{$tablet-gain})
+
+    .sina-map__orgs-wrapper
+        .container
+            border-top: calc(0.104vw * #{$tablet-gain}) solid $color-medium-grey
+
+    .sina-map__orgs-title
+        margin-top: calc(3.125vw * #{$tablet-gain})
+        margin-bottom: calc(3.125vw * #{$tablet-gain})
+        font-size: calc(2.083vw * #{$tablet-gain})
+
+    .sina-map__org
+        width: calc(21.042vw * #{$tablet-gain})
+        height: calc(20vw * #{$tablet-gain})
+        margin-right: calc(6.250vw * #{$tablet-gain})
+        margin-bottom: calc(2.708vw * #{$tablet-gain})
+        &::before
+            width: calc(16.563vw * #{$tablet-gain})
+            height: calc(0.104vw * #{$tablet-gain})
+        &:nth-child(2n)
+            margin-right: calc(5.208vw * #{$tablet-gain})
+
+    .sina-map__org-title
+        margin-bottom: calc(0.938vw * #{$tablet-gain})
+        font-size: calc(1.042vw * #{$tablet-gain})
+
+    .sina-map__org-text
+        margin-bottom: calc(0.938vw * #{$tablet-gain})
+        font-size: calc(0.938vw * #{$tablet-gain})
+        .link__icon
+            width: calc(1.042vw * #{$tablet-gain})
+            height: calc(1.042vw * #{$tablet-gain})
+            margin-right: calc(0.677vw * #{$tablet-gain})
+            &::before
+                font-size: calc(1.042vw * #{$tablet-gain})
+        .icon-metro
+            &::before
+                font-size: calc(0.885vw * #{$tablet-gain})
+
+    .sina-map__org-person
+        min-height: calc(2.500vw * #{$tablet-gain})
+
+    .sina-map__org-social
+        margin-top: calc(2.396vw * #{$tablet-gain})
+
+    .sina-map__org-social-link
+        width: calc(1.302vw * #{$tablet-gain})
+        height: calc(1.302vw * #{$tablet-gain})
+        margin-right: calc(1.302vw * #{$tablet-gain})
+        .sina-map__org-social-icon
+            width: calc(1.302vw * #{$tablet-gain})
+            height: calc(1.302vw * #{$tablet-gain})
+            &::before
+                font-size: calc(1.302vw * #{$tablet-gain})
+        .sina-map__org-social-icon_font_s
+            &::before
+                font-size: calc(1.563vw * #{$tablet-gain})
+
+@media(max-width: $mobile-width)
+    .sina-map
+        &>.container
+            padding-top: calc(3.854vw * #{$mobile-gain-m})
+            padding-bottom: calc(3.698vw * #{$mobile-gain-m})
+
+    .sina-map__map
+        // height: calc(29.948vw * #{$mobile-gain-m})
+        heiht: 500px
+
+    .sina-map__text
+        p
+            font-size: calc(1.250vw * #{$mobile-gain-m} * 1.3)
+
+    .sina-map__map
+        margin-top: calc(6.250vw * #{$mobile-gain-m})
+
+    .sina-map__button-more,
+    .sina-map__button-less
+        margin-top: calc(3.698vw * #{$mobile-gain-m})
+
+    .sina-map__orgs-wrapper
+        .container
+            border-top: calc(0.104vw * #{$mobile-gain-m}) solid $color-medium-grey
+
+    .sina-map__orgs-title
+        margin-top: calc(3.125vw * #{$mobile-gain-m})
+        margin-bottom: calc(3.125vw * #{$mobile-gain-m})
+        font-size: calc(2.083vw * #{$mobile-gain-m} * 1.2)
+
+    .sina-map__org
+        width: calc(21.042vw * #{$mobile-gain-m} * 1.13)
+        height: calc(20vw * #{$mobile-gain-m} * 1.13)
+        margin-right: calc(2.708vw * #{$mobile-gain-m} * 1.13)
+        margin-bottom: calc(2.708vw * #{$mobile-gain-m} * 1.13)
+        &::before
+            width: calc(16.563vw * #{$mobile-gain-m} * 1.13)
+            height: calc(0.104vw * #{$mobile-gain-m} * 1.13)
+        &:nth-child(2n)
+            margin-right: calc(2.708vw * #{$mobile-gain-m} * 1.13)
+
+    .sina-map__org-title
+        margin-bottom: calc(0.938vw * #{$mobile-gain-m} * 1.13)
+        font-size: calc(1.042vw * #{$mobile-gain-m} * 1.13)
+
+    .sina-map__org-text
+        margin-bottom: calc(0.938vw * #{$mobile-gain-m} * 1.13)
+        font-size: calc(0.938vw * #{$mobile-gain-m} * 1.13)
+        .link__icon
+            width: calc(1.042vw * #{$mobile-gain-m} * 1.13)
+            height: calc(1.042vw * #{$mobile-gain-m} * 1.13)
+            margin-right: calc(0.677vw * #{$mobile-gain-m} * 1.13)
+            &::before
+                font-size: calc(1.042vw * #{$mobile-gain-m} * 1.13)
+        .icon-metro
+            &::before
+                font-size: calc(0.885vw * #{$mobile-gain-m} * 1.13)
+
+    .sina-map__org-person
+        min-height: calc(2.500vw * #{$mobile-gain-m} * 1.13)
+
+    .sina-map__org-social
+        margin-top: calc(2.396vw * #{$mobile-gain-m} * 1.13)
+
+    .sina-map__org-social-link
+        width: calc(1.302vw * #{$mobile-gain-m} * 1.13)
+        height: calc(1.302vw * #{$mobile-gain-m} * 1.13)
+        margin-right: calc(1.302vw * #{$mobile-gain-m} * 1.13)
+        .sina-map__org-social-icon
+            width: calc(1.302vw * #{$mobile-gain-m} * 1.13)
+            height: calc(1.302vw * #{$mobile-gain-m} * 1.13)
+            &::before
+                font-size: calc(1.302vw * #{$mobile-gain-m} * 1.13)
+        .sina-map__org-social-icon_font_s
+            &::before
+                font-size: calc(1.563vw * #{$mobile-gain-m} * 1.13)
+
+@media(max-width: 767px)
+    .sina-map__map
+        height: 400px
+        // height: calc(29.948vw * #{$mobile-gain-m} * 1.3)
+        
+// @media(max-width: 575px)
+//     .sina-map__map
+//         height: calc(29.948vw * #{$mobile-gain-m} * 1.5)

@@ -1,0 +1,50 @@
+.form-search
+    display: flex
+    // flex-wrap: no-wrap
+    flex-direction: column
+    align-items: flex-start
+
+.form-search__input
+    width: 39.9vw
+    font-size: 30px
+    color: $color-text
+    background-color: $color-blue
+    border: none
+    border-bottom: 1px solid $color-text
+    -webkit-appearance: none
+    border-radius: 0
+    &::placeholder
+        color: $color-text
+        opacity: 0.5
+    &:focus
+        outline: none
+
+.form-search__submit
+    width: 10vw
+    height: 40px
+    margin-left: 20px
+    font-size: 120%
+    color: $color-text
+    background-color: $color-lightblue
+    border: none
+    &:hover
+        filter: saturate(150%)
+        cursor: pointer
+
+.form-search__submit:hover
+    transform: scale(1)
+
+@media(max-width: $mobile-width)
+    .form-search__input
+        width: 63vw
+
+    .form-search__submit
+        width: 26.8vw
+
+
+
+
+
+
+
+

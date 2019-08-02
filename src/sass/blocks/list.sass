@@ -1,0 +1,156 @@
+.list
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: flex-start
+    margin-bottom: 0
+    padding-left: 0
+    list-style: none
+
+// .list__item
+//     width: 50%
+
+.list__link
+    position: relative
+    display: block
+    width: auto
+    height: auto
+    font-weight: 700
+    color: $color-text
+    border: 1px solid transparent
+    &::before
+        content: ''
+        position: absolute
+        top: 50%
+        border-radius: 50%
+    &:hover,
+    &.active,
+    &.hover
+        color: $color-lightblue
+        border: 1px solid $color-lightblue
+        border-radius: 13px
+        cursor: pointer
+        &::before
+            border: 5px solid $color-lightblue
+
+.list_size_s
+    .list__item
+        width: 50%
+    .list__link
+        padding-left: 45px
+        padding-top: 10px
+        padding-bottom: 10px
+        padding-right: 15px
+        font-size: 0.93vw
+        border-radius: 13px
+        &::before
+            left: 15px
+            width: 13px
+            height: 13px
+            margin-top: -7px
+            border: 5px solid $color-text
+        &:hover,
+        &.active,
+        &.hover
+            &::before
+                border: 5px solid $color-lightblue
+
+.list_size_m
+    align-content: start
+    justify-content: start
+    .list__item
+        width: 50%
+    .list__link
+        padding-left: 1.6925vw
+        padding-top: 0.451vw
+        padding-bottom: 0.451vw
+        padding-right: 0.651vw
+        font-size: 1.146vw
+        font-weight: 400
+        border-radius: 0.677vw
+        &::before
+            top: 50%
+            left: 0.846vw
+            width: 0.3385vw
+            height: 0.3385vw
+            margin-top: -0.169vw
+            background-color: $color-text
+            border: none
+        &:hover,
+        &.active,
+        &.hover
+            &::before
+                background-color: $color-lightblue
+                border: none
+
+@media(max-width: $tablet-width)
+    .list_size_s
+        .list__link
+            font-size: 18px
+
+@media(max-width: 1199px)
+    .list_size_m
+        .list__link
+            padding-left: calc(1.6925vw / 1.2)
+            padding-top: calc(0.451vw / 1.2)
+            padding-bottom: calc(0.451vw / 1.2)
+            padding-right: calc(0.651vw / 1.2)
+            font-size: calc(1.146vw / 1.2)
+            border-radius: calc(0.677vw / 1.2)
+            &::before
+                left: calc(0.846vw / 1.2)
+                width: calc(0.3385vw / 1.2)
+                height: calc(0.3385vw / 1.2)
+                margin-top: calc(-0.169vw / 1.2)
+
+@media(max-width: $mobile-width)
+    .list_size_s
+        .list__link
+            font-size: 1.816vw
+
+    .list_size_m
+        .list__item
+            width: 33.33%
+        .list__link
+            padding-left: calc(1.6925vw * #{$mobile-gain-m})
+            padding-top: calc(0.451vw * #{$mobile-gain-m})
+            padding-bottom: calc(0.451vw * #{$mobile-gain-m})
+            padding-right: calc(0.651vw * #{$mobile-gain-m})
+            font-size: calc(1.146vw * #{$mobile-gain-m})
+            border-radius: calc(0.677vw * #{$mobile-gain-m})
+            &::before
+                left: calc(0.846vw * #{$mobile-gain-m})
+                width: calc(0.3385vw * #{$mobile-gain-m})
+                height: calc(0.3385vw * #{$mobile-gain-m})
+                margin-top: calc(-0.169vw * #{$mobile-gain-m})
+
+// @media(max-width: $mobile-width-s)
+@media(max-width: 575px)
+    .list
+        flex-direction: column
+        justify-content: flex-start
+        width: auto
+        margin: 0 auto
+    
+    .list_size_s
+        .list__item
+            width: 100%
+        .list__link
+            font-size: 18px
+
+    .list_size_m
+        .list__item
+            width: 50%
+        .list__link
+            padding-left: calc(1.6925vw * #{$mobile-gain})
+            padding-top: calc(0.451vw * #{$mobile-gain})
+            padding-bottom: calc(0.451vw * #{$mobile-gain})
+            padding-right: calc(0.651vw * #{$mobile-gain})
+            font-size: calc(1.146vw * #{$mobile-gain})
+            border-radius: calc(0.677vw * #{$mobile-gain})
+            &::before
+                left: calc(0.846vw * #{$mobile-gain})
+                width: calc(0.3385vw * #{$mobile-gain})
+                height: calc(0.3385vw * #{$mobile-gain})
+                margin-top: calc(-0.169vw * #{$mobile-gain})
+

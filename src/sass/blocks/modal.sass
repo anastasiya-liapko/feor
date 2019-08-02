@@ -1,0 +1,144 @@
+.modal_search
+    .modal-dialog
+        max-width: 100%
+        margin: 0
+        background-color: $color-blue
+
+    .modal-content
+        border: none
+        border-radius: 0
+        background-color: $color-blue
+
+    .modal-header
+        display: flex
+        justify-content: stretch
+        // align-items: flex-end
+        padding-top: 50px
+        padding-left: 0
+        padding-right: 0
+        padding-bottom: 25px
+        border: none
+        border-radius: 0
+
+    .modal-close
+        width: 40px
+        height: 40px
+        margin: 0
+        margin-right: 25px
+        margin-top: 10px
+        padding: 0
+        opacity: 1
+        &:hover .modal-close__icon::before,
+        &:hover .modal-close__icon::after
+            background-color: #ccc
+
+    .modal-close__icon
+        position: relative
+        display: block
+        width: 35px
+        height: 35px
+
+    .modal-close__icon::before,
+    .modal-close__icon::after
+        content: ''
+        position: absolute
+        top: 50%
+        left: 0
+        margin-top: -2px
+        width: 35px
+        height: 4px
+        background-color: $color-text
+
+    .modal-close__icon::before
+        transform: rotate(45deg)
+
+    .modal-close__icon::after
+        transform: rotate(-45deg)
+
+    .modal-form
+        width: 100%
+        flex-grow: 1
+
+.modal-backdrop
+    // background-color: $color-blue
+    // opacity: 0.7
+    background-color: rgba(0, 0, 0, 0.43)
+
+.modal-content
+    position: relative
+    border-radius: 0
+    border: none
+    background-color: #ffffff
+
+.modal
+    .modal__close
+        position: absolute
+        top: 0
+        // right: -50px
+        // width: 50px
+        // height: 50px
+        right: -2.604vw
+        width: 2.604vw
+        height: 2.604vw
+        background-color: $color-blue
+        opacity: 1
+        transition: background-color 0.3s
+        .icon
+            // width: 17px
+            // height: 17px
+            width: 0.885vw
+            height: 0.885vw
+            text-shadow: none
+            &::before
+                // font-size: 17px
+                font-size: 0.885vw
+        &:hover
+            opacity: 1 !important
+            background-color: $color-blue-transparent
+        &::before
+            z-index: -1
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            background-color: #ffffff
+
+@media(max-width: $mobile-width)
+    .modal_search
+        .modal-header
+            flex-wrap: wrap
+            align-items: center
+            padding-top: 30px
+        .modal-close
+            margin-bottom: 16px
+        .modal-form
+            margin-left: 0
+
+    .modal
+        .modal__close
+            right: calc(-2.604vw * #{$tablet-gain})
+            width: calc(2.604vw * #{$tablet-gain})
+            height: calc(2.604vw * #{$tablet-gain})
+            .icon
+                width: calc(0.885vw * #{$tablet-gain})
+                height: calc(0.885vw * #{$tablet-gain})
+                &::before
+                    font-size: calc(0.885vw * #{$tablet-gain})
+
+@media(max-width: 575px)
+    .modal
+        .modal__close
+            right: calc(-2.604vw * #{$tablet-gain} * 1.5)
+            width: calc(2.604vw * #{$tablet-gain} * 1.5)
+            height: calc(2.604vw * #{$tablet-gain} * 1.5)
+            .icon
+                width: calc(0.885vw * #{$tablet-gain} * 1.5)
+                height: calc(0.885vw * #{$tablet-gain} * 1.5)
+                &::before
+                    font-size: calc(0.885vw * #{$tablet-gain} * 1.5)
+
+
+
+

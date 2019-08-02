@@ -1,0 +1,112 @@
+.form-donate
+    padding-top: 64px
+    padding-bottom: 64px
+    color: $color-text-dark
+    background-color: $color-lightgrey
+    .container
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+
+.form-donate__form
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    width: 100%
+
+.form-donate__title
+    margin-bottom: 0
+    font-size: 30px
+    font-weight: 600
+    line-height: normal
+    color: $color-text-dark
+
+.form-donate__sum,
+.form-donate__times
+    display: flex
+    align-items: center
+    margin-top: 25px
+    .radio-wrapper:last-child
+        margin-right: 0
+
+.form-donate__times
+    margin-top: 50px
+
+.form-donate__data
+    display: flex
+    flex-wrap: wrap
+    width: 100%
+    margin-top: 44px
+    margin-bottom: 38px
+
+.form-donate__button-wrapper
+    align-self: center
+    margin-bottom: 38px
+
+.form-donate__link
+    align-self: center
+    margin-top: 26px
+    margin-bottom: 38px
+    font-size: 18px
+    font-weight: 400
+    line-height: normal
+    text-decoration: underline
+    color: $color-grey
+    transition: all 0.3s ease
+    &:hover
+        color: $color-text-dark
+        text-decoration: underline
+
+@media(max-width: 1700px)
+    .form-donate__sum,
+    .form-donate__data,
+    .form-donate__times
+        justify-content: space-between
+        width: 100%
+
+    .form-donate__times
+        flex-wrap: wrap
+        .radio-wrapper
+            width: 46%
+            margin-right: 0
+
+    .form-donate__data-name,
+    .form-donate__data-last-name
+        width: 46%
+
+    .form-donate__data-email
+        width: 100%
+
+@media(max-width: $mobile-width)
+    .form-donate__sum,
+    .form-donate__times
+        flex-direction: column
+        align-items: flex-start
+
+    .form-donate__times
+        .radio-wrapper
+            width: 100%
+
+    .form-donate__title
+        font-size: 28px
+
+@media(max-width: $mobile-width-s)
+    .form-donate__button-wrapper,
+    .form-donate__data-name,
+    .form-donate__data-last-name
+        width: 100%
+
+    .form-donate
+        .container
+            padding-left: 15px
+            padding-right: 15px
+    
+
+
+
+
+
+
+
+
+

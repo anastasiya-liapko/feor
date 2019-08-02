@@ -5,55 +5,66 @@
         <meta charset="UTF-8">
         <title>FEOR</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="shortcut icon" href="img/favicon.png" type="image/png">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&amp;subset=cyrillic-ext,latin-ext" rel="stylesheet">
-        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+        <link rel="shortcut icon" href="public/img/fav-feor.png" type="image/png">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800|Roboto:400,700,900&amp;subset=cyrillic-ext,latin-ext" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
         <link rel="stylesheet" href="public/css/main.min.css">
     </head>
 
     <body>
         <div class="page page_main">
             <div class="header page__header">
-                    <div class="container header__container">
-                        <div class="header__content header__content_position_top">
-                            <button id="js-hamburger" class="hamburger hamburger_squeeze header__hamburger" type="button">
-                                <span class="hamburger-box">
-                                    <span class="hamburger-inner"></span>
-                                </span>
-                            </button>
+                <div class="container header__container">
+                    <div id="js-lang" class="lang header__lang">
+                        <ul id="js-langList" class="lang__list">
+                            <li class="lang__item" data-text="English">English</li>
+                            <li class="lang__item" data-text="Russian">Russian</li>
+                        </ul>
 
-                            <a href="/" class="header__logo">
-                                <img src="public/img/logo.png" class="header__logo-img" alt="FEOR">
-                            </a>
-
-                            <ul id="js-menu" class="menu header__menu">
-                                <li class="menu__item header__menu-item">
-                                    <a href="#" class="menu__link header__menu-link">о федерации</a>
-                                </li>
-                                <li class="menu__item header__menu-item">
-                                    <a href="#" class="menu__link header__menu-link">деятельность</a>
-                                </li>
-                                <li class="menu__item header__menu-item">
-                                    <a href="#" class="menu__link header__menu-link">события</a>
-                                </li>
-                                <li class="menu__item header__menu-item">
-                                    <a href="#" class="menu__link header__menu-link">календарь</a>
-                                </li>
-                                <li class="menu__item header__menu-item">
-                                    <a href="#" class="menu__link header__menu-link">Традиции</a>
-                                </li>
-                            </ul>
-
-                            <button class="search header__search">
-                                <span class="search__icon icon-search"></span>
-                                <span class="search__text">Поиск</span>
-                            </button>
-                        </div>
-
-                        <div class="header__content header__content_position_bottom">
-                            <a href="#" class="button button_color_blue header__button" data-text="Поддержать">Поддержать</a>
-                        </div>
+                        <span id="js-langPicked" class="lang__picked">English</span>
                     </div>
+
+                    <div class="header__content header__content_position_top">
+                        <button id="js-hamburger" class="hamburger hamburger_squeeze header__hamburger" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+
+                        <a href="/" class="logo header__logo">
+                            <!-- <img src="public/img/logo.png" class="header__logo-img" alt="FEOR"> -->
+                        </a>
+
+                        <ul id="js-menu" class="menu header__menu">
+                            <li class="menu__item header__menu-item">
+                                <a href="about-us.html" class="menu__link header__menu-link">о федерации</a>
+                            </li>
+                            <li class="menu__item header__menu-item">
+                                <a href="#" class="menu__link header__menu-link">Общины</a>
+                            </li>
+                            <li class="menu__item header__menu-item">
+                                <a href="#" class="menu__link header__menu-link">Традиции</a>
+                            </li>
+                            <li class="menu__item header__menu-item">
+                                <a href="#" class="menu__link header__menu-link">календарь</a>
+                            </li>
+                            <li class="menu__item header__menu-item">
+                                <a href="organizatii.html" class="menu__link header__menu-link">Организации</a>
+                            </li>
+                        </ul>
+
+                        <button class="search header__search" data-toggle="modal" data-target="#js-modalSearch">
+                            <span class="search__icon icon-search"></span>
+                            <span class="search__text">Поиск</span>
+                        </button>
+                    </div>
+
+                    <div class="header__content header__content_position_bottom">
+                        <a href="donate-pay.html" class="button button_color_blue header__button" data-text="Поддержать">Поддержать</a>
+                    </div>
+                </div>
             </div>
             <!-- header -->
                 
@@ -72,8 +83,32 @@
                         <div class="community__content">
                             <p class="community__subtitle">Округ</p>
                             <h2 class="community__title community__title_decoration_point">Центральный</h2>
-                            <p class="community__descr">Lorem ipsum dolor sit amet, consectetur</p>
-                            <a href="#" class="button button_color_transparent community__button">Узнать об общине</a>
+
+                            <form class="form-search-main">
+                                <div class="form-search-main__search d-flex">
+                                    <input class="form-search-main__input flex-grow-1" type="text" name="city" placeholder="Москва">
+                                    <button class="form-search-main__submit flex-shrink-0" type="submit">
+                                        <span class="form-search-main__icon-search icon-search"></span>
+                                    </button>
+                                </div>
+                                <span class="form-search-main__error"></span>
+                                <div class="form-search-main__date d-flex align-items-center">
+                                    <i class="form-search-main__icon-candles icon-candles"></i>
+                                    <div class="d-flex flex-column">
+                                        <p class="form-search-main__text-wrapper d-flex">
+                                            <span class="form-search-main__text form-search-main__text_weight_light">Зажигание</span>
+                                            <span class="form-search-main__text form-search-main__text_weight_bold">7 июня 21:27</span>
+                                        </p>
+                                        <p class="form-search-main__text-wrapper d-flex">
+                                            <span class="form-search-main__text form-search-main__text_weight_light">Исход</span>
+                                            <span class="form-search-main__text form-search-main__text_weight_bold">8 июня 23:36</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- form-search-main -->
+                            
+                            <a href="map-4.html" class="button button_color_transparent community__button">Узнать об общине</a>
                         </div>
                     </div>
                 </div>
@@ -84,8 +119,32 @@
                         <div class="community__content">
                             <p class="community__subtitle">Округ</p>
                             <h2 class="community__title community__title_decoration_point">Сибирский</h2>
-                            <p class="community__descr">Lorem ipsum dolor sit amet, consectetur</p>
-                            <a href="#" class="button button_color_transparent community__button">Узнать об общине</a>
+                            
+                            <form class="form-search-main">
+                                <div class="form-search-main__search d-flex">
+                                    <input class="form-search-main__input flex-grow-1" type="text" name="city" placeholder="Новосибирск">
+                                    <button class="form-search-main__submit flex-shrink-0" type="submit">
+                                        <span class="form-search-main__icon-search icon-search"></span>
+                                    </button>
+                                </div>
+                                <span class="form-search-main__error"></span>
+                                <div class="form-search-main__date d-flex align-items-center">
+                                    <i class="form-search-main__icon-candles icon-candles"></i>
+                                    <div class="d-flex flex-column">
+                                        <p class="form-search-main__text-wrapper d-flex">
+                                            <span class="form-search-main__text form-search-main__text_weight_light">Зажигание</span>
+                                            <span class="form-search-main__text form-search-main__text_weight_bold">7 июня 21:27</span>
+                                        </p>
+                                        <p class="form-search-main__text-wrapper d-flex">
+                                            <span class="form-search-main__text form-search-main__text_weight_light">Исход</span>
+                                            <span class="form-search-main__text form-search-main__text_weight_bold">8 июня 23:36</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- form-search-main -->
+
+                            <a href="map-4.html" class="button button_color_transparent community__button">Узнать об общине</a>
                         </div>
                     </div>
                 </div>
@@ -95,8 +154,32 @@
                         <div class="community__content">
                             <p class="community__subtitle">Округ</p>
                             <h2 class="community__title community__title_decoration_point">Уральский</h2>
-                            <p class="community__descr">Lorem ipsum dolor sit amet, consectetur</p>
-                            <a href="#" class="button button_color_transparent community__button">Узнать об общине</a>
+                            
+                            <form class="form-search-main">
+                                <div class="form-search-main__search d-flex">
+                                    <input class="form-search-main__input flex-grow-1" type="text" name="city" placeholder="Екатеринбург">
+                                    <button class="form-search-main__submit flex-shrink-0" type="submit">
+                                        <span class="form-search-main__icon-search icon-search"></span>
+                                    </button>
+                                </div>
+                                <span class="form-search-main__error"></span>
+                                <div class="form-search-main__date d-flex align-items-center">
+                                    <i class="form-search-main__icon-candles icon-candles"></i>
+                                    <div class="d-flex flex-column">
+                                        <p class="form-search-main__text-wrapper d-flex">
+                                            <span class="form-search-main__text form-search-main__text_weight_light">Зажигание</span>
+                                            <span class="form-search-main__text form-search-main__text_weight_bold">7 июня 21:27</span>
+                                        </p>
+                                        <p class="form-search-main__text-wrapper d-flex">
+                                            <span class="form-search-main__text form-search-main__text_weight_light">Исход</span>
+                                            <span class="form-search-main__text form-search-main__text_weight_bold">8 июня 23:36</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- form-search-main -->
+
+                            <a href="map-4.html" class="button button_color_transparent community__button">Узнать об общине</a>
                         </div>
                     </div>
                 </div>
@@ -106,8 +189,32 @@
                         <div class="community__content">
                             <p class="community__subtitle">Округ</p>
                             <h2 class="community__title community__title_decoration_point">Северо-Западный</h2>
-                            <p class="community__descr">Lorem ipsum dolor sit amet, consectetur</p>
-                            <a href="#" class="button button_color_transparent community__button">Узнать об общине</a>
+                            
+                            <form class="form-search-main">
+                                <div class="form-search-main__search d-flex">
+                                    <input class="form-search-main__input flex-grow-1" type="text" name="city" placeholder="Санкт-Петербург">
+                                    <button class="form-search-main__submit flex-shrink-0" type="submit">
+                                        <span class="form-search-main__icon-search icon-search"></span>
+                                    </button>
+                                </div>
+                                <span class="form-search-main__error"></span>
+                                <div class="form-search-main__date d-flex align-items-center">
+                                    <i class="form-search-main__icon-candles icon-candles"></i>
+                                    <div class="d-flex flex-column">
+                                        <p class="form-search-main__text-wrapper d-flex">
+                                            <span class="form-search-main__text form-search-main__text_weight_light">Зажигание</span>
+                                            <span class="form-search-main__text form-search-main__text_weight_bold">7 июня 21:27</span>
+                                        </p>
+                                        <p class="form-search-main__text-wrapper d-flex">
+                                            <span class="form-search-main__text form-search-main__text_weight_light">Исход</span>
+                                            <span class="form-search-main__text form-search-main__text_weight_bold">8 июня 23:36</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- form-search-main -->
+
+                            <a href="map-4.html" class="button button_color_transparent community__button">Узнать об общине</a>
                         </div>
                     </div>
                 </div>
@@ -117,8 +224,32 @@
                         <div class="community__content">
                             <p class="community__subtitle">Округ</p>
                             <h2 class="community__title community__title_decoration_point">Приволжский</h2>
-                            <p class="community__descr">Lorem ipsum dolor sit amet, consectetur</p>
-                            <a href="#" class="button button_color_transparent community__button">Узнать об общине</a>
+                            
+                            <form class="form-search-main">
+                                <div class="form-search-main__search d-flex">
+                                    <input class="form-search-main__input flex-grow-1" type="text" name="city" placeholder="Нижний Новгород">
+                                    <button class="form-search-main__submit flex-shrink-0" type="submit">
+                                        <span class="form-search-main__icon-search icon-search"></span>
+                                    </button>
+                                </div>
+                                <span class="form-search-main__error"></span>
+                                <div class="form-search-main__date d-flex align-items-center">
+                                    <i class="form-search-main__icon-candles icon-candles"></i>
+                                    <div class="d-flex flex-column">
+                                        <p class="form-search-main__text-wrapper d-flex">
+                                            <span class="form-search-main__text form-search-main__text_weight_light">Зажигание</span>
+                                            <span class="form-search-main__text form-search-main__text_weight_bold">7 июня 21:27</span>
+                                        </p>
+                                        <p class="form-search-main__text-wrapper d-flex">
+                                            <span class="form-search-main__text form-search-main__text_weight_light">Исход</span>
+                                            <span class="form-search-main__text form-search-main__text_weight_bold">8 июня 23:36</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- form-search-main -->
+
+                            <a href="map-4.html" class="button button_color_transparent community__button">Узнать об общине</a>
                         </div>
                     </div>
                 </div>
@@ -128,8 +259,32 @@
                         <div class="community__content">
                             <p class="community__subtitle">Округ</p>
                             <h2 class="community__title community__title_decoration_point">Южный</h2>
-                            <p class="community__descr">Lorem ipsum dolor sit amet, consectetur</p>
-                            <a href="#" class="button button_color_transparent community__button">Узнать об общине</a>
+                            
+                            <form class="form-search-main">
+                                <div class="form-search-main__search d-flex">
+                                    <input class="form-search-main__input flex-grow-1" type="text" name="city" placeholder="Ростов-на-Дону">
+                                    <button class="form-search-main__submit flex-shrink-0" type="submit">
+                                        <span class="form-search-main__icon-search icon-search"></span>
+                                    </button>
+                                </div>
+                                <span class="form-search-main__error"></span>
+                                <div class="form-search-main__date d-flex align-items-center">
+                                    <i class="form-search-main__icon-candles icon-candles"></i>
+                                    <div class="d-flex flex-column">
+                                        <p class="form-search-main__text-wrapper d-flex">
+                                            <span class="form-search-main__text form-search-main__text_weight_light">Зажигание</span>
+                                            <span class="form-search-main__text form-search-main__text_weight_bold">7 июня 21:27</span>
+                                        </p>
+                                        <p class="form-search-main__text-wrapper d-flex">
+                                            <span class="form-search-main__text form-search-main__text_weight_light">Исход</span>
+                                            <span class="form-search-main__text form-search-main__text_weight_bold">8 июня 23:36</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- form-search-main -->
+
+                            <a href="map-4.html" class="button button_color_transparent community__button">Узнать об общине</a>
                         </div>
                     </div>
                 </div>
@@ -139,8 +294,32 @@
                         <div class="community__content">
                             <p class="community__subtitle">Округ</p>
                             <h2 class="community__title community__title_decoration_point">Северо-Кавказский</h2>
-                            <p class="community__descr">Lorem ipsum dolor sit amet, consectetur</p>
-                            <a href="#" class="button button_color_transparent community__button">Узнать об общине</a>
+                            
+                            <form class="form-search-main">
+                                <div class="form-search-main__search d-flex">
+                                    <input class="form-search-main__input flex-grow-1" type="text" name="city" placeholder="Пятигорск">
+                                    <button class="form-search-main__submit flex-shrink-0" type="submit">
+                                        <span class="form-search-main__icon-search icon-search"></span>
+                                    </button>
+                                </div>
+                                <span class="form-search-main__error"></span>
+                                <div class="form-search-main__date d-flex align-items-center">
+                                    <i class="form-search-main__icon-candles icon-candles"></i>
+                                    <div class="d-flex flex-column">
+                                        <p class="form-search-main__text-wrapper d-flex">
+                                            <span class="form-search-main__text form-search-main__text_weight_light">Зажигание</span>
+                                            <span class="form-search-main__text form-search-main__text_weight_bold">7 июня 21:27</span>
+                                        </p>
+                                        <p class="form-search-main__text-wrapper d-flex">
+                                            <span class="form-search-main__text form-search-main__text_weight_light">Исход</span>
+                                            <span class="form-search-main__text form-search-main__text_weight_bold">8 июня 23:36</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- form-search-main -->
+
+                            <a href="map-4.html" class="button button_color_transparent community__button">Узнать об общине</a>
                         </div>
                     </div>
                 </div>
@@ -150,8 +329,32 @@
                         <div class="community__content">
                             <p class="community__subtitle">Округ</p>
                             <h2 class="community__title community__title_decoration_point">Дальневосточный</h2>
-                            <p class="community__descr">Lorem ipsum dolor sit amet, consectetur</p>
-                            <a href="#" class="button button_color_transparent community__button">Узнать об общине</a>
+                            
+                            <form class="form-search-main">
+                                <div class="form-search-main__search d-flex">
+                                    <input class="form-search-main__input flex-grow-1" type="text" name="city" placeholder="Владивосток">
+                                    <button class="form-search-main__submit flex-shrink-0" type="submit">
+                                        <span class="form-search-main__icon-search icon-search"></span>
+                                    </button>
+                                </div>
+                                <span class="form-search-main__error"></span>
+                                <div class="form-search-main__date d-flex align-items-center">
+                                    <i class="form-search-main__icon-candles icon-candles"></i>
+                                    <div class="d-flex flex-column">
+                                        <p class="form-search-main__text-wrapper d-flex">
+                                            <span class="form-search-main__text form-search-main__text_weight_light">Зажигание</span>
+                                            <span class="form-search-main__text form-search-main__text_weight_bold">7 июня 21:27</span>
+                                        </p>
+                                        <p class="form-search-main__text-wrapper d-flex">
+                                            <span class="form-search-main__text form-search-main__text_weight_light">Исход</span>
+                                            <span class="form-search-main__text form-search-main__text_weight_bold">8 июня 23:36</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- form-search-main -->
+
+                            <a href="map-4.html" class="button button_color_transparent community__button">Узнать об общине</a>
                         </div>
                     </div>
                 </div>
@@ -164,7 +367,7 @@
                     <div class="activity news__block">
                         <h3 class="news__block-title">Деятельность</h3>
 
-                        <a href="#" class="news__item news__item_type_activity news__item_size_large news__item_design_blue">
+                        <a href="religion-del.html" class="news__item news__item_type_activity news__item_size_large news__item_design_blue">
                             <div class="news__item-img-wrapper">
                                 <img class="news__item-img" src="public/img/activity-large.jpg" alt="">
                             </div>
@@ -173,58 +376,58 @@
                             </div>
                         </a>
 
-                        <div class="news__item news__item_type_activity news__item_size_small news__item_design_blue">
+                        <a href="#" class="news__item news__item_type_activity news__item_size_small news__item_design_blue">
                             <div class="news__item-img-wrapper">
                                 <img class="news__item-img" src="public/img/activity-small.jpg" alt="">
                             </div>
                             <div class="news__item-descr">
                                 <p class="news__item-title">Молодежь</p>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="news__item news__item_type_activity news__item_size_small news__item_design_blue">
+                        <a href="#" class="news__item news__item_type_activity news__item_size_small news__item_design_blue">
                             <div class="news__item-img-wrapper">
                                 <img class="news__item-img" src="public/img/activity-small.jpg" alt="">
                             </div>
                             <div class="news__item-descr">
                                 <p class="news__item-title">Просвещение</p>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="news__item news__item_type_activity news__item_size_small news__item_design_blue">
+                        <a href="#" class="news__item news__item_type_activity news__item_size_small news__item_design_blue">
                             <div class="news__item-img-wrapper">
                                 <img class="news__item-img" src="public/img/activity-small.jpg" alt="">
                             </div>
                             <div class="news__item-descr">
                                 <p class="news__item-title">Культура</p>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="news__item news__item_type_activity news__item_size_small news__item_design_blue">
+                        <a href="#" class="news__item news__item_type_activity news__item_size_small news__item_design_blue">
                             <div class="news__item-img-wrapper">
                                 <img class="news__item-img" src="public/img/activity-small.jpg" alt="">
                             </div>
                             <div class="news__item-descr">
                                 <p class="news__item-title">Социальная работа</p>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="news__item news__item_type_activity news__item_size_large news__item_design_blue">
+                        <a href="#" class="news__item news__item_type_activity news__item_size_large news__item_design_blue">
                             <div class="news__item-img-wrapper">
                                 <img class="news__item-img" src="public/img/activity-large.jpg" alt="">
                             </div>
                             <div class="news__item-descr">
                                 <p class="news__item-title">Ветераны</p>
                             </div>
-                        </div>
+                        </a>
                         
                     </div>
                     <!-- activity -->
 
                     <div class="blog news__block">
-                        <h3 class="news__block-title">Блог раввина</h3>
+                        <h3 class="news__block-title">Блог президента</h3>
 
-                        <div class="news__item news__item_type_events news__item_size_large news__item_design_white">
+                        <a href="blog-ravin.html" class="news__item news__item_type_events news__item_size_large news__item_design_white">
                             <div class="news__item-img-wrapper news__item-img-wrapper_decor">
                                 <img class="news__item-img" src="public/img/event-large.png" alt="">
                                 <span class="news__item-img-decor">блог президента</span>
@@ -233,42 +436,42 @@
                                 <p class="news__item-date">11.03.2019</p>
                                 <p class="news__item-title">Очень длинное название новости которая произошла сегодня</p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <!-- blog -->
 
                     <div class="events news__block">
                         <h3 class="news__block-title">События</h3>
 
-                        <div class="news__item news__item_type_events news__item_size_small news__item_design_lightblue">
+                        <a href="blog-in.html" class="news__item news__item_type_events news__item_size_small news__item_design_lightblue">
                             <div class="news__item-descr">
                                 <p class="news__item-date">11.03.2019</p>
                                 <p class="news__item-title">Московский еврейский кинофестиваль (МЕКФ)</p>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="news__item news__item_type_events news__item_size_small news__item_design_transparent">
+                        <a href="blog-in.html" class="news__item news__item_type_events news__item_size_small news__item_design_transparent">
                             <div class="news__item-descr">
                                 <p class="news__item-date">11.03.2019</p>
                                 <p class="news__item-title">Соболезнования в связи с уходом Владимира Этуша</p>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="news__item news__item_type_events news__item_size_small news__item_design_transparent">
+                        <a href="blog-in.html" class="news__item news__item_type_events news__item_size_small news__item_design_transparent">
                             <div class="news__item-descr">
                                 <p class="news__item-date">11.03.2019</p>
                                 <p class="news__item-title">Премьер-министр Израиля Биньямин Нетаниягу с супругой Сарой</p>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="news__item news__item_type_events news__item_size_small news__item_design_transparent">
+                        <a href="blog-in.html" class="news__item news__item_type_events news__item_size_small news__item_design_transparent">
                             <div class="news__item-descr">
                                 <p class="news__item-date">11.03.2019</p>
-                                <p class="news__item-title">Главный раввин России Берл Лазар выразил соболезнования семье раввина Йехиэля Экштейна</p>
+                                <p class="news__item-title">Главный раввин России Берл Лазар выразил соболезнования семье раввина</p>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="news__item news__item_type_events news__item_size_large news__item_design_white">
+                        <a href="sobitie.html" class="news__item news__item_type_events news__item_size_large news__item_design_white">
                             <div class="news__item-img-wrapper">
                                 <img class="news__item-img" src="public/img/event-large.png" alt="">
                             </div>
@@ -276,16 +479,16 @@
                                 <p class="news__item-date">11.03.2019</p>
                                 <p class="news__item-title">ФЕОР приступила к реализации проекта "Услышать и помочь!"</p>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="news__item news__item_type_events news__item_size_small news__item_design_transparent">
+                        <a href="blog-in.html" class="news__item news__item_type_events news__item_size_small news__item_design_transparent">
                             <div class="news__item-descr">
                                 <p class="news__item-date">11.03.2019</p>
                                 <p class="news__item-title">Молодежное движение ФЕОР в праздник Ханука проводит «Неделю волонтерства»</p>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="news__item news__item_type_events news__item_size_small news__item_design_img">
+                        <a href="blog-in.html" class="news__item news__item_type_events news__item_size_small news__item_design_img">
                             <div class="news__item-img-wrapper">
                                 <img class="news__item-img" src="public/img/event-small.png" alt="">
                             </div>
@@ -293,23 +496,24 @@
                                 <p class="news__item-date">11.03.2019</p>
                                 <p class="news__item-title">Федерация еврейских общин России в 17-й раз вручит премию «Скрипач на крыше»</p>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="news__item news__item_type_events news__item_size_small news__item_design_white">
+                        <a href="blog-in.html" class="news__item news__item_type_events news__item_size_small news__item_design_white">
+                            <div class="news__item-back"></div>
                             <div class="news__item-descr">
                                 <p class="news__item-date">11.03.2019</p>
                                 <p class="news__item-title">Очень длинное название новости которая произошла сегодня</p>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="news__item news__item_type_events news__item_size_small news__item_design_lightblue">
+                        <a href="blog-in.html" class="news__item news__item_type_events news__item_size_small news__item_design_lightblue">
                             <div class="news__item-descr">
                                 <p class="news__item-date">11.03.2019</p>
                                 <p class="news__item-title">Очень длинное название новости которая произошла сегодня</p>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="news__item news__item_type_events news__item_size_large news__item_design_white">
+                        <a href="sobitie.html" class="news__item news__item_type_events news__item_size_large news__item_design_white">
                             <div class="news__item-img-wrapper">
                                 <img class="news__item-img" src="public/img/event-large.png" alt="">
                             </div>
@@ -317,37 +521,37 @@
                                 <p class="news__item-date">11.03.2019</p>
                                 <p class="news__item-title">ФЕОР приступила к реализации проекта "Услышать и помочь!"</p>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="news__item news__item_type_events news__item_size_small news__item_design_red">
+                        <a href="blog-in.html" class="news__item news__item_type_events news__item_size_small news__item_design_red">
                             <div class="news__item-descr">
                                 <p class="news__item-date">11.03.2019</p>
                                 <p class="news__item-title">Очень длинное название новости которая произошла сегодня</p>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="news__item news__item_type_events news__item_size_small news__item_design_transparent">
+                        <a href="blog-in.html" class="news__item news__item_type_events news__item_size_small news__item_design_transparent">
                             <div class="news__item-descr">
                                 <p class="news__item-date">11.03.2019</p>
                                 <p class="news__item-title">Очень длинное название новости которая произошла сегодня</p>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="news__item news__item_type_events news__item_size_small news__item_design_transparent">
+                        <a href="blog-in.html" class="news__item news__item_type_events news__item_size_small news__item_design_transparent">
                             <div class="news__item-descr">
                                 <p class="news__item-date">11.03.2019</p>
                                 <p class="news__item-title">Очень длинное название новости которая произошла сегодня</p>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="news__item news__item_type_events news__item_size_small news__item_design_lightblue">
+                        <a href="blog-in.html" class="news__item news__item_type_events news__item_size_small news__item_design_lightblue">
                             <div class="news__item-descr">
                                 <p class="news__item-date">11.03.2019</p>
                                 <p class="news__item-title">Очень длинное название новости которая произошла сегодня</p>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="news__item news__item_type_events news__item_size_large news__item_design_white">
+                        <a href="sobitie.html" class="news__item news__item_type_events news__item_size_large news__item_design_white">
                             <div class="news__item-img-wrapper">
                                 <img class="news__item-img" src="public/img/event-large.png" alt="">
                             </div>
@@ -355,16 +559,16 @@
                                 <p class="news__item-date">11.03.2019</p>
                                 <p class="news__item-title">ФЕОР приступила к реализации проекта "Услышать и помочь!"</p>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="news__item news__item_type_events news__item_size_small news__item_design_transparent">
+                        <a href="blog-in.html" class="news__item news__item_type_events news__item_size_small news__item_design_transparent">
                             <div class="news__item-descr">
                                 <p class="news__item-date">11.03.2019</p>
                                 <p class="news__item-title">Очень длинное название новости которая произошла сегодня</p>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="news__item news__item_type_events news__item_size_small news__item_design_img">
+                        <a href="blog-in.html" class="news__item news__item_type_events news__item_size_small news__item_design_img">
                             <div class="news__item-img-wrapper">
                                 <img class="news__item-img" src="public/img/event-small.png" alt="">
                             </div>
@@ -372,9 +576,9 @@
                                 <p class="news__item-date">11.03.2019</p>
                                 <p class="news__item-title">Очень длинное название новости которая произошла сегодня</p>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="news__item news__item_type_events news__item_size_large news__item_design_white">
+                        <a href="sobitie.html" class="news__item news__item_type_events news__item_size_large news__item_design_white">
                             <div class="news__item-img-wrapper">
                                 <img class="news__item-img" src="public/img/event-large.png" alt="">
                             </div>
@@ -382,16 +586,16 @@
                                 <p class="news__item-date">11.03.2019</p>
                                 <p class="news__item-title">ФЕОР приступила к реализации проекта "Услышать и помочь!"</p>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="news__item news__item_type_events news__item_size_small news__item_design_transparent">
+                        <a href="blog-in.html" class="news__item news__item_type_events news__item_size_small news__item_design_transparent">
                             <div class="news__item-descr">
                                 <p class="news__item-date">11.03.2019</p>
                                 <p class="news__item-title">Очень длинное название новости которая произошла сегодня</p>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="news__item news__item_type_events news__item_size_small news__item_design_img">
+                        <a href="blog-in.html" class="news__item news__item_type_events news__item_size_small news__item_design_img">
                             <div class="news__item-img-wrapper">
                                 <img class="news__item-img" src="public/img/event-small.png" alt="">
                             </div>
@@ -399,23 +603,23 @@
                                 <p class="news__item-date">11.03.2019</p>
                                 <p class="news__item-title">Очень длинное название новости которая произошла сегодня</p>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="news__item news__item_type_events news__item_size_small news__item_design_red">
+                        <a href="blog-in.html" class="news__item news__item_type_events news__item_size_small news__item_design_red">
                             <div class="news__item-descr">
                                 <p class="news__item-date">11.03.2019</p>
                                 <p class="news__item-title">Очень длинное название новости которая произошла сегодня</p>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="news__item news__item_type_events news__item_size_small news__item_design_transparent">
+                        <a href="blog-in.html" class="news__item news__item_type_events news__item_size_small news__item_design_transparent">
                             <div class="news__item-descr">
                                 <p class="news__item-date">11.03.2019</p>
                                 <p class="news__item-title">Очень длинное название новости которая произошла сегодня</p>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="news__item news__item_type_events news__item_size_large news__item_design_white">
+                        <a href="sobitie.html" class="news__item news__item_type_events news__item_size_large news__item_design_white">
                             <div class="news__item-img-wrapper">
                                 <img class="news__item-img" src="public/img/event-large.png" alt="">
                             </div>
@@ -423,21 +627,21 @@
                                 <p class="news__item-date">11.03.2019</p>
                                 <p class="news__item-title">ФЕОР приступила к реализации проекта "Услышать и помочь!"</p>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="news__item news__item_type_events news__item_size_small news__item_design_red">
+                        <a href="blog-in.html" class="news__item news__item_type_events news__item_size_small news__item_design_red">
                             <div class="news__item-descr">
                                 <p class="news__item-date">11.03.2019</p>
                                 <p class="news__item-title">Очень длинное название новости которая произошла сегодня</p>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="news__item news__item_type_events news__item_size_small news__item_design_lightblue">
+                        <a href="blog-in.html" class="news__item news__item_type_events news__item_size_small news__item_design_lightblue">
                             <div class="news__item-descr">
                                 <p class="news__item-date">11.03.2019</p>
                                 <p class="news__item-title">Очень длинное название новости которая произошла сегодня</p>
                             </div>
-                        </div>
+                        </a>
 
                     </div>
                     <!-- events -->
@@ -448,59 +652,96 @@
             <div class="footer page__footer">
                 <div class="container footer__container">
                     <div class="footer__content">
-                    <ul class="menu footer__menu">
-                        <li class="menu__item footer__menu-item">
-                            <a href="#" class="menu__link footer__menu-link">Общины</a>
-                        </li>
-                        <li class="menu__item footer__menu-item">
-                            <a href="#" class="menu__link footer__menu-link">деятельность</a>
-                        </li>
-                        <li class="menu__item footer__menu-item">
-                            <a href="#" class="menu__link footer__menu-link">О федерации </a>
-                        </li>
-                        <li class="menu__item footer__menu-item">
-                            <a href="#" class="menu__link footer__menu-link">блог президента</a>
-                        </li>
-                        <li class="menu__item footer__menu-item">
-                            <a href="#" class="menu__link footer__menu-link">Скрипач на крыше</a>
-                        </li>
-                    </ul>
+                        <!-- <ul id="js-menuFooter" class="menu footer__menu">
+                            <li class="menu__item footer__menu-item">
+                                <a href="deiatelnosti.html" class="menu__link footer__menu-link" data-text="Деятельность">Деятельность</a>
+                            </li>
+                            <li class="menu__item footer__menu-item">
+                                <a href="blog-ravin.html" class="menu__link footer__menu-link" data-text="Блог президента">Блог президента</a>
+                            </li>
+                            <li class="menu__item footer__menu-item">
+                                <a href="scripach.html" class="menu__link footer__menu-link" data-text="Скрипач на крыше">Скрипач на крыше</a>
+                            </li>
+                            <li class="menu__item footer__menu-item">
+                                <a href="press-center.html" class="menu__link footer__menu-link" data-text="Пресс-центр">Пресс-центр</a>
+                            </li>
+                            <li class="menu__item footer__menu-item">
+                                <a href="otchet.html" class="menu__link footer__menu-link" data-text="Отчеты">Отчеты</a>
+                            </li>
+                        </ul> -->
 
-                    <button class="search footer__search">
-                        <span class="search__icon icon-search"></span>
-                        <span class="search__text">Поиск</span>
-                    </button>
+                        <!-- <button class="search search_design_dark footer__search" data-toggle="modal" data-target="#js-modalSearch">
+                            <span class="search__icon icon-search"></span>
+                            <span class="search__text">Поиск</span>
+                        </button> -->
 
-                    <a href="/" class="footer__logo">
-                        <img src="public/img/logo.png" class="logo__img footer__logo-img" alt="FEOR">
-                    </a>
+                        <a href="/" class="logo logo_design_dark footer__logo">
+                            <!-- <img src="public/img/logo.png" class="logo__img footer__logo-img" alt="FEOR"> -->
+                        </a>
 
-                    <div class="contacts footer__contacts">
-                        <div class="contacts__content contacts__content_position_top">
-                            <p class="contacts__item contacts__item_address">Адрес: 127055 г. Москва, ул. Образцова д.19-а.</p>
-                            <a href="tel:+74957302791" class="contacts__item contacts__item_phones" data-text="Tелефоны: +7 (495) 730-2791 (-92, -93)">
-                                Tелефоны: +7 (495) 730-2791 (-92, -93)
+                        <ul id="js-menuFooter" class="menu footer__menu footer-menu-one">
+							<li class="menu__item footer__menu-item">
+								<a href="/reports" class="menu__link footer__menu-link">Отчетность</a>
+							</li>
+						</ul>
+
+                        <div class="contacts contacts_design_dark footer__contacts">
+                            <!-- <div class="contacts__content contacts__content_position_top">
+                                <p class="contacts__item contacts__item_address">Адрес: 127055 г. Москва, ул. Образцова д.19-а.</p>
+                                <a href="tel:+74957302791" class="contacts__item contacts__item_phones" data-text="Tелефоны: +7 (495) 730-2791 (-92, -93)">
+                                    Tелефоны: +7 (495) 730-2791 (-92, -93)
+                                </a>
                                 <span class="contacts__separator">|</span>
-                            </a>
-                            <a href="mailto:info@feor.ru" class="contacts__item contacts__item_email" data-text="E-mail: info@feor.ru">E-mail: info@feor.ru</a>
+                                <a href="mailto:info@feor.ru" class="contacts__item contacts__item_email" data-text="E-mail: info@feor.ru">E-mail: info@feor.ru</a>
+                            </div> -->
+                            <div class="contacts__content contacts__content_position_bottom">
+                                <p class="contacts__item contacts__item_descr">Федерация еврейских общин России © 2004-2019</p>
+                                <p class="contacts__item contacts__item_rights">При использовании материалов сайта, ссылка на feor.ru обязательна. При цитировании в сети Интернет гиперссылка на www.feor.ru обязательна.</p>
+                            </div>
                         </div>
-                        <div class="contacts__content contacts__content_position_bottom">
-                            <p class="contacts__item contacts__item_descr">Федерация еврейских общин России © 2004-2019</p>
-                            <p class="contacts__item contacts__item_rights">При использовании материалов сайта, ссылка на feor.ru обязательна. При цитировании в сети Интернет гиперссылка на www.feor.ru обязательна.</p>
-                        </div>
-                    </div>
 
-                    <div class="footer__button-wrapper">
-                        <a href="#" class="button button_color_blue footer__button" data-text="Поддержать">Поддержать</a>
-                    </div>
+                        <div class="footer__button-wrapper">
+                            <a href="donate-pay.html" class="button button_color_blue footer__button" data-text="Поддержать">Поддержать</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <!--footer-->
         </div>
+        <!-- page -->
+
+        <div id="js-modalSearch" class="modal modal_search fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content container">
+                    <div class="modal-header">
+                        <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">
+                          <span class="modal-close__icon" aria-hidden="true"></span>
+                        </button>
+
+                        <form class="modal-form form-search" name="form-search" action="">
+                            <input id="js-modalSearchInput" type="text" class="input_search form-search__input" name="input-search" placeholder="Что ищем?">
+                            <button type="submit" class="form-search__submit">Найти</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
         <script src="public/js/parallax.js"></script>
-        <script src="public/js/open-menu.js"></script>
+        <script src="public/js/show-menu.js"></script>
+        <script src="public/js/show-lang.js"></script>
+        <script src="public/js/show-button.js"></script>
+        <script src="public/js/modal-search.js"></script>
+        <script src="public/js/slider.js"></script>
+        <script src="public/js/scroll.js"></script>
+        <script src="public/js/form-donate.js"></script>
+        <script src="public/js/hover-map.js"></script>
+        <script src="public/js/add-active-class.js"></script>
+        <script src="public/js/filter-organizatii.js"></script>
+        <script src="public/js/form-search-main.js"></script>
+        <script src="public/js/direction-aware-hover.js"></script>
     </body>
 </html>

@@ -1,0 +1,193 @@
+button-.organizatii
+    padding-top: 70px
+
+.organizatii__block
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+    height: auto
+
+.organizatii__items
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-start
+    align-items: flex-start
+    padding-top: 74px
+
+.organizatii__item
+    margin-right: calc(3.8vw / 2)
+    margin-bottom: calc(4.792vw / 2)
+
+.organizatii__title
+    margin-top: 24px
+    margin-bottom: 0
+    margin-left: 55px
+
+.organizatii__img
+    position: relative
+    width: 100%
+    height: 29.948vw
+    margin-top: 74px
+    margin-bottom: 0
+
+.organizatii__search
+    position: absolute
+    top: 2.396vw
+    left: 2.865vw
+    display: flex
+    flex-wrap: nowrap
+    justify-content: space-between
+    align-items: center
+    width: 17.135vw
+    height: 3.958vw
+    background-color: transparent
+    border: 3px solid $color-lightblue
+    transition: all 0.3s ease
+
+.organizatii__search-input
+    flex-grow: 1
+    min-width: 10vw
+    height: 100%
+    padding-left: 2.292vw
+    font-size: 1.042vw
+    line-height: normal
+    font-weight: 600
+    color: $color-text
+    background-color: transparent
+    border: none
+    border-radius: 0
+    box-sizing: border-box
+    -webkit-appearance: none
+    &::placeholder
+        color: $color-text
+        transition: all 0.2s ease
+    &:focus
+        outline: none
+        &::placeholder
+            opacity: 0
+
+.organizatii__search-submit
+    flex-shrink: 0
+    width: 4.22vw
+    height: 100%
+    padding: 0
+    background-color: transparent
+    border: none
+    &:hover
+        cursor: pointer
+
+.organizatii__search-icon
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100%
+    height: 100%
+    text-align: center
+    &::before
+        font-size: 1.09vw
+
+.organizatii__button-more-wrapper
+    display: flex
+    justify-content: center
+    align-items: center
+
+.organizatii__button-more
+    width: 368px
+    height: 90px
+    font-size: 30px
+    line-height: 90px
+    font-weight: 400
+    text-align: center
+    color: $color-text-dark
+    border: 3px solid $color-blue
+    transition: all 0.3s ease
+    &:hover
+        color: $color-text
+        background-color: $color-blue
+        cursor: pointer
+
+.link__phone
+    color: #000
+    display: inline-block
+    clear: both
+    &:hover
+        color: #000
+        opacity: 0.7
+
+@media(max-width: $tablet-width)
+    .organizatii__item
+        margin-right: calc(3.8vw / 2)
+        margin-bottom: 4.792vw
+
+    .organizatii__title
+        font-size: 45px
+
+    .organizatii__search
+        top: calc(2.396vw * #{$tablet-gain})
+        left: calc(2.865vw * #{$tablet-gain})
+        width: calc(17.135vw * #{$tablet-gain})
+        height: calc(3.958vw * #{$tablet-gain})
+
+    .organizatii__search-input
+        font-size: calc(1.042vw * #{$tablet-gain})
+
+    .organizatii__search-submit
+        width: calc(4.22vw * #{$tablet-gain})
+
+    .organizatii__search-icon
+        &::before
+            font-size: calc(1.09vw * #{$tablet-gain})
+
+@media(max-width: $mobile-width)
+    
+    .organizatii__item
+        margin-right: calc(3.8vw * 1.4 / 2)
+        margin-bottom: calc(4.792vw * 2.4)
+
+    .organizatii__img
+        height: calc(29.948vw * 2)
+
+    .organizatii__title
+        margin-left: 0
+        font-size: calc(2.083vw * 2.6)
+
+    .organizatii__search
+        top: calc(2.396vw * #{$mobile-gain})
+        left: 50%
+        width: calc(17.135vw  * #{$mobile-gain})
+        height: calc(3.958vw * #{$mobile-gain})
+        margin-left: calc(-17.135vw  * #{$mobile-gain} / 2)
+
+    .organizatii__search-input
+        font-size: calc(1.042vw * #{$mobile-gain})
+
+    .organizatii__search-submit
+        width: calc(4.22vw * #{$mobile-gain})
+
+    .organizatii__search-icon
+        &::before
+            font-size: calc(1.09vw * #{$mobile-gain})
+
+    .organizatii__button-more
+        width: 100%
+        font-size: 20px
+
+@media(max-width: $mobile-width-s)
+    .organizatii
+        padding-top: 35px
+
+    .organizatii__block
+        align-items: center
+
+    .organizatii__items
+        padding-top: 35px
+
+    .organizatii__img
+        margin-top: 35px
+
+    .organizatii__item
+        margin-bottom: calc(4.792vw * 2.4)
+
+    .organizatii__title
+        font-size: calc(2.083vw * 4)

@@ -1,0 +1,119 @@
+.button
+    text-align: center
+
+.button_color_transparent
+    width: 348px
+    height: 75px
+    font-family: $font-main
+    font-size: 21px
+    font-weight: 700
+    line-height: 70px
+    text-align: center
+    color: $color-text
+    background-color: $color-transparent
+    border: 4px solid $color-lightblue
+    transition: background-color 0.15s ease
+
+.button_color_transparent:hover
+    text-decoration: none
+    color: $color-text
+    background-color: $color-lightblue
+
+.button_color_blue
+    position: relative
+    display: block
+    width: calc(290px / 1.5)
+    height: calc(68px / 1.5)
+    font-family: $font-main
+    font-size: calc(18px / 1.5)
+    font-weight: 700
+    line-height: calc(68px / 1.5)
+    text-transform: uppercase
+    text-align: center
+    color: $color-text
+    background-color: $color-blue
+    overflow: hidden
+    transition: 0.35s ease all
+    &.disabled
+        opacity: 0.8
+    &.disabled:hover
+        line-height: calc(68px / 1.5)
+        color: $color-text
+        background-color: $color-blue
+        box-shadow: none
+        cursor: default
+
+.button_color_blue:hover
+    line-height: calc(204px / 1.5)
+    color: $color-text
+    background-color: darken($color-blue, 7%)
+    text-decoration: none
+    box-shadow: 0 0 3px rgba(black, 0.5) inset
+    cursor: pointer
+
+.button_color_blue::before
+    content: attr(data-text)
+    position: absolute
+    top: calc(-68px / 1.5)
+    color: $color-text
+    opacity: 0.9
+    box-sizing: border-box
+
+.button_color_blue:active
+    line-height: calc(204px / 1.5)
+    color: $color-text
+    background-color: $color-blue
+    text-decoration: none
+    box-shadow: none
+
+.button_gallery
+    position: absolute
+    bottom: 2.396vw
+    right: 2.865vw
+    width: 70px
+    height: 70px
+    background-color: transparent
+    border: 0.156vw solid #fff
+    display: flex
+    justify-content: center
+    align-items: center
+    font-family: 'icomoon'
+    transition: all 0.3s ease
+
+.button_gallery::after
+    content: "\e909"
+    display: block
+    color: #fff
+    font-size: 16px
+
+.button_gallery:hover
+    background-color: #fff
+    box-shadow: none
+    transition: all 0.3s ease
+
+.button_gallery:hover::after
+    color: $color-blue
+
+.button_gallery:active
+    background-color: transparent
+
+@media(max-width: $mobile-width)
+    .button_gallery
+        top: 50%
+        margin-top: -35px
+        left: 50%
+        margin-left: -35px
+
+@media(max-width: 575px)
+    .button_gallery
+        width: calc(70px / 3)
+        height: calc(70px / 3)
+        top: auto
+        margin-top: 0
+        left: auto
+        margin-left: 0
+        right: 15px
+        bottom: 15px
+    
+    .button_gallery::after
+        font-size: calc(16px / 2)

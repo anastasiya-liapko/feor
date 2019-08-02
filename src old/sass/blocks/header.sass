@@ -1,0 +1,242 @@
+.header
+    z-index: 1
+    position: relative
+    width: 100%
+
+.header__container
+    position: relative
+    display: flex
+    flex-wrap: wrap
+    justify-content: stretch
+    align-items: center
+    height: $height-header
+
+.header__content
+    display: flex
+    flex-wrap: nowrap
+    justify-content: space-between
+    align-items: center
+
+.header__content_position_top
+    flex-grow: 1
+
+.header__content_position_bottom
+    justify-content: center
+    order: 4
+
+.header__hamburger
+    order: 1
+
+.header__logo
+    order: 2
+    width: 100px
+    height: 100px
+    margin-top: 30px
+    margin-bottom: 30px
+    margin-right: 2vw
+
+.header__menu
+    order: 3
+    flex-grow: 1
+    font-family: $font-main
+    font-size: 16px
+
+.header__menu-link
+    transition: all 0.3s ease
+
+.header__menu-link::after
+    content: ''
+    position: absolute
+    left: 50%
+    bottom: 15px
+    width: 0
+    height: 2px
+    background-color: $color-text
+    transition: all 0.3s ease
+
+.header__menu-link
+    &:hover,
+    &.active
+        color: $color-text
+        text-decoration: none
+        &.header__menu-link::after
+            left: 0
+            right: 0
+            width: 100%
+    &.active
+        cursor: default
+
+.header__menu-link:active
+    &.header__menu-link::after
+        left: 50%
+        width: 0
+
+.header__search
+    order: 4
+    margin-left: 2vw
+    margin-right: 2vw
+
+@media(min-width: 992px)
+    .header__menu
+        display: flex !important
+
+@media(max-width: $tablet-width)
+    // .header__container
+    //     height: $height-header-tablet
+
+    // .header__content_position_top
+    //     margin-top: 30px
+
+    // .header__content_position_bottom
+    //     width: 100%
+
+    // .header__logo
+    //     margin-top: 0
+    //     margin-bottom: 0
+
+    .header__menu
+        display: none
+
+    // .header__search
+    //     margin-right: 0
+
+    // .header__button
+    //     margin-left: auto
+
+    .header__logo
+        width: 6.944vw
+        height: 6.944vw
+        margin-top: 2.083vw
+        margin-bottom: 2.083vw
+        margin-right: 2vw
+
+    .header__menu-link::after
+        bottom: 1.042vw
+        height: 0.139vw
+
+    .header__button
+        width: calc(20.139vw / 1.5)
+        height: calc(4.722vw / 1.5)
+        font-size: calc(1.250vw / 1.5)
+        line-height: calc(4.722vw / 1.5)
+        &.disabled:hover
+            line-height: calc(4.722vw / 1.5)
+
+    .header__button:hover
+        line-height: calc(14.167vw / 1.5)
+
+    .header__button::before
+        top: calc(-4.722vw / 1.5)
+
+    .header__button:active
+        line-height: calc(14.167vw / 1.5)
+
+@media(max-width: $mobile-width)
+    .header__container
+        height: $height-header-tablet
+
+    .header__content_position_top
+        margin-top: 30px
+
+    .header__content_position_bottom
+        width: 100%
+
+    .header__logo
+        margin-top: 0
+        margin-bottom: 0
+
+    .header__search
+        margin-right: 0
+
+    .header__button
+        margin-left: auto
+
+    .header
+        position: absolute
+        background-color: $color-text
+        box-shadow: 0 0 10px rgba(0,0,0,0.5)
+
+    .header__container
+        height: auto
+        padding: 0
+
+    .header__content_position_bottom
+        border-top: 2px solid $color-text-dark
+
+    .header__hamburger
+        margin-left: 15px
+
+    .header__logo
+        margin-right: 0
+        margin-top: 10px
+        margin-bottom: 10px
+
+    .header__menu
+        order: 4
+
+    .header__menu-link
+        color: $color-text-dark !important
+        border-top: 2px solid $color-text-dark
+        transition: 0.15s ease all
+
+    .header__menu-link
+        &:hover,
+        &.active
+            color: $color-text
+            //background-color: $color-blue
+            //box-shadow: 0 0 3px rgba(black, 0.5) inset
+            transform: scale(1)
+
+    .header__search
+        order: 3
+        margin-left: 0
+        margin-right: 15px
+
+    .header__button
+        margin: 15px
+
+    .header__logo
+        width: 100px
+        height: 100px
+        margin-top: 30px
+        margin-bottom: 30px
+        margin-right: 2vw
+
+    .header__menu
+        font-size: 17px
+
+    .header__menu-link::after
+        bottom: 15px
+        height: 2px
+
+    .header__button
+        width: calc(290px / 1.5)
+        height: calc(68px / 1.5)
+        font-size: calc(18px / 1.5)
+        line-height: calc(68px / 1.5)
+        &.disabled:hover
+            line-height: calc(68px / 1.5)
+
+    .header__button:hover
+        line-height: calc(204px / 1.5)
+
+    .header__button::before
+        top: calc(-68px / 1.5)
+
+    .header__button:active
+        line-height: calc(204px / 1.5)
+
+
+    
+        
+
+
+
+
+
+
+
+
+
+
+

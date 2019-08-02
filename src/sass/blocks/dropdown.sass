@@ -1,0 +1,216 @@
+.hidden-block
+	z-index: 50
+	visibility: hidden
+	overflow: hidden
+	height: 0
+
+	// display: block
+	// visibility: visible
+	// height: auto
+
+.hidden-block.visible-block
+	display: block
+	visibility: visible
+	height: auto
+	transition: all 0.3s ease
+
+.top-menu
+	justify-content: space-between
+	list-style: none
+	margin: 0
+	padding: 0
+	position: relative
+	li
+		position: relative
+		margin: 0
+		padding: 0
+		a + div
+			position: absolute
+			width: 100%
+			// width: inherit
+			// left: 0
+			background: rgba(30,55,76,.7)
+		a
+			transition: color 0.3s ease
+
+.top-menu>li:hover
+	background: rgba(30,55,76,.7)
+
+.header__menu-link::after
+	display: none !important
+
+.top-menu > li
+	flex-grow: 1
+	width: 167px
+
+.top-menu > li a + div > ul
+	list-style-type: none
+	padding: 15px 0 20px
+
+.top-menu > li a + div > ul > li
+	margin: 0
+	padding: 0 15px
+
+.top-menu > li a + div > ul > li > a
+	display: block
+	text-decoration: none
+	justify-content: flex-start
+	font-size: 13px
+	font-weight: normal
+	opacity: 0.75
+	padding: 5px 0
+	line-height: 1
+	transition: all linear 0.1s
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.5)
+	&:hover
+		opacity: 1
+		text-decoration: underline
+
+@media(min-width: $mobile-width)
+	.top-menu > li a + div > ul > li > a
+		color:#fff
+
+	.hidden-block
+		transition: all 0.3s ease
+		&::before
+			position: absolute
+			content: ''
+			background-color: rgba(255, 255, 255, 0.7)
+			width: 100%
+			height: 0
+			transition: all 0.3s ease
+		ul li a
+			transition: all 0.3s ease
+	
+	.hidden-block.active-block
+		&::before
+			height: 100%
+		ul li a
+			color: rgba(38, 70, 95, 0.5) !important
+
+	.top-menu li.menu-item.active-block
+		position: relative
+		&::before
+			position: absolute
+			content: ''
+			width: 100%
+			height: 100%
+			background: rgba(255, 255, 255, 0.7)
+			transition: all 0.3s ease
+		a
+			color: black !important
+			text-shadow: none
+
+.top-menu > li > a
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.5)
+	align-items: flex-start
+	justify-content: center
+	color: #fff
+	display: flex
+	text-decoration: none
+	transition: all linear 0.1s
+
+.top-menu > li > a > div > span
+	color: rgba(255,255,255,.75)
+	display: block
+	font-family: Georgia, "Times New Roman", Times, serif
+	font-size: .7rem
+	font-style: italic
+	line-height: 1rem
+	max-width: 260px
+
+@media(max-width: $tablet-width)
+	.hidden-block.visible-block
+		height: auto
+
+	.top-menu>li
+		// width: 140px
+		width: 7.292vw
+
+	.top-menu>li>a
+		font-size: calc(0.833vw * 1.5)
+
+	.top-menu>li a+div>ul>li>a
+        font-size: calc(0.677vw * 1.4)
+
+	.header__content
+		flex-wrap: wrap
+
+@media(max-width: $mobile-width)
+	.top-menu li a+div
+		display: block
+		margin-bottom: 20px
+		visibility: visible
+		height: auto
+		background: transparent
+		position: relative !important
+		ul
+			width: 100%
+			a
+				opacity: 0.5
+
+	.top-menu>li
+		// width: 170px
+		width: 100%
+
+	.top-menu>li a+div>ul>li>a
+		color: $color-text-dark
+		font-size: 15px
+
+	.hidden-block ul
+		padding: 0
+
+	.top-menu li
+		padding-top: 5px !important
+		padding-bottom: 5px !important
+		width: 100%
+
+	.top-menu>li>a
+		padding-left: 20px
+		font-size: 16px
+
+
+@-webkit-keyframes fadeInUp
+  from
+    opacity: 0
+    -webkit-transform: translate3d(0, 100%, 0)
+    transform: translate3d(0, 100%, 0)
+
+  to
+    opacity: 1
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+
+@keyframes fadeInUp
+  from
+    opacity: 0
+    -webkit-transform: translate3d(0, 100%, 0)
+    transform: translate3d(0, 100%, 0)
+
+  to
+    opacity: 1
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+
+.fadeInUp
+  -webkit-animation-name: fadeInUp
+  animation-name: fadeInUp
+
+.animated
+  -webkit-animation-duration: 1s
+  animation-duration: 1s
+  -webkit-animation-fill-mode: both
+  animation-fill-mode: both
+
+.animated.fast
+  -webkit-animation-duration: 300ms
+  animation-duration: 300ms
+
+@media (print), (prefers-reduced-motion: reduce)
+  .animated
+    -webkit-animation-duration: 1ms !important
+    animation-duration: 1ms !important
+    -webkit-transition-duration: 1ms !important
+    transition-duration: 1ms !important
+    -webkit-animation-iteration-count: 1 !important
+    animation-iteration-count: 1 !important

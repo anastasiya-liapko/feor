@@ -1,0 +1,85 @@
+.radio-label
+    font-size: 24px
+    font-weight: 400
+    line-height: normal
+    color: $color-text-dark
+    
+.radio
+    display: none
+
+.radio-custom 
+    position: relative  
+    flex-shrink: 0    
+    width: 20px             
+    height: 20px 
+    margin-right: 30px           
+    border: 1px solid $color-medium-grey
+    border-radius: 50%
+
+.radio-custom,
+.radio-label 
+    display: inline-block
+    vertical-align: middle
+
+.radio-label
+    white-space: nowrap
+
+.radio:checked + .radio-custom::before
+    content: ""     
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 10px
+    height: 10px
+    margin-top: -5px
+    margin-left: -5px
+    background-color: $color-text-dark
+    border-radius: 50%
+
+.radio-wrapper
+    display: flex
+    flex-wrap: nowrap
+    align-items: flex-start
+    align-items: center
+    width: 100%
+    margin-right: 58px
+
+.radio-wrapper:hover
+    cursor: pointer
+
+.radio-wrapper_sum-other
+    position: relative
+    display: flex
+    flex-direction: column
+    .error-text
+        left: 48px
+
+@media(max-width: 1700px)
+    .radio-wrapper  
+        margin-right: 15px
+
+@media(max-width: $mobile-width)
+    .radio-wrapper 
+        margin-right: 0
+
+    .radio-wrapper_sum-other
+        align-items: flex-start
+
+    .radio-label
+        font-size: 20px
+
+@media(max-width: $mobile-width-s)
+    .radio-wrapper_sum-other
+        div
+            width: 100%
+
+    .radio-label
+        white-space: unset
+
+
+
+
+
+
+
+

@@ -1,0 +1,55 @@
+.search
+    position: relative
+    width: 20px
+    height: 20px
+    padding: 0
+    background-color: transparent
+    border: none
+    transition: transform 0.15s ease
+
+.search:hover
+    transform: scale(2)
+    transform-origin: center
+    cursor: pointer
+
+.search__icon
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 20px
+    height: 20px
+
+.search__text
+    font-size: 0
+
+.search_design_dark
+    .search__icon
+        &::before
+            color: $color-text-dark
+
+@media(max-width: $tablet-width)
+    .search
+        width: 1.389vw
+        height: 1.389vw
+
+    .search__icon
+        width: 1.389vw
+        height: 1.389vw
+
+@media(max-width: $mobile-width)
+    .search
+        width: 72px
+        height: 72px
+        padding: 15px
+
+    .search:hover
+        transform: scale(1)
+        .search__icon::before
+            opacity: 0.7
+
+    .search__icon
+        width: 42px
+        height: 42px
+        font-size: 30px
+        &::before
+            color: $color-text-dark

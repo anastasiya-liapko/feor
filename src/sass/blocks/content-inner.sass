@@ -1,0 +1,328 @@
+.content-inner
+    color: $color-text-dark
+    background-color: $color-text
+
+.content-inner__block_type_columns
+    display: flex
+    flex-wrap: nowrap
+    justify-content: space-between
+
+.content-inner__block-column
+    display: flex
+    flex-direction: column
+    width: 26.04vw
+
+.content-inner__block-column_position_right
+    margin-left: 50px
+
+.content-inner__header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 50px 0
+
+.content-inner__previous,
+.content-inner__date
+    font-size: 30px
+    line-height: normal
+    font-weight: 400
+    color: $color-blue
+    &:hover
+        color: $color-blue
+
+.content-inner__previous
+    display: flex
+    flex-wrap: nowrap
+    justify-content: space-between
+    align-items: center
+    &:hover
+        opacity: 0.7
+
+.content-inner__previous-icon
+    margin-right: 1.51vw
+
+.content-inner__block-paragraph
+    margin-top: 0
+    margin-bottom: 20px
+    font-size: 18px
+    line-height: normal
+    font-weight: 400
+    color: $color-text-dark
+
+.content-inner__block-img
+    width: 23.43vw
+    height: 31.25vw
+    margin-bottom: 30px
+    img
+        width: 23.43vw
+        height: 31.25vw
+        object-fit: cover
+
+.content-inner__block-img_position_right
+    float: right
+    margin-left: 50px
+    
+.content-inner__block-img_position_left
+    float: left
+    margin-right: 50px
+
+.content-inner__block-img_position_center
+    width: 100%
+    height: 29.9vw
+    img
+        width: 100%
+        height: 29.9vw
+
+.content-inner__block-date
+    font-size: 20px
+    line-height: normal
+    color: $color-grey
+
+.content-inner__block-title
+    margin-bottom: 50px
+    font-size: 40px
+    line-height: 1.03
+    font-weight: 700
+    color: $color-text-dark
+
+.content-inner__block-title_font-size_m
+    font-size: 40px
+
+.content-inner__block-title_font-size_s
+    font-size: 30px
+
+.content-inner__block-title_font-size_xs
+    font-size: 24px
+
+.content-inner__block-title_transform_uppercase
+    text-transform: uppercase
+
+.content-inner__block_border_top
+    border-top: 2px solid $color-medium-grey
+
+.content-inner__block_border_bottom
+    border-bottom: 2px solid $color-medium-grey
+
+.content-inner__block-list
+    padding-left: 20px
+
+.content-inner_type_events
+    padding-bottom: 100px
+
+.content-inner_type_events-small
+    padding-bottom: 40px
+
+.content-inner_type_blog
+    padding-top: 100px
+    padding-bottom: 100px
+    .content-inner__block-img
+        width: 23.43vw
+        height: 29.16vw
+        img
+            width: 23.43vw
+            height: 29.16vw
+
+.content-inner_type_activity-religion
+    padding-top: 100px
+    .content-inner__block
+        padding-bottom: 50px
+    .content-inner__block-img
+        position: relative
+        margin-top: 50px
+        margin-bottom: 50px
+    .content-inner__block-title
+        margin-top: 70px
+        margin-bottom: 70px
+
+.content-inner_type_activity
+    padding-top: 50px
+    padding-bottom: 70px
+    .content-inner__block
+        padding-top: 35px
+    .content-inner__block-img
+        width: 23vw
+        height: 23vw
+        margin-top: 0
+        margin-bottom: 35px
+        margin-left: 35px
+        img
+            width: 23vw
+            height: 23vw
+    .content-inner__block-img_position_center
+        width: 100%
+        height: 29.9vw
+        margin-left: 0
+        img
+            width: 100%
+            height: 29.9vw
+
+.content-inner_type_activity .content-inner__block p,
+.content-inner_type_veterans .content-inner__block p,
+.content-inner_type_scripach .content-inner__block p:not(.content-inner__block-title),
+.content-inner_type_activity-religion .content-inner__block p:not(.content-inner__block-title)
+    max-width: 1569px
+    width: 81.719vw
+    margin: 0 auto
+    padding: 0
+    box-sizing: border-box
+    width: 53.906vw
+    margin-top: 0
+    margin-bottom: 20px
+
+p.content-inner__block-img
+    width: 100%
+
+@media(max-width: $tablet-width)
+    .content-inner__block-column
+        width: calc(26.04vw * #{$tablet-gain})
+
+    .content-inner__block-img
+        width: calc(23.43vw * #{$tablet-gain})
+        height: calc(31.25vw * #{$tablet-gain})
+        img
+            width: calc(23.43vw * #{$tablet-gain})
+            height: calc(31.25vw * #{$tablet-gain})
+
+    .content-inner_type_blog
+        .content-inner__block-img
+            width: calc(23.43vw * #{$tablet-gain})
+            height: calc(29.16vw * #{$tablet-gain})
+            img
+                width: calc(23.43vw * #{$tablet-gain})
+                height: calc(29.16vw * #{$tablet-gain})
+
+    .content-inner_type_activity
+        .content-inner__block-img
+            width: calc(23vw * #{$tablet-gain})
+            height: calc(23vw * #{$tablet-gain})
+            img
+                width: calc(23vw * #{$tablet-gain})
+                height: calc(23vw * #{$tablet-gain})
+        .content-inner__block-img_position_center
+            width: 100%
+            height: 29.9vw
+            img
+                width: 100%
+                height: 29.9vw
+
+    .content-inner__block-img_position_center
+        width: 100%
+        height: 29.9vw
+        img
+            width: 100%
+            height: 29.9vw
+
+    .content-inner_type_activity .content-inner__block p,
+    .content-inner_type_scripach .content-inner__block p:not(.content-inner__block-title),
+    .content-inner_type_activity-religion .content-inner__block p:not(.content-inner__block-title)
+        max-width: 100%
+        width: 81vw
+
+@media(max-width: $mobile-width)
+    .content-inner__block_type_columns
+        flex-direction: column
+
+    .content-inner__block-column
+        width: 100%
+
+    .content-inner__block-column_position_right
+        margin-left: 0
+
+    .content-inner_type_events
+        padding-bottom: 50px
+
+    .content-inner_type_blog
+        padding-top: 50px
+        padding-bottom: 50px
+        .content-inner__block-img
+            width: 100%
+            height: auto
+            img
+                width: 100%
+                height: auto 
+        .content-inner__block-date
+            font-size: 14px
+
+    .content-inner_type_activity-religion
+        padding-top: 50px
+        .content-inner__block
+            padding-bottom: 20px
+        .content-inner__block-img
+            margin-top: 35px
+            margin-bottom: 35px
+        .content-inner__block-title
+            margin-top: 35px
+            margin-bottom: 35px
+
+    .content-inner_type_activity
+        padding-top: 50px
+        padding-bottom: 70px
+        .content-inner__block
+            padding-top: 25px
+        .content-inner__block-img
+            width: 100%
+            height: auto
+            margin-bottom: 35px
+            img
+                width: 100%
+                height: auto
+        .content-inner__block-img_position_center
+            width: 100%
+            height: 29.9vw
+            img
+                width: 100%
+                height: 29.9vw
+
+    .content-inner__block-img
+        width: 100%
+        height: auto
+        img
+            width: 100%
+            height: auto
+
+    .content-inner__block-img_position_center
+        width: 100%
+        height: 29.9vw
+        img
+            width: 100%
+            height: 29.9vw
+
+    .content-inner__block-title
+        margin-bottom: 35px
+        font-size: 26px
+        text-align: center
+
+    .content-inner__block-title_font-size_m
+        font-size: 26px
+
+    .content-inner__block-title_font-size_s
+        font-size: 20px
+
+    .content-inner__block-title_font-size_xs
+        font-size: 18px
+
+    .content-inner__previous,
+    .content-inner__date
+        font-size: 18px
+
+    .content-inner__block-paragraph
+        font-size: 15px
+        text-align: justify
+
+    .content-inner_type_activity .content-inner__block p,
+    .content-inner_type_veterans .content-inner__block p,
+    .content-inner_type_scripach .content-inner__block p:not(.content-inner__block-title),
+    .content-inner_type_activity-religion .content-inner__block p:not(.content-inner__block-title)
+        width: 100%
+        padding-left: 2.5vw
+        padding-right: 2.5vw
+        padding-left: 4.7vw
+        padding-right: 4.7vw
+        width: 100%
+        width: 100%
+        padding: 0
+        font-size: 15px
+        text-align: justify
+
+
+    

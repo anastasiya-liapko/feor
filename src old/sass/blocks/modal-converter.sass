@@ -1,0 +1,279 @@
+.modal-converter
+    .modal-dialog
+        // max-width: 768px
+        // width: 768px
+        max-width: 40vw
+        width: 40vw
+    .modal-converter__main
+        // padding-top: 65px
+        // padding-left: 70px
+        // padding-bottom: 50px
+        // padding-right: 88px
+        padding-top: 3.385vw
+        padding-left: 3.646vw
+        padding-bottom: 2.604vw
+        padding-right: 4.583vw
+    .modal-converter__name
+        // margin-bottom: 25px
+        // font-size: 40px
+        margin-bottom: 1.302vw
+        font-size: 2.083vw
+        font-weight: 700
+        line-height: 1
+        letter-spacing: normal
+        color: #120d17
+    .modal-converter__text
+        p
+            // font-size: 20px
+            font-size: 1.042vw
+            font-weight: 400
+            line-height: normal
+            color: #000000
+    .modal-converter__form-wrapper
+        // padding-top: 64px
+        // padding-left: 72px
+        // padding-bottom: 59px
+        // padding-right: 77px
+        padding-top: 3.333vw
+        padding-left: 3.750vw
+        padding-bottom: 3.073vw
+        padding-right: 4.010vw
+        background-color: $color-blue
+    .modal-converter__form
+        width: 100%
+    .modal-converter__select
+        // height: 110px
+        // padding-left: 37px
+        // padding-right: 30px
+        // font-size: 30px
+        height: 5.729vw
+        padding-left: 1.927vw
+        padding-right: 1.563vw
+        font-size: 1.563vw
+        font-weight: 400
+        // line-height: 110px
+        line-height: 5.729vw
+        color: #ffffff
+        background-color: $color-blue
+        // border: solid 1px $color-medium-grey
+        border: solid 0.052vw $color-medium-grey
+        border-radius: 0
+        &::after
+            // right: 30px
+            // width: 15px
+            // height: 15px
+            // margin-top: -11px
+            right: 1.563vw
+            width: 0.781vw
+            height: 0.781vw
+            margin-top: -0.573vw
+            // border-bottom: 2px solid $color-medium-grey
+            // border-right: 2px solid $color-medium-grey
+            border-bottom: 0.104vw solid $color-medium-grey
+            border-right: 0.104vw solid $color-medium-grey
+        .list
+            width: 100%
+            max-height: calc((3.542vw + 0.052vw) * 5 + 0.052vw)
+            // margin-top: 4px
+            margin-top: 0.208vw
+            background-color: $color-blue
+            // border: solid 1px $color-medium-grey
+            border: solid 0.052vw $color-medium-grey
+            border-radius: 0
+            overflow-y: scroll
+        .option
+            width: 100%
+            // min-height: 68px
+            // height: 68px
+            // padding-left: 37px
+            // padding-right: 30px
+            // font-size: 30px
+            min-height: 3.542vw
+            height: 3.542vw
+            padding-left: 1.927vw
+            padding-right: 1.563vw
+            font-size: 1.563vw
+            font-weight: 400
+            // line-height: 68px
+            line-height: 3.542vw
+            color: #ffffff
+            // border-bottom: solid 1px $color-medium-grey
+            border-bottom: solid 0.052vw $color-medium-grey
+            &::last-child
+                border-bottom: none
+            &.selected.focus:not(:hover)
+                color: $color-blue
+                background-color: #ffffff !important
+            &:hover
+                color: $color-blue
+                background-color: #ffffff
+    .modal-converter__select_day
+        // width: 127px
+        width: 6.615vw
+    .modal-converter__select_month
+        // width: 251px
+        width: 13.073vw
+    .modal-converter__select_year
+        // width: 189px
+        width: 9.844vw
+    .modal-converter__form-button_convert
+        // height: 45px
+        height: 2.344vw
+        margin: 0
+        // margin-top: 22px
+        // margin-bottom: 22px
+        margin-top: 1.146vw
+        margin-bottom: 1.146vw
+        .icon
+            // font-size: 43px
+            font-size: 2.240vw
+            &.convert
+                animation: rotate-vert-center 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both
+    .modal-converter__form-button_calendar
+        // width: 438px
+        // height: 68px
+        // margin-top: 51px
+        // font-size: 20px
+        width: 22.813vw
+        height: 3.542vw
+        margin-top: 2.656vw
+        padding: 0
+        font-size: 1.042vw
+        font-weight: 700
+        // line-height: 68px
+        line-height: 3.542vw
+        text-align: center
+        text-transform: uppercase
+        color: $color-blue
+        background-color: #ffffff
+        // border: 1px solid transparent
+        border: 0.052vw solid transparent
+        transition: border 0.3s, background-color 0.3s, color 0.3s
+        &:hover
+            cursor: pointer
+            color: #ffffff
+            background-color: $color-blue
+            // border: solid 1px $color-medium-grey
+            border: solid 0.052vw $color-medium-grey
+
+@keyframes rotate-vert-center
+  0%
+    transform: rotateY(0)
+  100%
+    transform: rotateY(360deg)
+
+@media(max-width: $mobile-width)
+    .modal-converter
+        .modal-dialog
+            max-width: calc(40vw * #{$tablet-gain})
+            width: calc(40vw * #{$tablet-gain})
+        .modal-converter__main
+            padding-top: calc(3.385vw * #{$tablet-gain})
+            padding-left: calc(3.646vw * #{$tablet-gain})
+            padding-bottom: calc(2.604vw * #{$tablet-gain})
+            padding-right: calc(4.583vw * #{$tablet-gain})
+        .modal-converter__name
+            margin-bottom: calc(1.302vw * #{$tablet-gain})
+            font-size: calc(2.083vw * #{$tablet-gain})
+        .modal-converter__text
+            p
+                font-size: calc(1.042vw * #{$tablet-gain})
+        .modal-converter__form-wrapper
+            padding-top: calc(3.333vw * #{$tablet-gain})
+            padding-left: calc(3.750vw * #{$tablet-gain})
+            padding-bottom: calc(3.073vw * #{$tablet-gain})
+            padding-right: calc(4.010vw * #{$tablet-gain})
+        .modal-converter__select
+            height: calc(5.729vw * #{$tablet-gain})
+            padding-left: calc(1.927vw * #{$tablet-gain})
+            padding-right: calc(1.563vw * #{$tablet-gain})
+            font-size: calc(1.563vw * #{$tablet-gain})
+            line-height: calc(5.729vw * #{$tablet-gain})
+            border: solid calc(0.052vw * #{$tablet-gain}) $color-medium-grey
+            &::after
+                right: calc(1.563vw * #{$tablet-gain})
+                width: calc(0.781vw * #{$tablet-gain})
+                height: calc(0.781vw * #{$tablet-gain})
+                margin-top: calc(-0.573vw * #{$tablet-gain})
+                border-bottom: calc(0.104vw * #{$tablet-gain}) solid $color-medium-grey
+                border-right: calc(0.104vw * #{$tablet-gain}) solid $color-medium-grey
+            .list
+                max-height: calc((3.542vw* #{$tablet-gain} + 0.052vw* #{$tablet-gain}) * 5 + 0.052vw* #{$tablet-gain})
+                margin-top: calc(0.208vw * #{$tablet-gain})
+                border: solid calc(0.052vw * #{$tablet-gain}) $color-medium-grey
+            .option
+                min-height: calc(3.542vw * #{$tablet-gain})
+                height: calc(3.542vw * #{$tablet-gain})
+                padding-left: calc(1.927vw * #{$tablet-gain})
+                padding-right: calc(1.563vw * #{$tablet-gain})
+                font-size: calc(1.563vw * #{$tablet-gain})
+                line-height: calc(3.542vw * #{$tablet-gain})
+                border-bottom: solid calc(0.052vw * #{$tablet-gain}) $color-medium-grey
+        .modal-converter__select_day
+            width: calc(6.615vw * #{$tablet-gain})
+        .modal-converter__select_month
+            width: calc(13.073vw * #{$tablet-gain})
+        .modal-converter__select_year
+            width: calc(9.844vw * #{$tablet-gain})
+        .modal-converter__form-button_convert
+            height: calc(2.344vw * #{$tablet-gain})
+            margin-top: calc(1.146vw * #{$tablet-gain})
+            margin-bottom: calc(1.146vw * #{$tablet-gain})
+            .icon
+                font-size: calc(2.240vw * #{$tablet-gain})
+        .modal-converter__form-button_calendar
+            width: calc(22.813vw * #{$tablet-gain})
+            height: calc(3.542vw * #{$tablet-gain})
+            margin-top: calc(2.656vw * #{$tablet-gain})
+            font-size: calc(1.042vw * #{$tablet-gain})
+            line-height: calc(3.542vw * #{$tablet-gain})
+            border: calc(0.052vw * #{$tablet-gain}) solid transparent
+            &:hover
+                border: solid calc(0.052vw * #{$tablet-gain}) $color-medium-grey
+
+@media(max-width: 575px)
+    .modal-converter
+        .modal-dialog
+            max-width: 100%
+            width: auto
+            margin-left: 15px
+            margin-right: calc(2.604vw * #{$tablet-gain} * 1.5 + 15px)
+        .modal-converter__name
+            font-size: calc(2.083vw * #{$tablet-gain} * 1.5)
+        .modal-converter__text
+            p
+                font-size: calc(1.042vw * #{$tablet-gain} * 1.8)
+        .modal-converter__select
+            font-size: calc(1.563vw * #{$tablet-gain} * 1.3)
+            .list
+                max-height: calc((3.542vw* #{$tablet-gain} * 1.5 + 0.052vw* #{$tablet-gain} * 1.5) * 5 + 0.052vw* #{$tablet-gain} * 1.5)
+                margin-top: calc(0.208vw * #{$tablet-gain})
+                border: solid calc(0.052vw * #{$tablet-gain}) $color-medium-grey
+            .option
+                min-height: calc(3.542vw * #{$tablet-gain} * 1.5)
+                height: calc(3.542vw * #{$tablet-gain} * 1.5)
+                padding-left: calc(1.927vw * #{$tablet-gain})
+                padding-right: calc(1.563vw * #{$tablet-gain})
+                font-size: calc(1.563vw * #{$tablet-gain} * 1.3)
+                line-height: calc(3.542vw * #{$tablet-gain} * 1.5)
+                border-bottom: solid calc(0.052vw * #{$tablet-gain}) $color-medium-grey
+        .modal-converter__select_day
+            flex-grow: 1
+        .modal-converter__select_month
+            flex-grow: 1
+            margin-left: calc(1.354vw * 2 * 1.5)
+            margin-right: calc(1.354vw * 2 * 1.5)
+        .modal-converter__select_year
+            flex-grow: 1
+        .modal-converter__form-button_convert
+            margin-top: calc(1.146vw * #{$tablet-gain} * 1.5)
+            margin-bottom: calc(1.146vw * #{$tablet-gain} * 1.5)
+        .modal-converter__form-button_calendar
+            width: calc(22.813vw * #{$tablet-gain} * 1.5)
+            height: calc(3.542vw * #{$tablet-gain} * 1.5)
+            margin-top: calc(2.656vw * #{$tablet-gain} * 1.5)
+            font-size: calc(1.042vw * #{$tablet-gain} * 1.5)
+            line-height: calc(3.542vw * #{$tablet-gain} * 1.5)
+            border: calc(0.052vw * #{$tablet-gain} * 1.5) solid transparent
+            &:hover
+                border: solid calc(0.052vw * #{$tablet-gain} * 1.5) $color-medium-grey

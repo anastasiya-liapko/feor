@@ -1,0 +1,216 @@
+.chairmen__header
+    // padding-top: 60px
+    // padding-bottom: 60px
+    padding-top: 3.125vw
+    padding-bottom: 3.125vw
+
+.chairmen__search
+    position: static
+    margin-left: auto
+    // border: 3px solid $color-medium-grey
+    border: 0.156vw solid $color-medium-grey
+
+.chairmen__search-input
+    color: #120d17
+    &::placeholder
+        color: #120d17
+
+.chairmen__search-icon
+    &::before
+        color: $color-medium-grey
+
+.chairmen__person
+    // margin-bottom: 60px
+    // padding-left: 130px
+    // padding-right: 130px
+    margin-bottom: 3.125vw
+    padding-left: 6.771vw
+    padding-right: 6.771vw
+
+.chairmen__person-city
+    // margin-bottom: 50px
+    // font-size: 40px
+    margin-bottom: 2.604vw
+    font-size: 2.083vw
+    font-weight: 700
+    line-height: 1
+    color: #120d17
+
+.chairmen__person-img
+    // width: 260px
+    // height: 260px
+    // margin-right: 40px
+    width: 13.542vw
+    height: 13.542vw
+    margin-right: 2.083vw
+    img
+        width: 100%
+        height: auto
+
+.chairmen__person-descr
+    flex-grow: 1
+    width: 50%
+    // padding-right: 80px
+    padding-right: 4.167vw
+
+.chairmen__person-name
+    // margin-bottom: 6px
+    // font-size: 24px
+    margin-bottom: 0.313vw
+    font-size: 1.250vw
+    font-weight: 700
+    line-height: 1
+    text-transform: uppercase
+    color: #120d17
+
+.chairmen__person-position,
+.chairmen__person-text,
+.chairmen__person-text p
+    margin-bottom: 0
+    // font-size: 24px
+    font-size: 1.250vw
+    font-weight: 400
+    line-height: normal
+    color: #120d17
+
+.chairmen__person-position
+    // margin-bottom: 40px
+    margin-bottom: 2.083vw
+
+@media(max-width: $tablet-width)
+    .chairmen__header
+        padding-top: calc(3.125vw * 1.2)
+        padding-bottom: calc(3.125vw * 1.2)
+
+    .chairmen__person
+        margin-bottom: calc(3.125vw * 1.2)
+        padding-left: 0
+        padding-right: 0
+
+    .chairmen__person-city
+        margin-bottom: calc(2.604vw * 1.2)
+        font-size: calc(2.083vw * 1.2)
+
+    .chairmen__person-img
+        width: calc(13.542vw * 1.2)
+        height: calc(13.542vw * 1.2)
+        margin-right: calc(2.083vw * 1.2)
+
+    .chairmen__person-descr
+        padding-right: 0
+
+    .chairmen__person-name
+        margin-bottom: calc(0.313vw * 1.2)
+        font-size: calc(1.250vw * 1.2)
+
+    .chairmen__person-position,
+    .chairmen__person-text,
+    .chairmen__person-text p
+        font-size: calc(1.250vw * 1.2)
+
+    .chairmen__person-position
+        margin-bottom: calc(2.083vw * 1.2)
+
+@media(max-width: $mobile-width)
+    .chairmen__header
+        padding-top: calc(3.125vw * #{$tablet-gain})
+        padding-bottom: calc(3.125vw * #{$tablet-gain})
+
+    .chairmen__search
+        width: calc(17.135vw * #{$tablet-gain} * 1.2)
+        height: calc(3.958vw * #{$tablet-gain} * 1.2)
+        margin-right: auto
+        border: calc(0.156vw * #{$tablet-gain} * 1.2) solid $color-medium-grey
+
+    .chairmen__search-input
+        font-size: calc(1.042vw * #{$tablet-gain} * 1.2)
+
+    .chairmen__search-submit
+        width: calc(4.22vw * #{$tablet-gain} * 1.2)
+
+    .chairmen__search-icon
+        &::before
+            font-size: calc(1.09vw * #{$tablet-gain} * 1.2)
+
+    .chairmen__person
+        margin-bottom: calc(3.125vw * #{$tablet-gain})
+
+    .chairmen__person-city
+        margin-bottom: calc(2.604vw * #{$tablet-gain})
+        font-size: calc(2.083vw * #{$tablet-gain})
+        text-align: center
+
+    .chairmen__person-img
+        width: calc(13.542vw * #{$tablet-gain})
+        height: calc(13.542vw * #{$tablet-gain})
+        margin-right: 0
+
+    .chairmen__person-descr
+        width: 100%
+
+    .chairmen__person-name
+        margin-bottom: calc(0.313vw * #{$tablet-gain})
+        font-size: calc(1.250vw * #{$tablet-gain})
+        text-align: center
+
+    .chairmen__person-position,
+    .chairmen__person-text,
+    .chairmen__person-text p
+        font-size: calc(1.250vw * #{$tablet-gain} * 1.2)
+
+    .chairmen__person-position
+        margin-bottom: calc(2.083vw * #{$tablet-gain})
+        text-align: center
+
+    .chairmen__person-text,
+    .chairmen__person-text p
+        text-align: justify
+
+@media(max-width: $mobile-width-s)
+    .chairmen__header
+        padding-top: calc(3.125vw * 2.5)
+        padding-bottom: calc(3.125vw * 2.5)
+
+    .chairmen__search
+        width: calc(17.135vw * 2.5 * 1.2)
+        height: calc(3.958vw * 2.5 * 1.2)
+        border: calc(0.156vw * 2.5 * 1.2) solid $color-medium-grey
+
+    .chairmen__search-input
+        font-size: calc(1.042vw * 2.5 * 1.2)
+
+    .chairmen__search-submit
+        width: calc(4.22vw * 2.5 * 1.2)
+
+    .chairmen__search-icon
+        &::before
+            font-size: calc(1.09vw * 2.5 * 1.2)
+
+    .chairmen__person
+        margin-bottom: calc(3.125vw * 2.5)
+
+    .chairmen__person-city
+        margin-bottom: calc(2.604vw * 2.5)
+        font-size: calc(2.083vw * 2.5)
+
+    .chairmen__person-img
+        width: calc(13.542vw * 2.5)
+        height: calc(13.542vw * 2.5)
+        margin-bottom: 20px
+
+    .chairmen__person-name
+        margin-bottom: calc(0.313vw * 2.5)
+        font-size: calc(1.250vw * 2.5)
+
+    .chairmen__person-position,
+    .chairmen__person-text,
+    .chairmen__person-text p
+        font-size: calc(1.250vw * 2.5 * 1.2)
+
+    .chairmen__person-position
+        margin-bottom: calc(2.083vw * 2.5)
+
+    
+
+
+        

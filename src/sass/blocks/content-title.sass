@@ -1,0 +1,363 @@
+.content-title
+    filter: brightness(90%)
+
+.content-title_type_news
+    width: 100%
+    height: 618px
+    margin-top: -$height-header
+    padding-top: $height-header
+    // padding-bottom: 133px
+    padding-bottom: 100px
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+
+.content-title_margin-bottom_s
+    padding-bottom: 80px
+
+.content-title_direction_row
+    height: auto
+    padding-bottom: 80px
+    .container
+        display: flex
+    .content-title__item
+        width: 50%
+
+.content-title_direction_column
+    position: relative
+    min-height: 53.52vw
+    height: auto
+    background-color: $color-blue
+    overflow: hidden
+    .container
+        display: flex
+        flex-direction: column
+        height: auto
+    .content-title__item
+        width: 30vw
+
+.content-title__map
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-size: cover
+    background-position: bottom
+    background-repeat: no-repeat
+
+.content-title_font-size_l
+    .content-title__title
+        font-size: 3.698vw
+
+.content-title_font-size_m
+    .content-title__title
+        // font-size: 3.178vw
+        font-size: 2.7vw
+
+.content-title_font-size_s
+    .content-title__title
+        font-size: 2.1vw
+
+.content-title_text-align_left
+    .content-title__title
+        padding-right: 15.62vw
+        text-align: left
+
+.content-title_decoration_underline
+    .content-title__title
+        position: relative
+        padding-bottom: 2.3vw
+        &::after
+            content: ''
+            position: absolute
+            bottom: 0
+            left: 50%
+            width: 14vw
+            height: 2px
+            margin-left: -7vw
+            background-color: $color-text 
+
+.content-title__container
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    align-items: center
+    height: 100%
+
+.content-title__title
+    margin-top: auto
+    font-weight: 700
+    line-height: 1
+    text-align: center
+    text-transform: uppercase
+    color: $color-text 
+
+.content-title
+    .community__content
+        align-items: flex-start
+        margin-top: 100px
+        margin-bottom: 70px
+        pointer-events: none
+    .community__subtitle
+        z-index: 1
+        margin-left: 3vw  
+        width: 7.3vw
+        height: 2.7vw
+        font-size: 1.2vw
+        line-height: 2.7vw
+
+.content-title.content-title_organizations 
+    .content-title__title
+        width: 50%
+        margin-bottom: 2.3vw
+
+.content-title__subtitle
+    margin-bottom: 2.3vw
+    font-size: calc(3.698vw / 1.3 / 2)
+    font-weight: 700
+    text-transform: uppercase
+    text-shadow: 2px 1px 9px rgba(0,0,0,0.5)
+
+@media(max-width: 1800px)
+    .content-title__map
+        left: 0
+        width: 100%
+        height: 100%
+        background-size: 110%
+        background-position: bottom
+
+@media(max-width: 1550px)
+    .content-title__map
+        left: 0
+        width: 100%
+        height: 100%
+        background-size: 120%
+        background-position: bottom
+
+@media(max-width: $tablet-width)
+    .content-title_type_news
+        margin-top: -$height-header-tablet
+        padding-top: $height-header-tablet
+
+    .content-title_decoration_underline
+        .content-title__title
+            width: 70%
+            margin-left: auto
+            margin-right: auto
+            padding-bottom: calc(2.3vw * #{$tablet-gain})
+            &::after
+                width: calc(14vw * #{$tablet-gain})
+                height: 2px
+                margin-left: calc(-7vw * #{$tablet-gain})
+
+    .content-title_font-size_l
+        .content-title__title
+            font-size: calc(3.69vw * #{$tablet-gain})
+
+    .content-title_font-size_m
+        .content-title__title
+            // font-size: calc(3.3vw * #{$tablet-gain})
+            font-size: calc(2.7vw * 1.2)
+
+    .content-title_font-size_s
+        .content-title__title
+            font-size: calc(2.1vw * #{$tablet-gain})
+
+    .content-title_text-align_left
+        .content-title__title
+            padding-right: 0
+            text-align: center
+
+    .content-title_direction_row
+        .container
+            flex-wrap: wrap
+        .content-title__item
+            width: 100%
+
+    .content-title_direction_column
+        padding-bottom: 50px
+        .content-title__item
+            width: 100%
+
+    .content-title_height_auto
+        .content-title__title
+            margin-top: 100px
+            margin-bottom: 50px
+            margin-right: auto
+    
+    .content-title_direction_column
+        position: relative
+        height: auto
+
+    .content-title__map
+        left: 0
+        width: 100%
+        height: 800px
+        margin-top: 130px
+        background-size: 100%
+        background-position: top
+
+    .content-title__list
+        .list__item
+            font-size: 30px
+
+    .content-title
+        .community__title
+            font-size: calc(3.7vw * #{$tablet-gain})
+        .community__title_decoration_point::before
+            width: calc(1.5vw * #{$tablet-gain})
+            height: calc(1.5vw * #{$tablet-gain})
+            border: calc(0.4vw * #{$tablet-gain}) solid $color-text
+        .community__subtitle
+            width: calc(7.3vw * #{$tablet-gain})
+            margin-left: calc(3vw * #{$tablet-gain})  
+            width: calc(7.3vw * #{$tablet-gain})
+            height: calc(2.7vw * #{$tablet-gain})
+            font-size: calc(1.2vw * #{$tablet-gain})
+            line-height: calc(2.7vw * #{$tablet-gain})
+
+    .content-title.content-title_organizations 
+        .content-title__title
+            margin-bottom: calc(2.3vw * #{$tablet-gain})
+
+    .content-title__subtitle
+        margin-bottom: calc(2.3vw * #{$tablet-gain})
+        font-size: calc(3.698vw / 1.3 * 1.5 / 2)
+
+@media(max-width: $mobile-width)
+    .content-title_type_news
+        height: 527px
+        margin-top: $height-header-mobile
+        padding-top: 0
+
+    .content-title_height_auto
+        height: auto
+
+    .content-title_decoration_underline
+        .content-title__title
+            padding-bottom: calc(2.3vw * 1.5)
+            &::after
+                width: calc(14vw * 1.5)
+                margin-left: calc(-7vw * 1.5)
+
+    .content-title_font-size_l
+        .content-title__title
+            font-size: calc(3.69vw * 1.5)
+
+    .content-title_font-size_m
+        .content-title__title
+            // font-size: calc(3.3vw * 2)
+            font-size: calc(2.7vw * 1.7)
+
+    .content-title_font-size_s
+        .content-title__title
+            font-size: calc(2.1vw * 2)
+
+    .content-title
+        .community__subtitle
+            width: 18.2vw
+            height: 6.7vw
+            font-size: 3vw
+            line-height: 6.7vw
+
+    .content-title__map
+        left: 0
+        width: 100%
+        height: 700px
+        margin-top: -20px
+        background-size: 125%
+        background-position: top
+
+    .content-title
+        .community__title
+            font-size: calc(3.7vw * #{$mobile-gain-m})
+        .community__title_decoration_point::before
+            width: calc(1.5vw * #{$mobile-gain-m})
+            height: calc(1.5vw * #{$mobile-gain-m})
+            border: calc(0.4vw * #{$mobile-gain-m}) solid $color-text
+        .community__subtitle
+            width: calc(7.3vw * #{$mobile-gain-m})
+            margin-left: calc(3vw * #{$mobile-gain-m})
+            width: calc(7.3vw * #{$mobile-gain-m})
+            height: calc(2.7vw * #{$mobile-gain-m})
+            font-size: calc(1.2vw * #{$mobile-gain-m})
+            line-height: calc(2.7vw * #{$mobile-gain-m})
+
+    .content-title.content-title_organizations 
+        .content-title__title
+            width: 100%
+            margin-bottom: calc(2.3vw * 1.5)
+        
+    .content-title__subtitle
+        margin-bottom: calc(2.3vw * 1.5)
+        font-size: calc(3.698vw / 1.3 * 1.5 / 2)
+
+@media(max-width: 767px)
+    .content-title_type_news
+        height: 500px
+
+    .content-title_height_s
+        height: 350px
+
+    .content-title_height_auto
+        height: auto
+
+    .content-title_decoration_underline
+        .content-title__title
+            width: 100%
+            padding-bottom: calc(2.3vw * 2.5)
+            &::after
+                width: calc(14vw * 2.5)
+                margin-left: calc(-7vw * 2.5)
+
+    .content-title_font-size_l
+        .content-title__title
+            font-size: calc(3.69vw * 2.5)
+
+    .content-title_font-size_m
+        .content-title__title
+            // font-size: calc(3.3vw * 3)
+            font-size: calc(2.7vw * 2)
+
+    .content-title_font-size_s
+        .content-title__title
+            // font-size: calc(2.1vw * #{$mobile-gain})
+            font-size: calc(2.1vw * 2.5)
+
+    .content-title
+        .community__title
+            font-size: calc(3.7vw * 3)
+        .community__title_decoration_point::before
+            width: calc(1.5vw  * 3)
+            height: calc(1.5vw * 3)
+            border: calc(0.4vw * 3) solid $color-text
+        .community__subtitle
+            width: calc(7.3vw * 3)
+            margin-left: calc(3vw * 3)
+            width: calc(7.3vw * 3)
+            height: calc(2.7vw * 3)
+            font-size: calc(1.2vw * 3)
+            line-height: calc(2.7vw * 3)
+
+    .content-title
+        .community__content
+            margin-top: 80vw
+            margin-bottom: 0
+
+    .content-title.content-title_organizations 
+        .content-title__title
+            margin-bottom: calc(2.3vw * 2.5)
+
+    .content-title__subtitle
+        margin-bottom: calc(2.3vw * 2.5)
+        font-size: calc(3.698vw * 2.5 / 2)
+
+
+
+
+
+
+
+
+

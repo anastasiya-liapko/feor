@@ -1,0 +1,45 @@
+.pin
+    z-index: 10
+    position: absolute
+    width: 3.438vw
+    height: 3.438vw
+    background-color: rgba(255, 255, 255, 0.2)
+    border-radius: 50%
+    box-shadow: 0 0 0 1px $color-text
+    transition: all 0.3s ease
+    &::after
+        content: ''
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 0.833vw
+        height: 0.833vw
+        margin-left: -0.4165vw
+        margin-top: -0.4165vw
+        background-color: $color-text
+        border-radius: 50%
+    &:hover,
+    &.hover
+        background-color: rgba(85, 152, 206, 0.2)
+        box-shadow: 0 0 0 3px $color-lightblue
+        cursor: pointer
+    
+.pin_novosibirsk
+    top: 55%
+    left: 45%
+
+.pin_tomsk
+    top: 35%
+    left: 50%
+
+.pin_irkutsk
+    top: 20%
+    left: 55%
+
+.pin_omsk
+    top: 40%
+    left: 60%
+
+.pin_barnaul
+    top: 25%
+    left: 70%

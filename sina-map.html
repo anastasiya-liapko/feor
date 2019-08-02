@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>FEOR</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="shortcut icon" href="public/img/fav-feor.png" type="image/png">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800|Roboto:400,700,900&amp;subset=cyrillic-ext,latin-ext" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
+        <link rel="stylesheet" href="public/css/main.min.css">
+    </head>
+
+    <body>
+        <div class="content content_type_news">
+            <div class="header page__header">
+                <div class="container header__container">
+                    <div id="js-lang" class="lang header__lang">
+                        <ul id="js-langList" class="lang__list">
+                            <li class="lang__item" data-text="English">English</li>
+                            <li class="lang__item" data-text="Russian">Russian</li>
+                        </ul>
+
+                        <span id="js-langPicked" class="lang__picked">English</span>
+                    </div>
+
+                    <div class="header__content header__content_position_top">
+                        <button id="js-hamburger" class="hamburger hamburger_squeeze header__hamburger" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+
+                        <a href="/" class="logo header__logo">
+                            <!-- <img src="public/img/logo.png" class="header__logo-img" alt="FEOR"> -->
+                        </a>
+
+                        <ul id="js-menu" class="menu header__menu">
+                            <li class="menu__item header__menu-item">
+                                <a href="about-us.html" class="menu__link header__menu-link">о федерации</a>
+                            </li>
+                            <li class="menu__item header__menu-item">
+                                <a href="#" class="menu__link header__menu-link">Общины</a>
+                            </li>
+                            <li class="menu__item header__menu-item">
+                                <a href="#" class="menu__link header__menu-link">Традиции</a>
+                            </li>
+                            <li class="menu__item header__menu-item">
+                                <a href="#" class="menu__link header__menu-link">календарь</a>
+                            </li>
+                            <li class="menu__item header__menu-item">
+                                <a href="organizatii.html" class="menu__link header__menu-link">Организации</a>
+                            </li>
+                        </ul>
+
+                        <button class="search header__search" data-toggle="modal" data-target="#js-modalSearch">
+                            <span class="search__icon icon-search"></span>
+                            <span class="search__text">Поиск</span>
+                        </button>
+                    </div>
+
+                    <div class="header__content header__content_position_bottom">
+                        <a href="donate-pay.html" class="button button_color_blue header__button" data-text="Поддержать">Поддержать</a>
+                    </div>
+                </div>
+            </div>
+            <!-- header -->
+
+            <div 
+                class="content-title content-title_type_news content-title_font-size_m content__title" 
+                style="background-image: url('public/img/sina-map.jpg');">
+                <div class="container container_content container_content_small content-title__container">
+                    <h1 class="content-title__title">Москва</h1>
+                </div>
+            </div>
+            <!-- content__title -->
+
+            <div class="sina-map content-inner content-inner_type_press-center content__inner">
+                <div class="container container_content content-inner__container">
+
+                    <div class="sina-map__text content-inner__block container container_content container_content_small container_content_inner">
+                        <p>Московская еврейская община представляет собой агломерацию общин, расположенных в разных   районах мегаполиса.  Сегодня -  это одна из самых больших и  процветающих общин в мире.  Основными ее задачами является: развитие еврейской жизни во всем ее многообразии, реализация социально-значимых проектов,   межнациональный, межрелигиозный и межкультурный диалог; укрепление толерантности, противодействие экстремизму и ксенофобии</p>
+
+                        <p>Об истории еврейской общины Москвы. </p>
+
+                        <p>Первые упоминания о евреях в Москве появляются в конце XV века.  Но первые указания о существовании небольшой еврейской общине датируются концом XVII века. Она состояла из принятых на службу иностранцев и пленников, приведенных из Речи Посполитой, несмотря на официальный запрет по отношению к иудаизму.</p>
+
+                        <p>Значительное число евреев появляется в Москве после первого раздела Польши (1772), когда в состав России вошли территории с большим еврейским населением. Первые еврейские молельные дома, Аракчевский и Межевой, появились в 1820-х. Их прихожанами были так называемые николаевские солдаты — евреи, которых стали призывать в армию после вступления на престол Николая I (до этого с них брали двойные подати за освобождение от службы в армии). В 1865 году была образована Московская еврейская религиозная община. В 1870 году была открыта первая Хоральная синагога в районе Солянского проезда. Рядом с православным Дорогомиловским кладбищем было создано еврейское. В 1871 году открылось учебное заведение «Талмуд-Тора». В период с 1850 по 1891-й год  в Москве появилось 15 синагог и молелен. В 1891-1893 годах в рамках политики выселения евреев из Москвы (было выселено свыше 20000 человек), было закрыто 10 синагог и молельных домов. </p>
+
+                        <p>В 1915-1917 годах  в результате выселения евреев из «черты оседлости» в пригороды Москвы прибыло множество беженцев,  и хаотично возникали общины, в Богородском открылась ешива.</p>
+
+                        <p>В 1920-е Москву захлестнула новая волна евреев беженцев. На сей раз люди бежали от экономических трудностей и политических преследований, так как в большом городе было легче затеряться. Из-за притока новых людей выросло количество синагог в городе — в 1920-е их было 18. Также в Москве работали кошерные магазины, и полуофициально преподавали меламеды (учителя для детей по еврейской традиции).</p>
+
+                        <p>В 1922 году в Москве прошел съезд раввинов, созванный раввином Иосифом-Ицхаком Шнеерсоном – Шестым Любавичским ребе (1880-1950), на котором был учрежден «Ваад рабаней СССР» (Совет раввинов СССР), который  и возглавил Иосиф-Ицхак Шнеерсон. В 1922-1924 годах Москва была центром деятельности Совета раввинов.</p>
+
+                        <p>В  1920-е еврейские религиозные общины подвергались репрессиям со стороны властей. В 1928-1930 годы были закрыты 14 из 18 синагог и была разрушена вся религиозная инфраструктура. В 1933 году, после выезда лидеров Ваад за границу, он был распущен.</p>
+
+                        <p>В 1935-1938 годы были арестованы несколько религиозных активистов, многие из них, включая раввина Хоральной синагоги Шмарьяу-Лейба Медалье и главу общины синагоги на Большой Бронной Моше Гутенбергера, были расстреляны. В 1939 году была закрыта синагога на Большой Бронной улице, в 1947 году  - на Арбате, в 1971 году,  построенная в 1925 году тогда еще в московском пригороде,  в Черкизово. До конца советской эпохи сохранились лишь Хоральная синагога и построенная в 1928 году синагога в Марьиной Роще. В начале 1980-х годов готовился (под предлогом «ветхости») снос синагоги в Марьиной Роще, но он не был осуществлен из-за организованного прихожанами ремонта, сделавшего вопрос о «ветхости» неактуальным.</p>
+
+                        <p>С 1958 года отмечаются массовые собрания еврейской молодежи на праздник Симхат-Тора (его внешняя сторона – песни и танцы – была наиболее понятной для ассимилированных советских евреев). В 1970-е благодаря росту национального самосознания у советских евреев, в Москве растет число верующих, появляются неофициальные общины. Происходит восстановление системы религиозного образования, появляются неофициальные шойхеты и моэли (специалисты, осуществляющие религиозное обрезание).</p>
+
+                        <p>В постсоветский период в Москве было открыто и реконструировано множество синагог. Они существуют как отдельные здания, так и открываются в общественных местах, например: в университете МГИМО и кампусе Еврейского университета, в Торговом центре «Афимолл», были открыты молельные комнаты в следственных изоляторах и аэропортах, во многих районах Москвы работают синагоги и действует своя небольшая община.</p>
+
+                        <p>На базе Московской еврейской общины действуют множество программ от образовательных факультативах до полноценных учебных заведений: детских садов, школ и вузов. Широко развита гуманитарная и благотворительная помощь, работает медицинский центр «Рамбам», оказывающий медицинские услуги для всех желающих. Евреи Москвы, соблюдающие кашрут, не чувствуют никаких стеснений, в городе много кошерных магазинов, ресторанов и кафе.</p>
+                    </div>
+                    <!-- content-inner__block -->
+
+                    <button class="sina-map__button-more button button_color_blue footer__button" data-text="читать далее">читать далее</button>
+                     
+                    <div class="sina-map__map mapbox-map content-inner__block-img content-inner__block-img_position_center">
+                        <div id="map"></div>
+                    </div>
+                    <!-- content-inner__block-img -->
+
+                </div>
+            </div>
+            <!-- content__inner -->
+
+            <div class="sina-map__orgs-wrapper more content__more">
+                <div class="container container_content container_content_small more__container">
+                    <p class="sina-map__orgs-title more__title more__title_position_left">Общины и синагоги Москвы</p>
+
+                    <div class="sina-map__orgs d-flex flex-wrap align-items-start justify-content-start">
+                        <div class="sina-map__org">
+                            <p class="sina-map__org-title">Местная религиозная организация "Иудейская ортодоксальная община "Бейт Давид" ("Дом Давида")</p>
+                            <div class="sina-map__org-text sina-map__org-person link_design_grey d-flex">
+                                <span class="link__icon fas fa-user d-flex align-items-center justify-content-center"></span>
+                                <div>
+                                    <span class="link__text d-inline-block">Равин Шалолашвили Давид Шалвович</span>
+                                    <span class="link__text d-inline-block">Председатель Золотарев Дмитрий </span>
+                                </div>
+                            </div>
+                            <p class="sina-map__org-text sina-map__org-address link_design_grey d-flex">
+                                <span class="link__icon icon-map d-flex align-items-center justify-content-center"></span>
+                                <span class="link__text">Москва, Касимовское шоссе, д.3</span>
+                            </p>
+                            <a href="tel:+74959955774" class="sina-map__org-text sina-map__org-phone link link_design_grey d-flex">
+                                <span class="link__icon icon-phone d-flex align-items-center justify-content-center"></span>
+                                <span class="link__text">(495) 995-57-74</span>
+                            </a>
+                            <p class="sina-map__org-text sina-map__org-metro link_design_grey d-flex">
+                                <span class="link__icon icon-metro d-flex align-items-center justify-content-center"></span>
+                                <span class="link__text">Китай-город</span>
+                            </p>
+                            <div class="sina-map__org-social social">
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <i class="sina-map__org-social-icon fas fa-globe-americas d-flex align-items-center justify-content-center"></i>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <i class="sina-map__org-social-icon fas fa-envelope d-flex align-items-center justify-content-center"></i>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <span class="sina-map__org-social-icon link__icon icon-youtube d-flex align-items-center justify-content-center"></span>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <span class="sina-map__org-social-icon sina-map__org-social-icon_font_s link__icon icon-instagram1 d-flex align-items-center justify-content-center"></span>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <span class="sina-map__org-social-icon link__icon icon-twitter d-flex align-items-center justify-content-center"></span>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <span class="sina-map__org-social-icon link__icon icon-facebook d-flex align-items-center justify-content-center"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- sina-map__org -->
+                        <div class="sina-map__org">
+                            <p class="sina-map__org-title">Местная религиозная организация "Иудейская ортодоксальная община "Бейт Давид" ("Дом Давида")</p>
+                            <div class="sina-map__org-text sina-map__org-person link_design_grey d-flex">
+                                <span class="link__icon fas fa-user d-flex align-items-center justify-content-center"></span>
+                                <div>
+                                    <span class="link__text d-inline-block">Равин Шалолашвили Давид Шалвович</span>
+                                    <span class="link__text d-inline-block">Председатель Золотарев Дмитрий </span>
+                                </div>
+                            </div>
+                            <p class="sina-map__org-text sina-map__org-address link_design_grey d-flex">
+                                <span class="link__icon icon-map d-flex align-items-center justify-content-center"></span>
+                                <span class="link__text">Москва, 123104, ул. Большая Бронная, д.6</span>
+                            </p>
+                            <a href="tel:+74959955774" class="sina-map__org-text sina-map__org-phone link link_design_grey d-flex">
+                                <span class="link__icon icon-phone d-flex align-items-center justify-content-center"></span>
+                                <span class="link__text">(495) 995-57-74</span>
+                            </a>
+                            <p class="sina-map__org-text sina-map__org-metro link_design_grey d-flex">
+                                <span class="link__icon icon-metro d-flex align-items-center justify-content-center"></span>
+                                <span class="link__text">Китай-город</span>
+                            </p>
+                            <div class="sina-map__org-social social">
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <i class="sina-map__org-social-icon fas fa-globe-americas d-flex align-items-center justify-content-center"></i>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <i class="sina-map__org-social-icon fas fa-envelope d-flex align-items-center justify-content-center"></i>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <span class="sina-map__org-social-icon link__icon icon-youtube d-flex align-items-center justify-content-center"></span>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <span class="sina-map__org-social-icon sina-map__org-social-icon_font_s link__icon icon-instagram1 d-flex align-items-center justify-content-center"></span>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <span class="sina-map__org-social-icon link__icon icon-twitter d-flex align-items-center justify-content-center"></span>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <span class="sina-map__org-social-icon link__icon icon-facebook d-flex align-items-center justify-content-center"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- sina-map__org -->
+                        <div class="sina-map__org">
+                            <p class="sina-map__org-title">Местная религиозная организация "Иудейская ортодоксальная община "Бейт Давид" ("Дом Давида")</p>
+                            <div class="sina-map__org-text sina-map__org-person link_design_grey d-flex">
+                                <span class="link__icon fas fa-user d-flex align-items-center justify-content-center"></span>
+                                <div>
+                                    <span class="link__text d-inline-block">Равин Шалолашвили Давид Шалвович</span>
+                                    <span class="link__text d-inline-block">Председатель Золотарев Дмитрий </span>
+                                </div>
+                            </div>
+                            <p class="sina-map__org-text sina-map__org-address link_design_grey d-flex">
+                                <span class="link__icon icon-map d-flex align-items-center justify-content-center"></span>
+                                <span class="link__text">Москва, 123112, Пресненская наб., д. 2, ТРЦ «Афимолл», эт. 5</span>
+                            </p>
+                            <a href="tel:+74959955774" class="sina-map__org-text sina-map__org-phone link link_design_grey d-flex">
+                                <span class="link__icon icon-phone d-flex align-items-center justify-content-center"></span>
+                                <span class="link__text">(495) 995-57-74</span>
+                            </a>
+                            <p class="sina-map__org-text sina-map__org-metro link_design_grey d-flex">
+                                <span class="link__icon icon-metro d-flex align-items-center justify-content-center"></span>
+                                <span class="link__text">Китай-город</span>
+                            </p>
+                            <div class="sina-map__org-social social">
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <i class="sina-map__org-social-icon fas fa-globe-americas d-flex align-items-center justify-content-center"></i>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <i class="sina-map__org-social-icon fas fa-envelope d-flex align-items-center justify-content-center"></i>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <span class="sina-map__org-social-icon link__icon icon-youtube d-flex align-items-center justify-content-center"></span>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <span class="sina-map__org-social-icon sina-map__org-social-icon_font_s link__icon icon-instagram1 d-flex align-items-center justify-content-center"></span>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <span class="sina-map__org-social-icon link__icon icon-twitter d-flex align-items-center justify-content-center"></span>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <span class="sina-map__org-social-icon link__icon icon-facebook d-flex align-items-center justify-content-center"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- sina-map__org -->
+                        <div class="sina-map__org">
+                            <p class="sina-map__org-title">Местная религиозная организация "Иудейская ортодоксальная община "Бейт Давид" ("Дом Давида")</p>
+                            <div class="sina-map__org-text sina-map__org-person link_design_grey d-flex">
+                                <span class="link__icon fas fa-user d-flex align-items-center justify-content-center"></span>
+                                <div>
+                                    <span class="link__text d-inline-block">Равин Шалолашвили Давид Шалвович</span>
+                                    <span class="link__text d-inline-block">Председатель Золотарев Дмитрий </span>
+                                </div>
+                            </div>
+                            <p class="sina-map__org-text sina-map__org-address link_design_grey d-flex">
+                                <span class="link__icon icon-map d-flex align-items-center justify-content-center"></span>
+                                <span class="link__text">Москва, 127055, ул.Образцова, д.11, стр.5, эт.4</span>
+                            </p>
+                            <a href="tel:+74959955774" class="sina-map__org-text sina-map__org-phone link link_design_grey d-flex">
+                                <span class="link__icon icon-phone d-flex align-items-center justify-content-center"></span>
+                                <span class="link__text">(495) 995-57-74</span>
+                            </a>
+                            <p class="sina-map__org-text sina-map__org-metro link_design_grey d-flex">
+                                <span class="link__icon icon-metro d-flex align-items-center justify-content-center"></span>
+                                <span class="link__text">Китай-город</span>
+                            </p>
+                            <div class="sina-map__org-social social">
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <i class="sina-map__org-social-icon fas fa-globe-americas d-flex align-items-center justify-content-center"></i>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <i class="sina-map__org-social-icon fas fa-envelope d-flex align-items-center justify-content-center"></i>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <span class="sina-map__org-social-icon link__icon icon-youtube d-flex align-items-center justify-content-center"></span>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <span class="sina-map__org-social-icon sina-map__org-social-icon_font_s link__icon icon-instagram1 d-flex align-items-center justify-content-center"></span>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <span class="sina-map__org-social-icon link__icon icon-twitter d-flex align-items-center justify-content-center"></span>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <span class="sina-map__org-social-icon link__icon icon-facebook d-flex align-items-center justify-content-center"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- sina-map__org -->
+                        <div class="sina-map__org">
+                            <p class="sina-map__org-title">Местная религиозная организация "Иудейская ортодоксальная община "Бейт Давид" ("Дом Давида")</p>
+                            <div class="sina-map__org-text sina-map__org-person link_design_grey d-flex">
+                                <span class="link__icon fas fa-user d-flex align-items-center justify-content-center"></span>
+                                <div>
+                                    <span class="link__text d-inline-block">Равин Шалолашвили Давид Шалвович</span>
+                                    <span class="link__text d-inline-block">Председатель Золотарев Дмитрий </span>
+                                </div>
+                            </div>
+                            <p class="sina-map__org-text sina-map__org-address link_design_grey d-flex">
+                                <span class="link__icon icon-map d-flex align-items-center justify-content-center"></span>
+                                <span class="link__text">Москва, 127018, ул.Октябрьская, д.18</span>
+                            </p>
+                            <a href="tel:+74959955774" class="sina-map__org-text sina-map__org-phone link link_design_grey d-flex">
+                                <span class="link__icon icon-phone d-flex align-items-center justify-content-center"></span>
+                                <span class="link__text">(495) 995-57-74</span>
+                            </a>
+                            <p class="sina-map__org-text sina-map__org-metro link_design_grey d-flex">
+                                <span class="link__icon icon-metro d-flex align-items-center justify-content-center"></span>
+                                <span class="link__text">Китай-город</span>
+                            </p>
+                            <div class="sina-map__org-social social">
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <i class="sina-map__org-social-icon fas fa-globe-americas d-flex align-items-center justify-content-center"></i>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <i class="sina-map__org-social-icon fas fa-envelope d-flex align-items-center justify-content-center"></i>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <span class="sina-map__org-social-icon link__icon icon-youtube d-flex align-items-center justify-content-center"></span>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <span class="sina-map__org-social-icon sina-map__org-social-icon_font_s link__icon icon-instagram1 d-flex align-items-center justify-content-center"></span>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <span class="sina-map__org-social-icon link__icon icon-twitter d-flex align-items-center justify-content-center"></span>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <span class="sina-map__org-social-icon link__icon icon-facebook d-flex align-items-center justify-content-center"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- sina-map__org -->
+                        <div class="sina-map__org">
+                            <p class="sina-map__org-title">Местная религиозная организация "Иудейская ортодоксальная община "Бейт Давид" ("Дом Давида")</p>
+                            <div class="sina-map__org-text sina-map__org-person link_design_grey d-flex">
+                                <span class="link__icon fas fa-user d-flex align-items-center justify-content-center"></span>
+                                <div>
+                                    <span class="link__text d-inline-block">Равин Шалолашвили Давид Шалвович</span>
+                                    <span class="link__text d-inline-block">Председатель Золотарев Дмитрий </span>
+                                </div>
+                            </div>
+                            <p class="sina-map__org-text sina-map__org-address link_design_grey d-flex">
+                                <span class="link__icon icon-map d-flex align-items-center justify-content-center"></span>
+                                <span class="link__text">Москва, 127055, Вадковский пер., д.3А</span>
+                            </p>
+                            <a href="tel:+74959955774" class="sina-map__org-text sina-map__org-phone link link_design_grey d-flex">
+                                <span class="link__icon icon-phone d-flex align-items-center justify-content-center"></span>
+                                <span class="link__text">(495) 995-57-74</span>
+                            </a>
+                            <p class="sina-map__org-text sina-map__org-metro link_design_grey d-flex">
+                                <span class="link__icon icon-metro d-flex align-items-center justify-content-center"></span>
+                                <span class="link__text">Китай-город</span>
+                            </p>
+                            <div class="sina-map__org-social social">
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <i class="sina-map__org-social-icon fas fa-globe-americas d-flex align-items-center justify-content-center"></i>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <i class="sina-map__org-social-icon fas fa-envelope d-flex align-items-center justify-content-center"></i>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <span class="sina-map__org-social-icon link__icon icon-youtube d-flex align-items-center justify-content-center"></span>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <span class="sina-map__org-social-icon sina-map__org-social-icon_font_s link__icon icon-instagram1 d-flex align-items-center justify-content-center"></span>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <span class="sina-map__org-social-icon link__icon icon-twitter d-flex align-items-center justify-content-center"></span>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <span class="sina-map__org-social-icon link__icon icon-facebook d-flex align-items-center justify-content-center"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- sina-map__org -->
+                        <div class="sina-map__org">
+                            <p class="sina-map__org-title">Местная религиозная организация "Иудейская ортодоксальная община "Бейт Давид" ("Дом Давида")</p>
+                            <div class="sina-map__org-text sina-map__org-person link_design_grey d-flex">
+                                <span class="link__icon fas fa-user d-flex align-items-center justify-content-center"></span>
+                                <div>
+                                    <span class="link__text d-inline-block">Равин Шалолашвили Давид Шалвович</span>
+                                    <span class="link__text d-inline-block">Председатель Золотарев Дмитрий </span>
+                                </div>
+                            </div>
+                            <p class="sina-map__org-text sina-map__org-address link_design_grey d-flex">
+                                <span class="link__icon icon-map d-flex align-items-center justify-content-center"></span>
+                                <span class="link__text">Москва, 127018, 2-й Вышеславцев пер., д.5а</span>
+                            </p>
+                            <a href="tel:+74959955774" class="sina-map__org-text sina-map__org-phone link link_design_grey d-flex">
+                                <span class="link__icon icon-phone d-flex align-items-center justify-content-center"></span>
+                                <span class="link__text">(495) 995-57-74</span>
+                            </a>
+                            <p class="sina-map__org-text sina-map__org-metro link_design_grey d-flex">
+                                <span class="link__icon icon-metro d-flex align-items-center justify-content-center"></span>
+                                <span class="link__text">Китай-город</span>
+                            </p>
+                            <div class="sina-map__org-social social">
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <i class="sina-map__org-social-icon fas fa-globe-americas d-flex align-items-center justify-content-center"></i>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <i class="sina-map__org-social-icon fas fa-envelope d-flex align-items-center justify-content-center"></i>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <span class="sina-map__org-social-icon link__icon icon-youtube d-flex align-items-center justify-content-center"></span>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <span class="sina-map__org-social-icon sina-map__org-social-icon_font_s link__icon icon-instagram1 d-flex align-items-center justify-content-center"></span>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <span class="sina-map__org-social-icon link__icon icon-twitter d-flex align-items-center justify-content-center"></span>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <span class="sina-map__org-social-icon link__icon icon-facebook d-flex align-items-center justify-content-center"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- sina-map__org -->
+                        <div class="sina-map__org">
+                            <p class="sina-map__org-title">Местная религиозная организация "Иудейская ортодоксальная община "Бейт Давид" ("Дом Давида")</p>
+                            <div class="sina-map__org-text sina-map__org-person link_design_grey d-flex">
+                                <span class="link__icon fas fa-user d-flex align-items-center justify-content-center"></span>
+                                <div>
+                                    <span class="link__text d-inline-block">Равин Шалолашвили Давид Шалвович</span>
+                                    <span class="link__text d-inline-block">Председатель Золотарев Дмитрий </span>
+                                </div>
+                            </div>
+                            <p class="sina-map__org-text sina-map__org-address link_design_grey d-flex">
+                                <span class="link__icon icon-map d-flex align-items-center justify-content-center"></span>
+                                <span class="link__text">Москва, 127055, ул.Новосущевская, д.15</span>
+                            </p>
+                            <a href="tel:+74959955774" class="sina-map__org-text sina-map__org-phone link link_design_grey d-flex">
+                                <span class="link__icon icon-phone d-flex align-items-center justify-content-center"></span>
+                                <span class="link__text">(495) 995-57-74</span>
+                            </a>
+                            <p class="sina-map__org-text sina-map__org-metro link_design_grey d-flex">
+                                <span class="link__icon icon-metro d-flex align-items-center justify-content-center"></span>
+                                <span class="link__text">Китай-город</span>
+                            </p>
+                            <div class="sina-map__org-social social">
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <i class="sina-map__org-social-icon fas fa-globe-americas d-flex align-items-center justify-content-center"></i>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <i class="sina-map__org-social-icon fas fa-envelope d-flex align-items-center justify-content-center"></i>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <span class="sina-map__org-social-icon link__icon icon-youtube d-flex align-items-center justify-content-center"></span>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <span class="sina-map__org-social-icon sina-map__org-social-icon_font_s link__icon icon-instagram1 d-flex align-items-center justify-content-center"></span>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <span class="sina-map__org-social-icon link__icon icon-twitter d-flex align-items-center justify-content-center"></span>
+                                </a>
+                                <a href="#" class="sina-map__org-social-link link link_type_social link_design_grey">
+                                    <span class="sina-map__org-social-icon link__icon icon-facebook d-flex align-items-center justify-content-center"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- sina-map__org -->
+                    </div>
+
+                </div>
+            </div>
+            <!-- more -->
+
+            <div class="footer footer_design_dark content__footer">
+                <div class="container footer__container">
+                    <div class="footer__content">
+                        <!-- <ul id="js-menuFooter" class="menu footer__menu">
+                            <li class="menu__item footer__menu-item">
+                                <a href="deiatelnosti.html" class="menu__link footer__menu-link" data-text="Деятельность">Деятельность</a>
+                            </li>
+                            <li class="menu__item footer__menu-item">
+                                <a href="blog-ravin.html" class="menu__link footer__menu-link" data-text="Блог президента">Блог президента</a>
+                            </li>
+                            <li class="menu__item footer__menu-item">
+                                <a href="scripach.html" class="menu__link footer__menu-link" data-text="Скрипач на крыше">Скрипач на крыше</a>
+                            </li>
+                            <li class="menu__item footer__menu-item">
+                                <a href="press-center.html" class="menu__link footer__menu-link" data-text="Пресс-центр">Пресс-центр</a>
+                            </li>
+                            <li class="menu__item footer__menu-item">
+                                <a href="otchet.html" class="menu__link footer__menu-link" data-text="Отчеты">Отчеты</a>
+                            </li>
+                        </ul> -->
+
+                        <!-- <button class="search search_design_dark footer__search" data-toggle="modal" data-target="#js-modalSearch">
+                            <span class="search__icon icon-search"></span>
+                            <span class="search__text">Поиск</span>
+                        </button> -->
+
+                        <a href="/" class="logo logo_design_dark footer__logo">
+                            <!-- <img src="public/img/logo.png" class="logo__img footer__logo-img" alt="FEOR"> -->
+                        </a>
+
+                        <ul id="js-menuFooter" class="menu footer__menu footer-menu-one">
+							<li class="menu__item footer__menu-item">
+								<a href="/reports" class="menu__link footer__menu-link">Отчетность</a>
+							</li>
+						</ul>
+
+                        <div class="contacts contacts_design_dark footer__contacts">
+                            <!-- <div class="contacts__content contacts__content_position_top">
+                                <p class="contacts__item contacts__item_address">Адрес: 127055 г. Москва, ул. Образцова д.19-а.</p>
+                                <a href="tel:+74957302791" class="contacts__item contacts__item_phones" data-text="Tелефоны: +7 (495) 730-2791 (-92, -93)">
+                                    Tелефоны: +7 (495) 730-2791 (-92, -93)
+                                </a>
+                                <span class="contacts__separator">|</span>
+                                <a href="mailto:info@feor.ru" class="contacts__item contacts__item_email" data-text="E-mail: info@feor.ru">E-mail: info@feor.ru</a>
+                            </div> -->
+                            <div class="contacts__content contacts__content_position_bottom">
+                                <p class="contacts__item contacts__item_descr">Федерация еврейских общин России © 2004-2019</p>
+                                <p class="contacts__item contacts__item_rights">При использовании материалов сайта, ссылка на feor.ru обязательна. При цитировании в сети Интернет гиперссылка на www.feor.ru обязательна.</p>
+                            </div>
+                        </div>
+
+                        <div class="footer__button-wrapper">
+                            <a href="donate-pay.html" class="button button_color_blue footer__button" data-text="Поддержать">Поддержать</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--footer-->
+        </div>
+        <!-- page -->
+
+        <div id="js-modalSearch" class="modal modal_search fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content container">
+                    <div class="modal-header">
+                        <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">
+                          <span class="modal-close__icon" aria-hidden="true"></span>
+                        </button>
+
+                        <form class="modal-form form-search" name="form-search" action="">
+                            <input id="js-modalSearchInput" type="text" class="input_search form-search__input" name="input-search" placeholder="Что ищем?">
+                            <button type="submit" class="form-search__submit">Найти</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
+        <script src="public/js/parallax.js"></script>
+        <script src="public/js/show-menu.js"></script>
+        <script src="public/js/show-lang.js"></script>
+        <script src="public/js/show-button.js"></script>
+        <script src="public/js/modal-search.js"></script>
+        <script src="public/js/slider.js"></script>
+        <script src="public/js/add-active-class.js"></script>
+        <script src="public/js/sina-map.js"></script>
+        <script src="public/js/sina-mapbox/util.js"></script>
+        <script src="public/js/sina-mapbox/add_markers.js"></script>
+        <script src="public/js/sina-mapbox/maps_logic.js"></script>
+    </body>
+</html>

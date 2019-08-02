@@ -1,0 +1,196 @@
+.veterans__lists
+    // padding-top: 69px
+    // padding-bottom: 74px
+    padding-top: 3.594vw
+    padding-bottom: 3.854vw
+
+.veterans__lists-inner
+    // width: 500px
+    // height: 836px
+    // margin-bottom: 0
+    // background-color: #ffffff
+    // margin-right: 32px
+    // padding: 46px 57px
+    width: 26.042vw
+    height: 30.542vw
+    margin-bottom: 0
+    background-color: #ffffff
+    margin-right: 1.667vw
+    padding: 2.396vw 2.969vw
+    &:nth-child(2n)
+        margin-right: 0
+    
+.veterans__title
+    // margin-bottom: 40px
+    // font-size: 40px
+    margin-bottom: 2.083vw
+    font-size: 1.8vw
+    font-weight: 700
+    line-height: 1
+    color: #120d17
+    
+.veterans__list
+    margin-bottom: 0
+    padding-left: 0
+    list-style: none
+
+.veterans__list_type_cities
+    // height: 666px
+    height: 20.688vw
+    overflow-y: scroll
+
+.veterans__list-link
+    position: relative
+    // padding: 25px
+    // padding-left: 43px
+    // font-size: 24px
+    padding: 0.7vw
+    padding-left: 2.240vw
+    font-size: 1vw
+    font-weight: 700
+    line-height: 1
+    color: #000000
+    transition: color 0.3s linear
+    &::before
+        content: ''
+        position: absolute
+        top: 50%
+        left: 0
+        // width: 13px
+        // height: 13px
+        // margin-top: -6px
+        // border: 5px solid #120d17
+        width: 0.677vw
+        height: 0.677vw
+        margin-top: -0.313vw
+        border: 0.260vw solid #120d17
+        border-radius: 50%
+        background-color: transparent
+        transition: border 0.2s linear
+    &:hover,
+    &.active
+        color: $color-lightblue
+    &:hover::before,
+    &.active::before
+        // border: 5px solid $color-lightblue
+        border: 0.260vw solid $color-lightblue
+
+.veterans__people
+    // padding-top: 36px
+    // padding-bottom: 144px
+    padding-top: 1.875vw
+    padding-bottom: 7.500vw
+
+.veterans__people-list
+    width: 100%
+    margin-bottom: 0
+    padding-left: 0
+    list-style: none
+
+.veterans__people-list-item:last-child
+    .veterans__people-list-link
+        border-bottom: none
+
+.veterans__people-list-link
+    // padding: 25px 0
+    // font-size: 24px
+    padding: 0.7vw 0
+    font-size: 1vw
+    font-weight: 700
+    line-height: 1
+    color: #000000
+    border-bottom: 1px dashed #979797
+    transition: color 0.2s linear
+    span
+        color: #000000
+    &:hover
+        color: $color-lightblue
+
+.veterans__people-descr
+    font-weight: normal
+
+.content-inner__block-orden
+    margin-top: -120px
+    position: relative
+    width: 20%
+    margin-right: 120px
+
+.mb-30
+    margin-bottom: 30px
+
+.pb-60
+    margin-bottom: 60px
+
+.mt-30
+    margin-top: 30px
+
+@media(max-width: $tablet-width)
+    .veterans__lists
+        .container
+            width: 53.906vw
+            max-width: 1569px
+            margin: 0 auto
+
+    .veterans__people
+        .container
+            width: 53.906vw
+            max-width: 1569px
+            margin: 0 auto
+
+.veteran__active
+    .veterans__people-list-link span
+        color: $color-blue
+        cursor: pointer
+
+@media(max-width: $mobile-width)
+    .veterans__lists
+        padding-top: calc(3.594vw * #{$mobile-gain-m})
+        padding-bottom: calc(3.854vw * #{$mobile-gain-m})
+        .container
+            width: 100%
+            max-width: 100%   
+
+    .veterans__lists-inner
+        width: calc(26.042vw * #{$mobile-gain-m})
+        height: calc(43.542vw * #{$mobile-gain-m})
+        margin-right: calc(1.667vw * #{$mobile-gain-m})
+        padding: calc(2.396vw * #{$mobile-gain-m}) calc(2.969vw * #{$mobile-gain-m})  
+
+    .veterans__people
+        .container
+            width: 100%
+            max-width: 100%
+
+    .veterans__title
+        margin-bottom: calc(2.083vw * #{$mobile-gain-m})
+        font-size: calc(2.083vw * #{$mobile-gain-m})
+
+    .veterans__list_type_cities
+        height: calc(34.688vw * #{$mobile-gain-m})
+
+    .veterans__list-link
+        padding: calc(1.302vw * #{$mobile-gain-m})
+        padding-left: calc(2.240vw * #{$mobile-gain-m})
+        font-size: calc(1.250vw * #{$mobile-gain-m})
+        &::before
+            width: calc(0.677vw * #{$mobile-gain-m})
+            height: calc(0.677vw * #{$mobile-gain-m})
+            margin-top: calc(-0.677vw * #{$mobile-gain-m} / 2)
+            border: calc(0.260vw * #{$mobile-gain-m} * 1.1) solid #120d17
+        &:hover::before,
+        &.active::before
+            border: calc(0.260vw * #{$mobile-gain-m} * 1.1) solid $color-lightblue
+
+    .veterans__people
+        padding-top: calc(1.875vw * #{$mobile-gain-m})
+        padding-bottom: calc(7.500vw * #{$mobile-gain-m} / 2)
+
+    .veterans__people-list-link
+        padding: calc(1.302vw * #{$mobile-gain-m}) 0
+        font-size: calc(1.250vw * #{$mobile-gain-m})
+        border-bottom: 1px dashed #979797
+
+    .content-inner__block-orden
+        width: 30%
+        margin-top: 0
+        margin-right: 0

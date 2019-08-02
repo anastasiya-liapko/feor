@@ -1,0 +1,284 @@
+.map
+    position: relative
+    height: auto
+    margin-top: - #{$height-header}
+    background-color: $color-blue
+
+.map__layer_back
+    position: relative
+    width: 100%
+    height: 53.125vw
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+
+.map__layer-date
+    position: absolute
+    left: 9.1405vw
+    bottom: calc(9.1405vw / 3)
+
+.map__layer_front
+    z-index: 10
+    position: absolute
+    top: 11vw
+    left: 9.167vw
+    display: flex
+    flex-direction: column
+    width: 30%
+    height: auto
+    pointer-events: none
+
+.map__header
+    flex-grow: 1
+    margin-bottom: 1.5vw
+    pointer-events: none
+
+.map__subtitle
+    width: 5.781vw
+    height: 2.135vw
+    margin-left: 3vw
+    margin-bottom: 2.3vw
+    font-family: $font-main
+    font-size: 1.042vw
+    font-weight: 700
+    line-height: 2.135vw
+    text-transform: uppercase
+    text-align: center
+    color: $color-text
+    background-color: $color-lightblue
+
+.map__title
+    font-family: $font-main
+    font-size: 2.604vw
+    font-weight: 700
+    line-height: 1
+    text-transform: uppercase
+    text-align: left
+
+.map__title_decoration_point
+    position: relative
+    margin-bottom: 0
+    padding-left: 3vw
+    &::before
+        content: ''
+        position: absolute
+        top: 50%
+        left: 0
+        width: 1.354vw
+        height: 1.354vw
+        margin-top: -0.677vw
+        border: 0.365vw solid $color-text
+        border-radius: 50%
+
+.map__list
+    height: auto
+    pointer-events: auto
+
+.map__transition
+    position: absolute
+    top: 0
+    left: 0
+    width: 50%
+    height: 100%
+    background-image: linear-gradient(to right, #232323, rgba(51, 51, 51, 0))
+
+.map_position_left
+    .map__layer_back
+        background-position: right
+    .map__layer_front
+        left: 9.167vw
+        right: auto
+
+.map_position_right
+    .map__layer_back
+        background-position: left
+    .map__layer_front
+        left: auto
+        right: 9.167vw
+    .map__subtitle
+        margin-left: auto
+        margin-right: 3vw
+    .map__title_decoration_point
+        padding-left: 0
+        padding-right: 3vw
+        text-align: right
+        &::before
+            left: auto
+            right: 0
+
+.map_size_s
+
+.map_size_m
+    .map__layer_front
+        width: 40%
+    .list__item
+        width: 33.33%
+
+.map_size_l
+    .map__layer_front
+        width: 40%
+    .list__item
+        width: 33.33%
+
+@media(max-width: $tablet-width)
+    .map
+        margin-top: - #{$height-header-tablet}
+
+    .map__layer_back
+        background-color: $color-blue
+
+    .map__layer_front
+        top: 220px
+
+    .map_size_l
+        .map__layer_front
+            width: 50%
+        .list__item
+            width: 25%
+
+@media(max-width: 1199px)
+    .map__subtitle
+        width: calc(5.781vw / 1.2)
+        height: calc(2.135vw / 1.2)
+        margin-left: calc(3vw / 1.2)
+        margin-bottom: calc(2.3vw / 1.2)
+        font-size: calc(1.042vw / 1.2)
+        line-height: calc(2.135vw / 1.2)
+
+    .map__title
+        font-size: calc(2.604vw / 1.2)
+
+    .map__title_decoration_point
+        padding-left: calc(3vw / 1.2)
+        &::before
+            width: calc(1.354vw / 1.2)
+            height: calc(1.354vw / 1.2)
+            margin-top: calc(-0.677vw / 1.2)
+            border: calc(0.365vw / 1.2) solid $color-text
+
+@media(max-width: $mobile-width)
+    .map
+        margin-top: $height-header-mobile
+
+    .map__layer_back
+        height: calc(52.344vw * #{$mobile-gain-m})
+        margin-top: 0
+        margin-bottom: 0
+
+    .map__layer-date
+        position: absolute
+        left: 4.7vw
+        bottom: 4.7vw
+
+    .map__layer_front
+        position: static
+        width: 100%
+        height: auto
+        padding-left: 4.7vw
+        padding-right: 4.7vw
+        background-color: $color-blue
+
+    .map__header
+        margin-top: calc(5.625vw / 2)
+        margin-bottom: calc(5.625vw / 2)
+
+    .map__subtitle
+        width: calc(5.781vw * #{$mobile-gain-m})
+        height: calc(2.135vw * #{$mobile-gain-m})
+        margin-left: calc(3vw * #{$mobile-gain-m})
+        margin-bottom: calc(2.3vw * #{$mobile-gain-m} / 2)
+        font-size: calc(1.042vw * #{$mobile-gain-m})
+        line-height: calc(2.135vw * #{$mobile-gain-m})
+
+    .map__title
+        font-size: calc(2.604vw * #{$mobile-gain-m})
+
+    .map__title_decoration_point
+        padding-left: calc(3vw * #{$mobile-gain-m})
+        &::before
+            width: calc(1.354vw * #{$mobile-gain-m})
+            height: calc(1.354vw * #{$mobile-gain-m})
+            margin-top: calc(-0.677vw * #{$mobile-gain-m})
+            border: calc(0.365vw * #{$mobile-gain-m}) solid $color-text
+
+    .map__list
+        margin-top: 0
+        margin-bottom: calc(5.625vw / 2)
+        overflow-y: auto
+
+    .map_position_right
+        .map__subtitle
+            margin-right: 0
+            margin-left: calc(3vw * #{$mobile-gain-m})
+        .map__title_decoration_point
+            padding-right: 0
+            padding-left: calc(3vw * #{$mobile-gain-m})
+            text-align: left
+            &::before
+                left: 0
+                right: auto
+
+    .map_size_s,
+    .map_size_m,
+    .map_size_l
+        .map__layer_front
+            width: 100%
+        .list__item
+            width: 33.33%
+
+// @media(max-width: $mobile-width-s)
+@media(max-width: 575px)
+    .map__header
+        margin-top: 5vw
+        margin-bottom: 5vw
+
+    .map__subtitle
+        width: calc(5.781vw * 3)
+        height: calc(2.135vw * 3)
+        margin-left: calc(3vw * 3)
+        margin-bottom: calc(2.3vw * 3 / 2)
+        font-size: calc(1.042vw * 3)
+        line-height: calc(2.135vw * 3)
+
+    .map__title
+        font-size: calc(2.604vw * 2.5)
+
+    .map__title_decoration_point
+        padding-left: calc(3vw * 3)
+        &::before
+            width: calc(1.354vw * 3)
+            height: calc(1.354vw * 3)
+            margin-top: calc(-0.677vw * 3)
+            border: calc(0.365vw * 3) solid $color-text
+
+    .map__list
+        flex-direction: row
+        margin-bottom: 5vw
+
+    .map_position_right
+        .map__subtitle
+            margin-left: calc(3vw * 3)
+        .map__title_decoration_point
+            padding-left: calc(3vw * 3)
+
+    .map_size_s,
+    .map_size_m,
+    .map_size_l
+        .map__layer_front
+            width: 100%
+        .list__item
+            width: 50%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
