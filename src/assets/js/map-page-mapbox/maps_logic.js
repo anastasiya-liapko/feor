@@ -1,6 +1,7 @@
 $(function () {
     // const URL = 'get_base.php'
     const URL = '../../../get_base.php'
+    
     $.post(URL, {map_params: 1}, function (msg) {
         // const PLACE = 'public/img/map-pin.png';
         // const PLACES = 'public/img/map-pin-large.png';
@@ -44,6 +45,7 @@ $(function () {
             request.send(null);
         }
 
+
         // load pins images on the map
         map.loadImage(PLACE, function(error, image) {
             if (error) throw error;
@@ -58,7 +60,9 @@ $(function () {
 
         map.addControl(new mapboxgl.NavigationControl());
 
+
         var markersArray = [];
+
 
         // logic when map loading
         map.on('load', function () {
@@ -73,11 +77,22 @@ $(function () {
             });
         });
 
+
         // show/hide layers when zoom changed
         map.on('zoom', function () {
             var zoomValue = map.getZoom();
             window.util.switchLayer(map, zoomValue);            
         });
+
+
+        // remove popups on click
+        $(document).on('click', function (e) {
+            if (e.target.closest('#map') === null) {
+                window.util.removePopups('.mapboxgl-popup');
+                window.util.removePopups('.popup-place');
+            }
+        })
+        
 
         // transform list of places into array with children
         var getMarkersWithChildren = function (markers) {

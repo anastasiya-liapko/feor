@@ -46,24 +46,24 @@ $(function () {
             }
         });
 
-        map.addLayer({
-            "id": 'points',
-            "type": "circle",
-            "source": {
-                "type": "geojson",
-                "data": {
-                    "type": "FeatureCollection",
-                    "features": geoCities
-                }
-            },
-            "paint": {
-                "circle-stroke-width": 10,
-                "circle-stroke-opacity": 0,
-                "circle-stroke-color": "#1a3646",
-                "circle-color": "#54ecea",
-                "circle-radius": ["interpolate", ["linear"], ["zoom"], 7, ["interpolate", ["exponential", 1], ["number", ["get", "children"]], 1, 3, 4, 6], 22, ["interpolate", ["exponential", 1], ["number", ["get", "children"]], 999, 23]]
-            }
-        });
+        // map.addLayer({
+        //     "id": 'points',
+        //     "type": "circle",
+        //     "source": {
+        //         "type": "geojson",
+        //         "data": {
+        //             "type": "FeatureCollection",
+        //             "features": geoCities
+        //         }
+        //     },
+        //     "paint": {
+        //         "circle-stroke-width": 10,
+        //         "circle-stroke-opacity": 0,
+        //         "circle-stroke-color": "#1a3646",
+        //         "circle-color": "#54ecea",
+        //         "circle-radius": ["interpolate", ["linear"], ["zoom"], 7, ["interpolate", ["exponential", 1], ["number", ["get", "children"]], 1, 3, 4, 6], 22, ["interpolate", ["exponential", 1], ["number", ["get", "children"]], 999, 23]]
+        //     }
+        // });
 
 
         // add layer with places
@@ -97,9 +97,9 @@ $(function () {
                 }
             },
             paint: {
-                "text-color": "#54ecea",
+                "text-color": "#26465f",
                 // "text-translate": ["interpolate", ["exponential", 1.7], ["zoom"], 10, ["literal", [5, 4]], 15, ["literal", [14, 14]]]
-                "text-translate": [0,5]
+                "text-translate": [0,-32]
             },
             layout: {
                 "icon-image": ["get", "icon"],
@@ -109,38 +109,29 @@ $(function () {
                 // },
                 "icon-size": 1,
                 "icon-offset": [0, -25],
-                "text-line-height": 0.5,
+                "text-line-height": 0.25,
                 "text-field": ["get", "quantity"],
-                "text-font": ["Roboto Black", "Arial Unicode MS Regular"]
+                "text-font": ["Open Sans Bold", "Arial Unicode MS Regular"],
+                "text-size": 7
                 // "text-size": ["interpolate", ["linear"], ["zoom"], 6, ["interpolate", ["exponential", 1], ["number", ["get", "children"]], 1, 11, 5, 28], 12, ["interpolate", ["exponential", 1], ["number", ["get", "children"]], 1, 40, 5, 40]],
                 // "text-anchor": "right"
             }
         });
 
 
-        // show popup on click
+        // click place pin
         map.on('click', 'point', function (e) {
             var coordinates = e.features[0].geometry.coordinates.slice();
             while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
                 coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
             }
-            
-            // var popup = e.features[0].properties.popup;
-            // new mapboxgl.Popup({
-            //     anchor: 'bottom',
-            //     offset: [0, -50],
-            //     closeButton: false
-            // })
-            // .setLngLat(coordinates)
-            // .setHTML(popup)
-            // .addTo(map);
 
             var name = e.features[0].properties.name;
             var person = e.features[0].properties.person;
             var address = e.features[0].properties.address;
             var phone = e.features[0].properties.phone;
-            window.addPopupPlace(map, [name, person, address, phone], coordinates);
-            window.util.flyTo(map, coordinates);
+            // window.addPopupPlace(map, [name, person, address, phone], coordinates);
+            window.util.flyTo(map, coordinates, [name, person, address, phone]);
         });
 
         map.on('mouseenter', 'point', function () {
@@ -152,7 +143,7 @@ $(function () {
         });
 
 
-        // show popup on click
+        // click city pin
         map.on('click', 'city', function (e) {
             var coordinates = e.features[0].geometry.coordinates.slice();
 

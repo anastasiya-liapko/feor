@@ -17,16 +17,24 @@ $(function () {
 
     var closePopup = function () {
         $('#map .hamburger').removeClass('is-active');
-        $('#map .popup').addClass('slide-out-left');
+        $('#map .popup-menu').addClass('slide-out-left');
         setTimeout(function () { 
-            $('#map .popup').remove();
+            $('#map .popup-menu').remove();
         }, 400);
     };
 
-    var flyTo = function (map, coordinates) {
-        var zoomValue = map.getZoom();
+    var removePopups = function (selector) {
+        $(selector).each(function (index, elem) {
+            elem.remove()
+        })
+    };
 
-        zoomValue = zoomValue <= 10 ? 10 : zoomValue;
+    var flyTo = function (map, coordinates, array) {
+        removePopups('.mapboxgl-popup');
+        removePopups('.popup-place');
+        
+        var zoomValue = map.getZoom();
+        zoomValue = zoomValue <= 14 ? 14 : zoomValue;
 
         map.flyTo({
             center: coordinates,
@@ -39,10 +47,14 @@ $(function () {
 
             easing: function (t) { return t; }
         });
+
+        if (array !== undefined) {
+            window.addPopupPlace(map, array, coordinates)
+        }
     };
 
     var switchLayer = function (map, zoomValue) {
-        if (zoomValue >= 10) {
+        if (zoomValue > 10) {
             map.setLayoutProperty('city', 'visibility', 'none');
             map.setLayoutProperty('point', 'visibility', 'visible');
         } else {
@@ -58,8 +70,11 @@ $(function () {
         closePopup: function () {
             closePopup();
         },
-        flyTo: function (map, coordinates) {
-            flyTo(map, coordinates);
+        removePopups: function (selector) {
+            removePopups(selector);
+        },
+        flyTo: function (map, coordinates, array) {
+            flyTo(map, coordinates, array);
         },
         switchLayer: function (map, zoomValue) {
             switchLayer(map, zoomValue);

@@ -42,15 +42,19 @@ $(function () {
             });
 
             $('#map .popup-menu__dropdown-link').on('click', function () {
-                // var name = $(this).text();
-                // var address = $(this).attr('data-address');
+                var name = $(this).text();
+                var address = $(this).attr('data-address');
                 var point = $(this).attr('data-point').split(',');
+                var person = $(this).attr('data-person');
+                var phone = $(this).attr('data-phone');
                 // var descr = $(this).attr('data-descr');
                 // var more = $(this).attr('data-more');
                 // var img = $(this).attr('data-img');
 
                 // window.util.switchPopup([name, address, descr, more, img]);
-                window.util.flyTo(map, point);
+                // window.addPopupPlace(map, [name, person, address, phone], point);
+                window.util.flyTo(map, point, [name, person, address, phone]);
+                window.util.closePopup();
             });
 
             $('.popup-menu__search-submit').click(function(e) {
@@ -83,16 +87,16 @@ $(function () {
             $(this).toggleClass('is-active');
 
             if (!$(this).hasClass('is-active')) {
-                $('#map .popup').addClass('slide-out-left');
+                $('#map .popup-menu').addClass('slide-out-left');
                 setTimeout(function () { 
-                    $('#map .popup').remove();
+                    $('#map .popup-menu').remove();
                 }, 400);
             } else {
                 
-                if ($('div').is('#map .popup')) {
-                    $('#map .popup').addClass('slide-out-left');
+                if ($('div').is('#map .popup-menu')) {
+                    $('#map .popup-menu').addClass('slide-out-left');
                     setTimeout(function () { 
-                        $('#map .popup').remove();
+                        $('#map .popup-menu').remove();
                     }, 400);
                     setTimeout(function () { 
                         addPopup();
