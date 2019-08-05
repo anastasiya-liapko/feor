@@ -1,7 +1,8 @@
 'use strict';
 
 $(function () {
-    window.templatePlace = function (markerElem, coordinates) {
+    window.map_templatePlace = function (markerElem, coordinates) {
+        console.log(markerElem)
         var name = markerElem[0];
         var descr = markerElem[1];
         var address = markerElem[2];

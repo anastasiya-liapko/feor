@@ -1,5 +1,5 @@
 $(function () {
-    const URL = 'get_base.php'
+    // const URL = 'get_base.php'
     // const URL = '../../../get_base.php'
     
     $.post(URL, {map_params: 1}, function (msg) {

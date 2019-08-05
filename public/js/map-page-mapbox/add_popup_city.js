@@ -2,7 +2,7 @@ $(function () {
     var addPopupCity = function (markerElem, coordinates) {
         var fragment = document.createDocumentFragment();
         fragment.appendChild(window.templateCity(markerElem));
-        $('#map').append(fragment);
+        $('#map-page').append(fragment);
         
         $('.popup .popup__close').on('click', function () {
             var popup = $(this).closest('.popup');
@@ -13,7 +13,7 @@ $(function () {
         })
     };
 
-    window.addPopupCity = function (markerElem, coordinates) {
+    window.map_addPopupCity = function (markerElem, coordinates) {
         addPopupCity(markerElem, coordinates);
     }
 });

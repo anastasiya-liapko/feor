@@ -8,7 +8,7 @@ $(function () {
             var template = document.querySelector('#js-templatePopupMenu').content.querySelector('.popup-menu');
             var templateElement = template.cloneNode(true);
             fragmentMenu.appendChild(templateElement);
-            $('#map').append(fragmentMenu);
+            $('#map-page').append(fragmentMenu);
             Array.prototype.forEach.call(markersArray, function (parent, i) {
 
                 var fragmentMenuItem = document.createDocumentFragment();
@@ -18,7 +18,7 @@ $(function () {
         }
 
         var addClickFunc = function () {
-            $('#map .popup-menu__list-link').on('click', function (e) {
+            $('#map-page .popup-menu__list-link').on('click', function (e) {
                 // var name = $(this).text();
                 // var address = $(this).attr('data-address');
                 var point = $(this).attr('data-point').split(',');
@@ -31,17 +31,17 @@ $(function () {
                     dropdown.slideDown();
                     $(this).on('click', function () {
                         // window.util.switchPopup([name, address, descr, more, img]);
-                        window.util.flyTo(map, point);
-                        window.util.closePopup();
+                        window.map_util.flyTo(map, point);
+                        window.map_util.closePopup();
                     })
                 } else {
                     // window.util.switchPopup([name, address, descr, more, img]);
-                    window.util.flyTo(map, point);
-                    window.util.closePopup();
+                    window.map_util.flyTo(map, point);
+                    window.map_util.closePopup();
                 }
             });
 
-            $('#map .popup-menu__dropdown-link').on('click', function () {
+            $('#map-page .popup-menu__dropdown-link').on('click', function () {
                 var name = $(this).text();
                 var address = $(this).attr('data-address');
                 var point = $(this).attr('data-point').split(',');
@@ -53,8 +53,8 @@ $(function () {
 
                 // window.util.switchPopup([name, address, descr, more, img]);
                 // window.addPopupPlace(map, [name, person, address, phone], point);
-                window.util.flyTo(map, point, [name, person, address, phone]);
-                window.util.closePopup();
+                window.map_util.flyTo(map, point, [name, person, address, phone]);
+                window.map_util.closePopup();
             });
 
             $('.popup-menu__search-submit').click(function(e) {
@@ -83,20 +83,20 @@ $(function () {
         }
         
         // show/hide menu when hamburger clicked
-        $('#map .hamburger').on('click', function () {
+        $('#map-page .hamburger').on('click', function () {
             $(this).toggleClass('is-active');
 
             if (!$(this).hasClass('is-active')) {
-                $('#map .popup-menu').addClass('slide-out-left');
+                $('#map-page .popup-menu').addClass('slide-out-left');
                 setTimeout(function () { 
-                    $('#map .popup-menu').remove();
+                    $('#map-page .popup-menu').remove();
                 }, 400);
             } else {
                 
-                if ($('div').is('#map .popup-menu')) {
-                    $('#map .popup-menu').addClass('slide-out-left');
+                if ($('div').is('#map-page .popup-menu')) {
+                    $('#map-page .popup-menu').addClass('slide-out-left');
                     setTimeout(function () { 
-                        $('#map .popup-menu').remove();
+                        $('#map-page .popup-menu').remove();
                     }, 400);
                     setTimeout(function () { 
                         addPopup();
@@ -108,21 +108,9 @@ $(function () {
                 }
             }
         });
-
-        // закрытие при клике вне меню
-        // $('#map').on('click', function (e) {
-        //     console.log($('#js-mapHamburger').find(e.target).length === 0 )
-        //     console.log($('#map .popup').find(e.target).length === 0 )
-        //     console.log($(this).find(e.target).hasClass('popup'))
-        //     if ($('#js-mapHamburger').find(e.target).length === 0 
-        //     && $('#map .popup').find(e.target).length === 0 
-        //     || !$(this).find(e.target).hasClass('popup')) {
-        //         window.util.closePopup();
-        //     }
-        // });
     }
 
-window.menu = {
+window.map_menu = {
     addMenu: function (map, markersArray) {
         addMenu(map, markersArray);
     }

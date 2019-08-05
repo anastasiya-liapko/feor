@@ -1,25 +1,25 @@
 $(function () {
     var switchPopup = function (markerElem) {
-        $('#map .hamburger').removeClass('is-active');
+        $('#map-page .hamburger').removeClass('is-active');
 
-        if ($('div').is('#map .popup')) {
-            $('#map .popup').addClass('slide-out-left');
+        if ($('div').is('#map-page .popup')) {
+            $('#map-page .popup').addClass('slide-out-left');
             setTimeout(function () { 
-                $('#map .popup').remove();
+                $('#map-page .popup').remove();
             }, 400);
             setTimeout(function () { 
-                window.addPopupCity(markerElem);
+                window.map_addPopupCity(markerElem);
             }, 600);
         } else {
-            window.addPopupCity(markerElem);
+            window.map_addPopupCity(markerElem);
         }
     };
 
     var closePopup = function () {
-        $('#map .hamburger').removeClass('is-active');
-        $('#map .popup-menu').addClass('slide-out-left');
+        $('#map-page .hamburger').removeClass('is-active');
+        $('#map-page .popup-menu').addClass('slide-out-left');
         setTimeout(function () { 
-            $('#map .popup-menu').remove();
+            $('#map-page .popup-menu').remove();
         }, 400);
     };
 
@@ -34,7 +34,7 @@ $(function () {
         removePopups('.popup-place');
         
         var zoomValue = map.getZoom();
-        zoomValue = zoomValue <= 12 ? 12 : zoomValue;
+        zoomValue = zoomValue <= 14 ? 14 : zoomValue;
 
         map.flyTo({
             center: coordinates,
@@ -49,7 +49,8 @@ $(function () {
         });
 
         if (array !== undefined) {
-            window.addPopupPlace(map, array, coordinates)
+            console.log('add popup')
+            window.map_addPopupPlace(map, array, coordinates)
         }
     };
 
@@ -63,7 +64,7 @@ $(function () {
         }
     };
 
-    window.util = {
+    window.map_util = {
         switchPopup: function (markerElem) {
             switchPopup(markerElem);
         },

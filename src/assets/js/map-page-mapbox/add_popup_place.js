@@ -5,8 +5,8 @@ $(function () {
         // window.util.removePopups('.popup-place');
 
         var fragment = document.createDocumentFragment();
-        fragment.appendChild(window.templatePlace(markerElem, coordinates));
-        $('#map').append(fragment);
+        fragment.appendChild(window.map_templatePlace(markerElem, coordinates));
+        $('#map-page').append(fragment);
         
         var html = $('.popup-place').append(fragment)[0].outerHTML
         new mapboxgl.Popup({
@@ -19,7 +19,7 @@ $(function () {
         .addTo(map);
     };
 
-    window.addPopupPlace = function (map, markerElem, coordinates) {
+    window.map_addPopupPlace = function (map, markerElem, coordinates) {
         addPopupPlace(map, markerElem, coordinates);
     }
 });
