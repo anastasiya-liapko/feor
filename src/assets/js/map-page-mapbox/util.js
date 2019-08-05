@@ -34,7 +34,7 @@ $(function () {
         removePopups('.popup-place');
         
         var zoomValue = map.getZoom();
-        zoomValue = zoomValue <= 14 ? 14 : zoomValue;
+        zoomValue = zoomValue <= 12 ? 12 : zoomValue;
 
         map.flyTo({
             center: coordinates,

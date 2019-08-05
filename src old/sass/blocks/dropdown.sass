@@ -124,7 +124,14 @@
 		height: auto
 
 	.top-menu>li
-		width: 140px
+		// width: 140px
+		width: 7.292vw
+
+	.top-menu>li>a
+		font-size: calc(0.833vw * 1.5)
+
+	.top-menu>li a+div>ul>li>a
+        font-size: calc(0.677vw * 1.4)
 
 	.header__content
 		flex-wrap: wrap
@@ -143,7 +150,8 @@
 				opacity: 0.5
 
 	.top-menu>li
-		width: 170px
+		// width: 170px
+		width: 100%
 
 	.top-menu>li a+div>ul>li>a
 		color: $color-text-dark
@@ -159,6 +167,7 @@
 
 	.top-menu>li>a
 		padding-left: 20px
+		font-size: 16px
 
 
 @-webkit-keyframes fadeInUp

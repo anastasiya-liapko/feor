@@ -1,12 +1,12 @@
 $(function () {
-    const URL = 'get_base.php'
-    // const URL = '../../../get_base.php'
+    // const URL = 'get_base.php'
+    const URL = '../../../get_base.php'
     
     $.post(URL, {map_params: 1}, function (msg) {
-        const PLACE = 'public/img/map-pin.png';
-        const PLACES = 'public/img/map-pin-large.png';
-        // const PLACE = 'http://localhost:8888/public/img/map-pin.png';
-        // const PLACES = 'http://localhost:8888/public/img/map-pin-large.png';
+        // const PLACE = 'public/img/map-pin.png';
+        // const PLACES = 'public/img/map-pin-large.png';
+        const PLACE = 'http://localhost:8888/public/img/map-pin.png';
+        const PLACES = 'http://localhost:8888/public/img/map-pin-large.png';
 
         var obj = jQuery.parseJSON(msg);
         let params = {lat: -56.857595, lng: 151.171936, zoom: 10};

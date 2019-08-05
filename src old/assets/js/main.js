@@ -16,17 +16,18 @@ $(document).ready(function()
 {
 	$("#js-mapList").children("li").each(function()
 	{
-		var self = $(this).find('a'),
-				city = self.attr('data-pulse');
+		var block = $(this).find('a'),
+				city = block.attr('data-pulse');
 
-		self.mouseover(function()
+		block.on('mouseover', function()
 		{
-			$('.pulse-css').addClass('pulse-hide');
-			$('.pulse-' + city).removeClass('pulse-hide');
+			$('.pulse-css').removeClass('pulse-visible');
+			$('.pulse-' + city).addClass('pulse-visible');
+			console.log(city);
 		});
-		self.mouseout(function ()
+		block.on('mouseout', function ()
 		{
-			$('.pulse-css').addClass('pulse-hide');
+			$('.pulse-css').removeClass('pulse-visible');
 		});
 	});
 })
