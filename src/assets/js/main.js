@@ -31,3 +31,24 @@ $(document).ready(function()
 		});
 	});
 })
+
+// Скроллинг вверх
+if ($(window).width() > 992)
+{
+	var CurrentScroll = 0;
+	$(window).scroll(function(event)
+	{
+		var NextScroll = $(this).scrollTop();
+
+		if ((NextScroll > CurrentScroll) || (NextScroll == 0))
+		{
+			$('.header').removeClass('fixed');
+		}
+		else
+		{
+			$('.header').addClass('fixed');
+		}
+
+		CurrentScroll = NextScroll;
+	});
+}

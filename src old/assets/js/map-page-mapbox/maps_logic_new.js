@@ -67,20 +67,20 @@ $(function () {
         Array.prototype.forEach.call(cities, function (city, cityIndex) {
             markersArray.push({
                 'id': cityIndex,
-                'name': city['name'],
-                'point': [parseFloat(city['lng']), parseFloat(city['lat'])],
+                'name': city,
+                'point': [parseFloat('37.607689'), parseFloat('55.788845')],
                 'childs': []
             });
 
             Array.prototype.forEach.call(orgs, function (place, placeIndex) {
-                if (place['city'] === city['name']) {
+                if (place['city'] === city) {
                     markersArray[cityIndex].childs.push({
                         'name': place['name'],
-                        'address': place['address'],
+                        'address': 'Москва, 127055, ул.Образцова, д.11, стр.5, эт.4',
                         // 'point': [parseFloat(child.getAttribute('lng')), parseFloat(child.getAttribute('lat'))],
-                        'point': [parseFloat(place['lng']), parseFloat(place['lat'])],
+                        'point': [parseFloat('37.607689'), parseFloat('55.788845')],
                         'person': 'Имя Раввина',
-                        'phone': place['phone']
+                        'phone': '(495) 995-57-74'
                     });
                 };
             });

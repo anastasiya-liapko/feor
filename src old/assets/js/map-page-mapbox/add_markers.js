@@ -15,25 +15,14 @@ $(function () {
             myGeoJSON.properties = {};
             myGeoJSON.properties.name = elem.name;   
             myGeoJSON.properties.address = elem.address; 
-            myGeoJSON.properties.descr = elem.descr;
-            myGeoJSON.properties.more = elem.more;       
-            myGeoJSON.properties.img = 'images/s1200-3.jpeg'; 
             myGeoJSON.properties.quantity = elem.childs === undefined || elem.childs.length === 0 ? '' : elem.childs.length;myGeoJSON.properties.person = elem.person;   
             myGeoJSON.properties.phone = elem.phone;  
             myGeoJSON.properties.icon = elem.childs === undefined || elem.childs.length === 0 ? 'place' : 'places'; 
 
-            // create popup
-            // var name = "<p class=\"popup-place__name\">" + elem.name + "</p>"
-            // var person = "<p class=\"popup-place__person\"><span class=\"icon-map-person\"></span><span>Имя Равина</span></p>"
-            // var address = "<a class=\"popup-place__address\" href=\"https://yandex.by/maps/?ll=" + elem.point[0] + "," + elem.point[1] + "&z=16&text=" + elem.name.split(' ').join('%20') + "\" target=\"_blank\"><span class=\"icon-map\"></span><span>" + elem.name + "</span></a>"
-            // var phone = "<a class=\"popup-place__phone\" href=\"tel:84959955774\"><span class=\"icon-phone\"></span><span>(495) 995-57-74</span></a>"
-
-            // myGeoJSON.properties.popup = "<div class=\"popup popup-place d-flex flex-column\">" + name + person + address + phone + "</div>";
-
             return myGeoJSON;
         }
 
-        Array.prototype.forEach.call(markersArray, function (markerElem) {    
+        Array.prototype.forEach.call(markersArray, function (markerElem) {  
             var myGeoJSON = createGeoJSON(markerElem);
             geoCities.push(myGeoJSON);
 
@@ -80,7 +69,9 @@ $(function () {
             layout: {
                 "icon-image": ["get", "icon"],
                 "icon-size": 1,
-                "icon-offset": [0, -25]
+                "icon-offset": [0, -25],
+                "icon-allow-overlap": true
+                // "icon-ignore-placement": true
             }
         });
 
@@ -109,6 +100,8 @@ $(function () {
                 // },
                 "icon-size": 1,
                 "icon-offset": [0, -25],
+                "icon-allow-overlap": true,
+                // "icon-ignore-placement": true,
                 "text-line-height": 0.25,
                 "text-field": ["get", "quantity"],
                 "text-font": ["Open Sans Bold", "Arial Unicode MS Regular"],
@@ -131,7 +124,7 @@ $(function () {
             var address = e.features[0].properties.address;
             var phone = e.features[0].properties.phone;
             // window.addPopupPlace(map, [name, person, address, phone], coordinates);
-            window.util.flyTo(map, coordinates, [name, person, address, phone]);
+            window.map_util.flyTo(map, coordinates, [name, person, address, phone]);
         });
 
         map.on('mouseenter', 'point', function () {
@@ -157,7 +150,7 @@ $(function () {
             // var more = e.features[0].properties.more;
             // var img = e.features[0].properties.img;
             // window.util.switchPopup([name, address, descr, more, img]);
-            window.util.flyTo(map, coordinates);
+            window.map_util.flyTo(map, coordinates);
         });
 
         map.on('mouseenter', 'city', function () {
@@ -169,7 +162,7 @@ $(function () {
         });
     }
 
-    window.marker = {
+    window.map_marker = {
         addMarkers: function (map, markersArray) {
             addMarkers(map, markersArray);
         }

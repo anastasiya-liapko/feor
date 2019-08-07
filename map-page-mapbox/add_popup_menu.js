@@ -17,6 +17,13 @@ $(function () {
             });
         }
 
+        var showPoint = function (map, point, zoom) {
+            if (point[0] !== '' || point[1] !== '') {
+                window.map_util.flyTo(map, point, zoom);
+                window.map_util.closePopup();
+            }
+        }
+
         var addClickFunc = function () {
             $('#map-page .popup-menu__list-link').on('click', function (e) {
                 // var name = $(this).text();
@@ -31,17 +38,16 @@ $(function () {
                     dropdown.slideDown();
                     $(this).on('click', function () {
                         // window.util.switchPopup([name, address, descr, more, img]);
-                        window.map_util.flyTo(map, point);
-                        window.map_util.closePopup();
+                        showPoint(map, point, 11)
                     })
                 } else {
                     // window.util.switchPopup([name, address, descr, more, img]);
-                    window.map_util.flyTo(map, point);
-                    window.map_util.closePopup();
+                    showPoint(map, point, 11)
                 }
             });
 
-            $('#map-page .popup-menu__dropdown-link').on('click', function () {
+            $('#map-page .popup-menu__dropdown-link').on('click', function (e) {
+                var id = parseInt($(this).attr('data-id'));
                 var name = $(this).text();
                 var address = $(this).attr('data-address');
                 var point = $(this).attr('data-point').split(',');
@@ -53,8 +59,8 @@ $(function () {
 
                 // window.util.switchPopup([name, address, descr, more, img]);
                 // window.addPopupPlace(map, [name, person, address, phone], point);
-                window.map_util.flyTo(map, point, [name, person, address, phone]);
-                window.map_util.closePopup();
+                // window.map_util.flyTo(map, point, [name, person, address, phone]);
+                showPoint(map, point)
             });
 
             $('.popup-menu__search-submit').click(function(e) {

@@ -16,6 +16,7 @@
     color: #ffffff
     
 /* footer */
+.page-id-5082 .footer,
 .map-page .footer
     position: absolute
     left: 0
@@ -31,6 +32,12 @@
     .menu,
     .footer__button-wrapper
         width: 15%
+    .footer__menu-link
+        color: #ffffff
+        &:hover
+            color: #000
+            background-color: rgba(250,250,250,.8)
+            text-decoration: none
     .contacts
         // width: 695px
         width: 36.198vw
@@ -53,6 +60,7 @@
 
 @media(max-width: $tablet-width) 
     /* footer */
+    .page-id-5082 .footer,
     .map-page .footer
         .footer__container
             padding: 0
@@ -61,6 +69,7 @@
 
 @media(max-width: $mobile-width)
     /* footer */
+    .page-id-5082 .footer,
     .map-page .footer
         // bottom: 15px
         padding: 0
@@ -73,12 +82,12 @@
             width: auto
         .menu
             margin-bottom: 15px
-        .footer__menu-link
-            color: #ffffff
-            &:hover
-                color: #000
-                background-color: rgba(250,250,250,.8)
-                text-decoration: none
+        // .footer__menu-link
+        //     color: #ffffff
+        //     &:hover
+        //         color: #000
+        //         background-color: rgba(250,250,250,.8)
+        //         text-decoration: none
         .footer__button-wrapper
             margin-bottom: 0
         .contacts
@@ -88,6 +97,7 @@
 
 @media(max-width: 575px)
     /* footer */
+    .page-id-5082 .footer,
     .map-page .footer
         .contacts__item_descr,
         .contacts__item_rights
