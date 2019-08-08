@@ -1,5 +1,6 @@
 $(function () {
     var addMarkers = function (map, markersArray) {
+        console.log(markersArray)
 
         var geo = [];
         var geoCities = [];
@@ -13,11 +14,16 @@ $(function () {
             myGeoJSON.geometry.coordinates = elem.point;
 
             myGeoJSON.properties = {};
+            myGeoJSON.properties.color = 'red';   
             myGeoJSON.properties.name = elem.name;   
             myGeoJSON.properties.address = elem.address; 
             myGeoJSON.properties.quantity = elem.childs === undefined || elem.childs.length === 0 ? '' : elem.childs.length;myGeoJSON.properties.person = elem.person;   
             myGeoJSON.properties.phone = elem.phone;  
-            myGeoJSON.properties.icon = elem.childs === undefined || elem.childs.length === 0 ? 'place' : 'places'; 
+            myGeoJSON.properties.person = elem.person;  
+            // myGeoJSON.properties.icon = elem.childs === undefined || elem.childs.length === 0 ? 'place' : 'places'; 
+            myGeoJSON.properties['marker-size'] = 'large';
+            myGeoJSON.properties['marker-symbol'] = 'bus';
+            myGeoJSON.properties['marker-color'] = '#fa0';
 
             return myGeoJSON;
         }
@@ -56,60 +62,140 @@ $(function () {
 
 
         // add layer with places
-        map.addLayer({
-            "id": 'point',
-            "type": "symbol",
-            "source": {
-                "type": "geojson",
-                "data": {
-                    "type": "FeatureCollection",
-                    "features": geo
-                }
-            },
-            layout: {
-                "icon-image": ["get", "icon"],
-                "icon-size": 1,
-                "icon-offset": [0, -25],
-                "icon-allow-overlap": true
-                // "icon-ignore-placement": true
-            }
-        });
+        // map.addLayer({
+        //     "id": 'point',
+        //     "type": "symbol",
+        //     "source": {
+        //         "type": "geojson",
+        //         "data": {
+        //             "type": "FeatureCollection",
+        //             "features": geo
+        //         }
+        //     },
+        //     layout: {
+        //         "icon-image": ["get", "icon"],
+        //         "icon-size": 1,
+        //         "icon-offset": [0, -25],
+        //         "symbol-avoid-edges": true,
+        //         "icon-allow-overlap": true,
+        //         "icon-rotate": ["get", "rotate"]
+        //         // "icon-allow-overlap": true
+        //         // "icon-ignore-placement": true
+        //     }
+        // });
+        // mapboxgl.featureLayer(geo).on('ready', function(e) {
+        //     // The clusterGroup gets each marker in the group added to it
+        //     // once loaded, and then is added to the map
+        //     var clusterGroup = new L.MarkerClusterGroup();
+        //     e.target.eachLayer(function(layer) {
+        //         clusterGroup.addLayer(layer);
+        //     });
+        //     map.addLayer(clusterGroup);
+        // });
+        // var featureLayer = L.mapbox.featureLayer(geo)
+        //     .addTo(map);
 
+        // console.log(featureLayer.getGeoJSON())
+
+        // var featureLayer = L.mapbox.featureLayer(geo)
+        //     .addTo(map);
+
+
+        // var markers = [];
+        // Array.prototype.forEach.call(markersArray, function (markerElem) { 
+        //     Array.prototype.forEach.call(markerElem.childs, function (place) { 
+        //         var marker = L.marker(place.point, {
+        //             icon: L.mapbox.marker.icon({
+        //                 'marker-size': 'large',
+        //                 'marker-symbol': 'bus',
+        //                 'marker-color': '#fa0'
+        //             })
+        //         })
+        //         markers.push(marker)
+        //     })
+        // })
+        // console.log(markers)
+        // var markersLayer = L.layerGroup(markers);
+
+
+        // var myLayer = L.mapbox.featureLayer(geo).addTo(map);
+
+
+
+        // L.mapbox.featureLayer(geo).on('ready', function(e) {
+        //     // The clusterGroup gets each marker in the group added to it
+        //     // once loaded, and then is added to the map
+        //     var clusterGroup = new L.MarkerClusterGroup();
+        //     e.target.eachLayer(function(layer) {
+        //         clusterGroup.addLayer(layer);
+        //     });
+        //     map.addLayer(clusterGroup);
+        // }).addTo(map);
+
+
+
+
+        // for (i = 0; i < markersArray.length; i++) {
+            
+            // for (j = 0; j < markersArray[i].childs.length; j++) {
+            //     lat = parseFloat(markersArray[i][j].point[1]);
+            //     lng = parseFloat(markersArray[i][j].point[0]);
+            //     console.log(lat)
+            //     console.log(lng)
+
+
+                // L.marker([lat, lng], {
+                //     icon: L.mapbox.marker.icon({
+                //         'marker-size': 'large',
+                //         'marker-symbol': 'bus',
+                //         'marker-color': '#fa0'
+                //     })
+                // }).addTo(map);
+            // }
+        // }
+
+//         L.marker([37.9, -77], {
+//     icon: L.mapbox.marker.icon({
+//         'marker-size': 'large',
+//         'marker-symbol': 'bus',
+//         'marker-color': '#fa0'
+//     })
+// }).addTo(map);
 
         // add layer with cities
-        map.addLayer({
-            id: "city",
-            type: "symbol",
-            "source": {
-                "type": "geojson",
-                "data": {
-                    "type": "FeatureCollection",
-                    "features": geoCities
-                }
-            },
-            paint: {
-                "text-color": "#26465f",
-                // "text-translate": ["interpolate", ["exponential", 1.7], ["zoom"], 10, ["literal", [5, 4]], 15, ["literal", [14, 14]]]
-                "text-translate": [0,-32]
-            },
-            layout: {
-                "icon-image": ["get", "icon"],
-                // "icon-size": {
-                //     base: 1,
-                //     stops: [[13, .4], [16, 1]]
-                // },
-                "icon-size": 1,
-                "icon-offset": [0, -25],
-                "icon-allow-overlap": true,
-                // "icon-ignore-placement": true,
-                "text-line-height": 0.25,
-                "text-field": ["get", "quantity"],
-                "text-font": ["Open Sans Bold", "Arial Unicode MS Regular"],
-                "text-size": 7
-                // "text-size": ["interpolate", ["linear"], ["zoom"], 6, ["interpolate", ["exponential", 1], ["number", ["get", "children"]], 1, 11, 5, 28], 12, ["interpolate", ["exponential", 1], ["number", ["get", "children"]], 1, 40, 5, 40]],
-                // "text-anchor": "right"
-            }
-        });
+        // map.addLayer({
+        //     id: "city",
+        //     type: "symbol",
+        //     "source": {
+        //         "type": "geojson",
+        //         "data": {
+        //             "type": "FeatureCollection",
+        //             "features": geoCities
+        //         }
+        //     },
+        //     paint: {
+        //         "text-color": "#26465f",
+        //         // "text-translate": ["interpolate", ["exponential", 1.7], ["zoom"], 10, ["literal", [5, 4]], 15, ["literal", [14, 14]]]
+        //         "text-translate": [0,-32]
+        //     },
+        //     layout: {
+        //         "icon-image": ["get", "icon"],
+        //         // "icon-size": {
+        //         //     base: 1,
+        //         //     stops: [[13, .4], [16, 1]]
+        //         // },
+        //         "icon-size": 1,
+        //         "icon-offset": [0, -25],
+        //         "icon-allow-overlap": true,
+        //         // "icon-ignore-placement": true,
+        //         "text-line-height": 0.25,
+        //         "text-field": ["get", "quantity"],
+        //         "text-font": ["Open Sans Bold", "Arial Unicode MS Regular"],
+        //         "text-size": 7
+        //         // "text-size": ["interpolate", ["linear"], ["zoom"], 6, ["interpolate", ["exponential", 1], ["number", ["get", "children"]], 1, 11, 5, 28], 12, ["interpolate", ["exponential", 1], ["number", ["get", "children"]], 1, 40, 5, 40]],
+        //         // "text-anchor": "right"
+        //     }
+        // });
 
 
         // click place pin

@@ -60,7 +60,6 @@ $(function () {
 
     cities.forEach(function (elem) {
         if (elem.name === 'Санкт-Петербург') {
-            console.log(elem)
             cities.splice(cities.indexOf(elem), 1)
             cities.unshift(elem);
             return false;
@@ -69,7 +68,6 @@ $(function () {
 
     cities.forEach(function (elem) {
         if (elem.name === 'Москва') {
-            console.log(elem)
             cities.splice(cities.indexOf(elem), 1)
             cities.unshift(elem);
             return false;

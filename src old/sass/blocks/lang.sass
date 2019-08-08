@@ -15,12 +15,13 @@
     z-index: 3
     position: absolute
     top: -92px
-    left: 0
+    left: -2px
     display: flex
     flex-direction: column
     align-items: center
     justify-content: center
-    width: 100%
+    // width: 195px
+    width: 141px
     height: 100px
     margin: 0
     padding-left: 0
@@ -48,16 +49,41 @@
     &:hover
         line-height: 69px
         cursor: pointer 
+        line-height: 23px
     &::before
         content: attr(data-text)
         position: absolute
         top: -23px
         color: $color-blue
         box-sizing: border-box
+        content: none
+    a
+        position: relative
+        display: block
+        width: auto
+        height: 23px
+        font-size: 17px
+        line-height: 23px
+        text-align: center
+        color: #26465f
+        transition: all 0.25s ease
+        overflow: hidden
+        &:hover
+            line-height: 69px
+            cursor: pointer
+        &::before
+            content: attr(data-text)
+            position: absolute
+            top: -23px
+            color: #26465f
+            box-sizing: border-box
+
+
 
 .lang__picked
     display: block
-    width: 100%
+    // width: 193px
+    width: 141px
     height: 23px
     margin-top: 13px
     font-size: 17px
@@ -68,7 +94,7 @@
 @media(max-width: $tablet-width)
     .lang
         right: 3.6vw
-        width: 9.792vw
+        // width: 9.792vw
         &:hover .lang__list
             box-shadow: 0 0 0.694vw rgba(255, 255, 255, 0.9)
 
@@ -78,13 +104,27 @@
 
     .lang__item
         height: 1.597vw
-        margin: 50.347vw 0
+        // margin: 50.347vw 0
         font-size: 1.181vw
         line-height: 1.597vw
         &:hover
             line-height: 4.792vw
         &::before
             top: -1.597vw
+        a
+            // height: 23px
+            // font-size: 17px
+            // line-height: 23px
+            height: 1.597vw
+            font-size: 1.181vw
+            line-height: 1.597vw
+            &:hover
+                // line-height: 69px
+                line-height: 4.792vw
+            &::before
+                // top: -23px
+                top: -1.597vw
+
 
     .lang__picked
         height: 1.597vw
@@ -112,6 +152,16 @@
             line-height: 69px
         &::before
             top: -23px
+        a
+            height: 23px
+            font-size: 17px
+            line-height: 23px
+            color: #ffffff
+            &:hover
+                line-height: 69px
+            &::before
+                top: -23px
+                color: #ffffff
 
     .lang__picked
         height: 23px
