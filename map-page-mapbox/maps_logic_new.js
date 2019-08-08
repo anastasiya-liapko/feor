@@ -1,5 +1,4 @@
 $(function () {
-    console.log(window.location.pathname.split('/')[1])
     const PLACE = '/wp-content/themes/feor/public/img/map-pin.png';
     const PLACES = '/wp-content/themes/feor/public/img/map-pin-large.png';
     const ZOOM = 12;
@@ -16,7 +15,9 @@ $(function () {
 
     var map = L.map('leaflet-map', {
         doubleClickZoom: false,
-        zoomControl: true
+        zoomControl: true,
+        zoomDelta: 0.25,
+        zoomSnap: 0
     })
         .setView([55.753208, 37.604008], 12)
         .addLayer(L.mapbox.styleLayer('mapbox://styles/aliapko/cjz1cclb402md1cmhj270gpwi'));

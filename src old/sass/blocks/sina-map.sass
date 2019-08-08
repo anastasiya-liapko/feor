@@ -22,9 +22,12 @@
     p
         margin-bottom: 0
         // font-size: 24px
-        font-size: 1.250vw
-        font-weight: 600
-        line-height: normal
+        // font-size: 1.250vw
+        font-size: 16px
+        // font-weight: 600
+        font-weight: 400
+        // line-height: normal
+        line-height: 1.5
         color: #000000
 
 .link__phones a
@@ -59,16 +62,20 @@
     color: #120d17
     text-transform: none
 
+.sina-map__orgs
+    margin-top: 3.125vw
+
 .sina-map__org
     position: relative
     // width: 404px
     // height: 384px
     // margin-right: 120px
     // margin-bottom: 52px
-    width: 21.042vw
-    min-height: 16vw
-    margin-right: 6.250vw
-    margin-bottom: 2.708vw
+    width: calc(21.042vw / 1.28)
+    min-height: calc(16vw / 1.28)
+    // margin-right: 6.250vw
+    margin-right: calc(2.708vw / 1.28)
+    margin-bottom: calc(2.708vw / 1.28)
     &::before
         content: ''
         position: absolute
@@ -76,18 +83,20 @@
         left: 0
         // width: 318px
         // height: 2px
-        width: 16.563vw
-        height: 0.104vw
+        width: calc(16.563vw / 1.28)
+        height: calc(0.104vw / 1.28)
         background-color: $color-medium-grey
     &:nth-child(2n)
         // margin-right: 100px
-        margin-right: 5.208vw
+        // margin-right: 5.208vw
+    &:nth-child(3n)
+        margin-right: 0
 
 .sina-map__org-title
     // margin-bottom: 18px
-    margin-bottom: 0.938vw
+    margin-bottom: calc(0.938vw / 1.28)
     // font-size: 20px
-    font-size: 1.042vw
+    font-size: calc(1.042vw / 1.28)
     font-weight: 700
     line-height: 1
     color: #120d17
@@ -95,8 +104,8 @@
 .sina-map__org-text
     // margin-bottom: 18px
     // font-size: 18px
-    margin-bottom: 0.938vw
-    font-size: 0.938vw
+    margin-bottom: calc(0.938vw / 1.28)
+    font-size: calc(0.938vw / 1.28)
     font-weight: 400
     line-height: 1.33
     color: #120d17
@@ -104,46 +113,46 @@
         // width: 20px
         // height: 20px
         // margin-right: 13px
-        width: 1.042vw
-        height: 1.042vw
-        margin-right: 0.677vw
+        width: calc(1.042vw / 1.28)
+        height: calc(1.042vw / 1.28)
+        margin-right: calc(0.677vw / 1.28)
         &::before
             // font-size: 20px
-            font-size: 1.042vw
+            font-size: calc(1.042vw / 1.28)
             color: #000000
     .icon-metro
         &::before
             // font-size: 17px
-            font-size: 0.885vw
+            font-size: calc(0.885vw / 1.28)
 
 .sina-map__org-person
     // min-height: 48px
-    min-height: 2.500vw
+    min-height: calc(2.500vw / 1.28)
 
 .sina-map__org-social
     // margin-top: 46px
-    margin-top: 2.396vw
+    margin-top: calc(2.396vw / 1.28)
 
 .sina-map__org-social-link
     // width: 25px
     // height: 25px
     // margin-right: 25px
-    width: 1.302vw
-    height: 1.302vw
-    margin-right: 1.302vw
+    width: calc(1.302vw / 1.28)
+    height: calc(1.302vw / 1.28)
+    margin-right: calc(1.302vw / 1.28)
     .sina-map__org-social-icon
         // width: 25px
         // height: 25px
-        width: 1.302vw
-        height: 1.302vw
+        width: calc(1.302vw / 1.28)
+        height: calc(1.302vw / 1.28)
         &::before
             // font-size: 25px
-            font-size: 1.302vw
+            font-size: calc(1.302vw / 1.28)
             color: $color-medium-grey
     .sina-map__org-social-icon_font_s
         &::before
             // font-size: 30px
-            font-size: 1.563vw
+            font-size: calc(1.563vw / 1.28)
     &:hover
         .sina-map__org-social-icon
             &::before
@@ -162,9 +171,9 @@
     // .sina-map__map
     //     height: calc(29.948vw * #{$tablet-gain})
 
-    .sina-map__text
-        p
-            font-size: calc(1.250vw * #{$tablet-gain})
+    // .sina-map__text
+    //     p
+    //         font-size: calc(1.250vw * #{$tablet-gain})
 
     .sina-map__map
         margin-top: calc(6.250vw * #{$tablet-gain})
@@ -182,52 +191,53 @@
         margin-bottom: calc(3.125vw * #{$tablet-gain})
         font-size: calc(2.083vw * #{$tablet-gain})
 
+    .sina-map__orgs
+        margin-top: calc(3.125vw * #{$tablet-gain})
+
     .sina-map__org
-        width: calc(21.042vw * #{$tablet-gain})
-        height: calc(20vw * #{$tablet-gain})
-        margin-right: calc(6.250vw * #{$tablet-gain})
-        margin-bottom: calc(2.708vw * #{$tablet-gain})
+        width: calc(21.042vw * #{$tablet-gain} / 1.28)
+        height: calc(20vw * #{$tablet-gain} / 1.28)
+        margin-right: calc(2.708vw * #{$tablet-gain} / 1.28)
+        margin-bottom: calc(2.708vw * #{$tablet-gain} / 1.28)
         &::before
-            width: calc(16.563vw * #{$tablet-gain})
-            height: calc(0.104vw * #{$tablet-gain})
-        &:nth-child(2n)
-            margin-right: calc(5.208vw * #{$tablet-gain})
+            width: calc(16.563vw * #{$tablet-gain} / 1.28)
+            height: calc(0.104vw * #{$tablet-gain} / 1.28)
 
     .sina-map__org-title
-        margin-bottom: calc(0.938vw * #{$tablet-gain})
-        font-size: calc(1.042vw * #{$tablet-gain})
+        margin-bottom: calc(0.938vw * #{$tablet-gain} / 1.28)
+        font-size: calc(1.042vw * #{$tablet-gain} / 1.28)
 
     .sina-map__org-text
-        margin-bottom: calc(0.938vw * #{$tablet-gain})
-        font-size: calc(0.938vw * #{$tablet-gain})
+        margin-bottom: calc(0.938vw * #{$tablet-gain} / 1.28)
+        font-size: calc(0.938vw * #{$tablet-gain} / 1.28)
         .link__icon
-            width: calc(1.042vw * #{$tablet-gain})
-            height: calc(1.042vw * #{$tablet-gain})
-            margin-right: calc(0.677vw * #{$tablet-gain})
+            width: calc(1.042vw * #{$tablet-gain} / 1.28)
+            height: calc(1.042vw * #{$tablet-gain} / 1.28)
+            margin-right: calc(0.677vw * #{$tablet-gain} / 1.28)
             &::before
-                font-size: calc(1.042vw * #{$tablet-gain})
+                font-size: calc(1.042vw * #{$tablet-gain} / 1.28)
         .icon-metro
             &::before
-                font-size: calc(0.885vw * #{$tablet-gain})
+                font-size: calc(0.885vw * #{$tablet-gain} / 1.28)
 
     .sina-map__org-person
-        min-height: calc(2.500vw * #{$tablet-gain})
+        min-height: calc(2.500vw * #{$tablet-gain} / 1.28)
 
     .sina-map__org-social
-        margin-top: calc(2.396vw * #{$tablet-gain})
+        margin-top: calc(2.396vw * #{$tablet-gain} / 1.28)
 
     .sina-map__org-social-link
-        width: calc(1.302vw * #{$tablet-gain})
-        height: calc(1.302vw * #{$tablet-gain})
-        margin-right: calc(1.302vw * #{$tablet-gain})
+        width: calc(1.302vw * #{$tablet-gain} / 1.28)
+        height: calc(1.302vw * #{$tablet-gain} / 1.28)
+        margin-right: calc(1.302vw * #{$tablet-gain} / 1.28)
         .sina-map__org-social-icon
-            width: calc(1.302vw * #{$tablet-gain})
-            height: calc(1.302vw * #{$tablet-gain})
+            width: calc(1.302vw * #{$tablet-gain} / 1.28)
+            height: calc(1.302vw * #{$tablet-gain} / 1.28)
             &::before
-                font-size: calc(1.302vw * #{$tablet-gain})
+                font-size: calc(1.302vw * #{$tablet-gain} / 1.28)
         .sina-map__org-social-icon_font_s
             &::before
-                font-size: calc(1.563vw * #{$tablet-gain})
+                font-size: calc(1.563vw * #{$tablet-gain} / 1.28)
 
 @media(max-width: $mobile-width)
     .sina-map
@@ -239,9 +249,9 @@
         // height: calc(29.948vw * #{$mobile-gain-m})
         heiht: 500px
 
-    .sina-map__text
-        p
-            font-size: calc(1.250vw * #{$mobile-gain-m} * 1.3)
+    // .sina-map__text
+    //     p
+    //         font-size: calc(1.250vw * #{$mobile-gain-m} * 1.3)
 
     .sina-map__map
         margin-top: calc(6.250vw * #{$mobile-gain-m})
@@ -259,57 +269,131 @@
         margin-bottom: calc(3.125vw * #{$mobile-gain-m})
         font-size: calc(2.083vw * #{$mobile-gain-m} * 1.2)
 
+    .sina-map__orgs
+        margin-top: calc(3.125vw * #{$mobile-gain-m})
+
     .sina-map__org
-        width: calc(21.042vw * #{$mobile-gain-m} * 1.13)
-        height: calc(20vw * #{$mobile-gain-m} * 1.13)
-        margin-right: calc(2.708vw * #{$mobile-gain-m} * 1.13)
-        margin-bottom: calc(2.708vw * #{$mobile-gain-m} * 1.13)
+        width: calc(21.042vw * #{$mobile-gain-m} / 1.28)
+        height: calc(20vw * #{$mobile-gain-m} / 1.28)
+        margin-right: calc(2.708vw * #{$mobile-gain-m} / 1.28)
+        margin-bottom: calc(2.708vw * #{$mobile-gain-m} / 1.28)
         &::before
-            width: calc(16.563vw * #{$mobile-gain-m} * 1.13)
-            height: calc(0.104vw * #{$mobile-gain-m} * 1.13)
-        &:nth-child(2n)
-            margin-right: calc(2.708vw * #{$mobile-gain-m} * 1.13)
+            width: calc(16.563vw * #{$mobile-gain-m} / 1.28)
+            height: calc(0.104vw * #{$mobile-gain-m} / 1.28)
 
     .sina-map__org-title
-        margin-bottom: calc(0.938vw * #{$mobile-gain-m} * 1.13)
-        font-size: calc(1.042vw * #{$mobile-gain-m} * 1.13)
+        margin-bottom: calc(0.938vw * #{$mobile-gain-m} / 1.28)
+        font-size: calc(1.042vw * #{$mobile-gain-m} / 1.28)
 
     .sina-map__org-text
-        margin-bottom: calc(0.938vw * #{$mobile-gain-m} * 1.13)
-        font-size: calc(0.938vw * #{$mobile-gain-m} * 1.13)
+        margin-bottom: calc(0.938vw * #{$mobile-gain-m} / 1.28)
+        font-size: calc(0.938vw * #{$mobile-gain-m} / 1.28)
         .link__icon
-            width: calc(1.042vw * #{$mobile-gain-m} * 1.13)
-            height: calc(1.042vw * #{$mobile-gain-m} * 1.13)
-            margin-right: calc(0.677vw * #{$mobile-gain-m} * 1.13)
+            width: calc(1.042vw * #{$mobile-gain-m} / 1.28)
+            height: calc(1.042vw * #{$mobile-gain-m} / 1.28)
+            margin-right: calc(0.677vw * #{$mobile-gain-m} / 1.28)
             &::before
-                font-size: calc(1.042vw * #{$mobile-gain-m} * 1.13)
+                font-size: calc(1.042vw * #{$mobile-gain-m} / 1.28)
         .icon-metro
             &::before
-                font-size: calc(0.885vw * #{$mobile-gain-m} * 1.13)
+                font-size: calc(0.885vw * #{$mobile-gain-m} / 1.28)
 
     .sina-map__org-person
-        min-height: calc(2.500vw * #{$mobile-gain-m} * 1.13)
+        min-height: calc(2.500vw * #{$mobile-gain-m} / 1.28)
 
     .sina-map__org-social
-        margin-top: calc(2.396vw * #{$mobile-gain-m} * 1.13)
+        margin-top: calc(2.396vw * #{$mobile-gain-m} / 1.28)
 
     .sina-map__org-social-link
-        width: calc(1.302vw * #{$mobile-gain-m} * 1.13)
-        height: calc(1.302vw * #{$mobile-gain-m} * 1.13)
-        margin-right: calc(1.302vw * #{$mobile-gain-m} * 1.13)
+        width: calc(1.302vw * #{$mobile-gain-m} / 1.28)
+        height: calc(1.302vw * #{$mobile-gain-m} / 1.28)
+        margin-right: calc(1.302vw * #{$mobile-gain-m} / 1.28)
         .sina-map__org-social-icon
-            width: calc(1.302vw * #{$mobile-gain-m} * 1.13)
-            height: calc(1.302vw * #{$mobile-gain-m} * 1.13)
+            width: calc(1.302vw * #{$mobile-gain-m} / 1.28)
+            height: calc(1.302vw * #{$mobile-gain-m} / 1.28)
             &::before
-                font-size: calc(1.302vw * #{$mobile-gain-m} * 1.13)
+                font-size: calc(1.302vw * #{$mobile-gain-m} / 1.28)
         .sina-map__org-social-icon_font_s
             &::before
-                font-size: calc(1.563vw * #{$mobile-gain-m} * 1.13)
+                font-size: calc(1.563vw * #{$mobile-gain-m} / 1.28)
 
 @media(max-width: 767px)
     .sina-map__map
         height: 400px
         // height: calc(29.948vw * #{$mobile-gain-m} * 1.3)
+
+    .sina-map
+        &>.container
+            padding-top: calc(3.854vw * #{$mobile-gain-m})
+            padding-bottom: calc(3.698vw * #{$mobile-gain-m})
+
+    .sina-map__map
+        margin-top: calc(6.250vw * #{$mobile-gain-m})
+
+    .sina-map__button-more,
+    .sina-map__button-less
+        margin-top: calc(3.698vw * #{$mobile-gain-m})
+
+    .sina-map__orgs-wrapper
+        .container
+            border-top: calc(0.104vw * #{$mobile-gain-m}) solid $color-medium-grey
+
+    .sina-map__orgs-title
+        margin-top: calc(3.125vw * #{$mobile-gain-m})
+        margin-bottom: calc(3.125vw * #{$mobile-gain-m})
+        font-size: calc(2.083vw * #{$mobile-gain-m} * 1.2)
+
+    .sina-map__orgs
+        margin-top: calc(3.125vw * #{$mobile-gain-m})
+
+    .sina-map__org
+        width: calc(21.042vw * #{$mobile-gain-m} * 1.2)
+        height: calc(20vw * #{$mobile-gain-m} * 1.12)
+        margin-right: calc(2.708vw * #{$mobile-gain-m} * 1.12)
+        margin-bottom: calc(2.708vw * #{$mobile-gain-m} * 1.12)
+        &::before
+            width: calc(16.563vw * #{$mobile-gain-m} * 1.12)
+            height: calc(0.104vw * #{$mobile-gain-m} * 1.12)
+        &:nth-child(3n)
+            margin-right: calc(2.708vw * #{$mobile-gain-m} * 1.12)
+        &:nth-child(2n)
+            margin-right: 0
+
+    .sina-map__org-title
+        margin-bottom: calc(0.938vw * #{$mobile-gain-m} * 1.12)
+        font-size: calc(1.042vw * #{$mobile-gain-m} * 1.12 * 1.2)
+
+    .sina-map__org-text
+        margin-bottom: calc(0.938vw * #{$mobile-gain-m} * 1.12)
+        font-size: calc(0.938vw * #{$mobile-gain-m} * 1.12 * 1.2)
+        .link__icon
+            width: calc(1.042vw * #{$mobile-gain-m} * 1.12 * 1.2)
+            height: calc(1.042vw * #{$mobile-gain-m} * 1.12 * 1.2)
+            margin-right: calc(0.677vw * #{$mobile-gain-m} * 1.12)
+            &::before
+                font-size: calc(1.042vw * #{$mobile-gain-m} * 1.12 * 1.2)
+        .icon-metro
+            &::before
+                font-size: calc(0.885vw * #{$mobile-gain-m} * 1.12 * 1.2)
+
+    .sina-map__org-person
+        min-height: calc(2.500vw * #{$mobile-gain-m} * 1.12)
+
+    .sina-map__org-social
+        margin-top: calc(2.396vw * #{$mobile-gain-m} * 1.12)
+
+    .sina-map__org-social-link
+        width: calc(1.302vw * #{$mobile-gain-m} * 1.12)
+        height: calc(1.302vw * #{$mobile-gain-m} * 1.12)
+        margin-right: calc(1.302vw * #{$mobile-gain-m} * 1.12)
+        .sina-map__org-social-icon
+            width: calc(1.302vw * #{$mobile-gain-m} * 1.12)
+            height: calc(1.302vw * #{$mobile-gain-m} * 1.12)
+            &::before
+                font-size: calc(1.302vw * #{$mobile-gain-m} * 1.12)
+        .sina-map__org-social-icon_font_s
+            &::before
+                font-size: calc(1.563vw * #{$mobile-gain-m} * 1.12)
         
 // @media(max-width: 575px)
 //     .sina-map__map

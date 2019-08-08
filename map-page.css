@@ -13,12 +13,12 @@
     padding-right: 39px;
     padding-bottom: 45px; */
     padding-top: 0.990vw;
-    padding-left: 1.198vw;
-    padding-right: 2.031vw;
-    padding-bottom: 2.344vw;
+    padding-left: calc(1.198vw / 1.375);
+    padding-right: calc(2.031vw / 1.375);
+    padding-bottom: calc(2.344vw / 1.375);
     background-color: rgba(15, 28, 46, 0.7);
     /* width: 369px; */
-    width: 19.219vw;
+    width: calc(19.219vw / 1.375);
     /* height: 608px; */
     height: auto;
     box-sizing: border-box;
@@ -49,73 +49,6 @@
     }
 }
 
-/* .map-page__map .popup__img {
-    width: 100%;
-    height: 100px;
-    overflow: hidden;
-} */
-
-/* .map-page__map .popup__name {
-    text-transform: uppercase;
-} */
-
-/* .map-page__map .popup__address {
-    text-align: left;
-} */
-
-/* .map-page__map .popup__descr {
-    text-align: justify;
-} */
-
-/* .map-page__map .popup__close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 30px;
-    height: 30px;
-} */
-
-/* .map-page__map .popup__close:hover {
-    opacity: 0.7;
-    cursor: pointer;
-} */
-
-/* .map-page__map .popup__close::before {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -6px;
-    margin-left: -1px;
-    content: '';
-    width: 2px;
-    height: 12px;
-    background-color: #000;
-    transform: rotate(45deg);
-} */
-
-/* .map-page__map .popup__close::after {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -6px;
-    margin-left: -1px;
-    content: '';
-    width: 2px;
-    height: 12px;
-    background-color: #000;
-    transform: rotate(-45deg);
-} */
-
-/* .map-page__map .popup__more {
-    margin-top: auto;
-    color: #000000;
-} */
-
-/* .map-page__map .popup__more:hover {
-    opacity: 0.7;
-    cursor: pointer;
-} */
-
 
 /* search */
 .map-page__map .popup-menu__search {
@@ -123,7 +56,7 @@
     height: 37px;
     margin-top: 11px;
     margin-bottom: 11px; */
-    width: 10.990vw;
+    width: calc(10.990vw / 1.375 / 1.2);
     height: 1.927vw;
     margin-top: 0.573vw;
     margin-bottom: 0.573vw;
@@ -133,7 +66,7 @@
 }
 
 .map-page__map .popup-menu__search-input {
-    min-width: 0.938vw;
+    min-width: calc(0.938vw / 1.375);
     /* font-size: 18px; */
     font-size: 0.938vw;
     font-weight: 400;
@@ -187,7 +120,7 @@
 /* scrollbar */
 .popup-menu__scrollbar {
     /* margin-top: 44px; */
-    margin-top: 2.292vw;
+    margin-top: calc(2.292vw / 1.375);
     height: 100%;
     width: 100%;
     background: transparent;
@@ -196,7 +129,7 @@
 
 .popup-menu__scrollbar::-webkit-scrollbar {
     /* width: 4px; */
-    width: 0.208vw;
+    width: calc(0.208vw / 1.375);
     background-color: rgba(216, 216, 216, 0.39);
     /* border-radius: 6px; */
     border-radius: 0.313vw;
@@ -236,14 +169,14 @@
 .map-page__map .popup-menu__list {
     margin-bottom: 0;
     /* padding-right: 25px; */
-    padding-right: 1.302vw;
+    padding-right: calc(1.302vw / 1.375);
     overflow-y: scroll;
 }
 
 .map-page__map .popup-menu__dropdown {
     display: none;
     /* padding-left: 13px; */
-    padding-left: 0.677vw;
+    padding-left: calc(0.677vw / 1.375);
 }
 
 .map-page__map .popup-menu__list-item,
@@ -260,10 +193,10 @@
     padding: 13px;
     padding-left: 40px;
     font-size: 22px; */
-    padding-left: 0.625vw;
-    padding: 0.677vw;
-    padding-left: 2.083vw;
-    font-size: 1.146vw;
+    /*padding-left: 0.625vw;*/
+    padding: calc(0.677vw / 1.375);
+    padding-left: calc(2.083vw / 1.375);
+    font-size: calc(1.146vw / 1.375);
     font-weight: 400;
     line-height: 1;
     text-align: left;
@@ -592,10 +525,10 @@
         top: 160px;
         bottom: calc(6.354vw * 1.5);
         padding-top: calc(0.990vw * 1.5);
-        padding-left: calc(1.198vw * 1.5);
-        padding-right: calc(2.031vw * 1.5);
-        padding-bottom: calc(2.344vw * 1.5);
-        width: calc(19.219vw * 1.5);
+        padding-left: calc(1.198vw * 1.5 / 1.375);
+        padding-right: calc(2.031vw * 1.5 / 1.375);
+        padding-bottom: calc(2.344vw * 1.5 / 1.375);
+        width: calc(19.219vw * 1.5 / 1.375);
     }
     
     @keyframes slide-in-left {
@@ -619,7 +552,7 @@
     
     /* search */
     .map-page__map .popup-menu__search {
-        width: calc(10.990vw * 1.5);
+        width: calc(10.990vw * 1.5 / 1.375 / 1.2);
         height: calc(1.927vw * 1.5);
         margin-top: calc(0.573vw * 1.5);
         margin-bottom: calc(0.573vw * 1.5);
@@ -627,7 +560,7 @@
     }
     
     .map-page__map .popup-menu__search-input {
-        font-size: calc(0.938vw * 1.5);
+        font-size: calc(0.938vw * 1.5 / 1.375);
     }
     
     .map-page__map .popup-menu__search-input::placeholder {
@@ -651,11 +584,11 @@
     
     /* scrollbar */
     .popup-menu__scrollbar {
-        margin-top: calc(2.292vw * 1.5);
+        margin-top: calc(2.292vw * 1.5 / 1.375);
     }
     
     .popup-menu__scrollbar::-webkit-scrollbar {
-        width: calc(0.208vw * 1.5);
+        width: calc(0.208vw * 1.5 / 1.375);
         border-radius: calc(0.313vw * 1.5);
     }
     
@@ -670,19 +603,19 @@
     
     /* popup-menu */
     .map-page__map .popup-menu__list {
-        padding-right: calc(1.302vw * 1.5);
+        padding-right: calc(1.302vw * 1.5 / 1.375);
     }
     
     .map-page__map .popup-menu__dropdown {
-        padding-left: calc(0.677vw * 1.5);
+        padding-left: calc(0.677vw * 1.5 / 1.375);
     }
     
     .map-page__map .popup-menu__list-link,
     .map-page__map .popup-menu__dropdown-link {
-        padding-left: calc(0.625vw * 1.5);
-        padding: calc(0.677vw * 1.5);
-        padding-left: calc(2.083vw * 1.5);
-        font-size: calc(1.146vw * 1.5);
+        /*padding-left: calc(0.625vw * 1.5);*/
+        padding: calc(0.677vw * 1.5 / 1.375);
+        padding-left: calc(2.083vw * 1.5 / 1.375);
+        font-size: calc(1.146vw * 1.5 / 1.375);
         border: calc(0.052vw * 1.5) solid transparent;
         border-radius: calc(0.521vw * 1.5);
     }
@@ -845,9 +778,9 @@
         top: 39px;
         bottom: 135px;
         padding-top: 15px;
-        padding-left: calc(1.198vw * 3.6);
-        padding-right: calc(2.031vw * 3.6);
-        padding-bottom: calc(2.344vw * 3.6);
+        padding-left: calc(1.198vw * 3.6 / 1.375);
+        padding-right: calc(2.031vw * 3.6 / 1.375);
+        padding-bottom: calc(2.344vw * 3.6 / 1.375);
         width: 100vw;
     }
     
