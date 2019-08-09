@@ -1,25 +1,29 @@
 $(function () {
-    console.log(window.location.pathname.split('/')[1])
-    const PLACE = '/wp-content/themes/feor/public/img/map-pin.png';
-    const PLACES = '/wp-content/themes/feor/public/img/map-pin-large.png';
-    const ZOOM = 12;
+    // const PLACE = '/wp-content/themes/feor/public/img/map-pin.png';
+    // const PLACES = '/wp-content/themes/feor/public/img/map-pin-large.png';
+    const PLACE = '/wp-content/themes/feor/public/img/pin-new.png';
+    const PLACES = '/wp-content/themes/feor/public/img/pin-new.png';
+    const ZOOM = 4;
+    const BOUNDS_RUSSIA = new L.LatLngBounds([30.0, 15.0], [78.0, 188.0]);
 
-    let params = {lat: 55.753208, lng: 37.604008, zoom: ZOOM};
+    // let params = {lat: 55.753208, lng: 37.604008, zoom: ZOOM};
 
     // if (orgs[0].lat !== undefined) {
     //     params = obj[0];
     // }
 
-    var uluru = {lat: params.lat, lng: params.lng};
+    // var uluru = {lat: params.lat, lng: params.lng};
 
     L.mapbox.accessToken = 'pk.eyJ1IjoiYWxpYXBrbyIsImEiOiJjangyenVmeGMwcTFjM3lvNGhsdmUzejRoIn0.zdJYMN5sxS2SJXZV2Lb3aA';
 
     var map = L.map('leaflet-map', {
         doubleClickZoom: false,
-        zoomControl: true
+        zoomControl: true,
+        zoomDelta: 0.25,
+        zoomSnap: 0
     })
-        .setView([55.753208, 37.604008], 12)
-        .addLayer(L.mapbox.styleLayer('mapbox://styles/aliapko/cjz1cclb402md1cmhj270gpwi'));
+        .setView([63.674041, 99.742382], ZOOM)
+        .addLayer(L.mapbox.styleLayer('mapbox://styles/aliapko/cjz3xyd8w6z761cpl5jldcwwr'));
 
 
     // transform list of places into array of cities with children
@@ -165,7 +169,7 @@ $(function () {
                 // shadowAnchor: [22, 94]
             });
         }
-    }).addTo(map);
+    });
 
     // cities with clusters
     // var layerWithCities = L.markerClusterGroup({
@@ -181,7 +185,7 @@ $(function () {
     // }).addTo(map);
 
     // cities without clusters
-    var layerWithCities = L.mapbox.featureLayer().addTo(map);
+    var layerWithCities = L.mapbox.featureLayer();
 
     function onClick(e) {
         var point = e.target._latlng
@@ -271,7 +275,6 @@ $(function () {
 
 
 
-
     // labelgun
     var totalTime = 0;
     var totalMarkers;
@@ -312,17 +315,21 @@ $(function () {
     map.on("zoomend", function(){
       resetLabels(layerWithCities);
     });
-    // map.fitBounds(layerWithCities.getBounds());
 
-    var cover = document.getElementById("cover");
-    cover.parentNode.removeChild(cover);
+    // var bounds = new L.LatLngBounds([-180.0, 41.2], [180.0, 82.1]);
+    // map.fitBounds(bounds, { padding: [20, 20] });
+    map.fitBounds(BOUNDS_RUSSIA, { padding: [20, 20] });
+    // map.fitBounds(russiaLayer.getBounds());
+
+    // var cover = document.getElementById("cover");
+    // cover.parentNode.removeChild(cover);
     resetLabels(layerWithCities);
 
 
     function resetLabels(markers) {
 
       var i = 0;
-      layerWithCities.eachLayer(function(label){
+      markers.eachLayer(function(label){
         addLabel(label, ++i);
       });
       labelEngine.update();

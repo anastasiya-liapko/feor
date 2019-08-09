@@ -1,15 +1,19 @@
 $(function () {
-    const PLACE = '/wp-content/themes/feor/public/img/map-pin.png';
-    const PLACES = '/wp-content/themes/feor/public/img/map-pin-large.png';
-    const ZOOM = 12;
+    // const PLACE = '/wp-content/themes/feor/public/img/map-pin.png';
+    // const PLACES = '/wp-content/themes/feor/public/img/map-pin-large.png';
+    const PLACE = '/wp-content/themes/feor/public/img/pin-new.png';
+    const PLACES = '/wp-content/themes/feor/public/img/pin-new.png';
+    const ZOOM = 4;
+    const BOUNDS_RUSSIA = new L.LatLngBounds([30.0, 15.0], [78.0, 188.0]);
+    const BOUNDS_DALNEVOSTOCHNYJ = new L.LatLngBounds([65.0, 70.0], [62.0, 210.0]);
+    const BOUNDS_PRIVOLZHSKIJ = new L.LatLngBounds([45.0, 51.0], [64.0, 54.0]);
+    const BOUNDS_SEVERO_ZAPADNYJ = new L.LatLngBounds([50.0, 51.0], [74.0, 34.0]);
+    const BOUNDS_SEVERO_KAVKAZKIJ = new L.LatLngBounds([45.0, 57.0], [43.0, 30.0]);
+    const BOUNDS_SIBIRSKIJ = new L.LatLngBounds([40.0, 55.0], [78.0, 148.0]);
+    const BOUNDS_URALSKIJ = new L.LatLngBounds([49.0, 55.0], [75.0, 87.0]);
+    const BOUNDS_CZENTRALNYJ = new L.LatLngBounds([47.0, 41.0], [60.0, 34.0]);
+    const BOUNDS_YUZHNYJ = new L.LatLngBounds([53.0, 44.0], [42.0, 45.0]);
 
-    let params = {lat: 55.753208, lng: 37.604008, zoom: ZOOM};
-
-    // if (orgs[0].lat !== undefined) {
-    //     params = obj[0];
-    // }
-
-    var uluru = {lat: params.lat, lng: params.lng};
 
     L.mapbox.accessToken = 'pk.eyJ1IjoiYWxpYXBrbyIsImEiOiJjangyenVmeGMwcTFjM3lvNGhsdmUzejRoIn0.zdJYMN5sxS2SJXZV2Lb3aA';
 
@@ -19,8 +23,53 @@ $(function () {
         zoomDelta: 0.25,
         zoomSnap: 0
     })
-        .setView([55.753208, 37.604008], 12)
-        .addLayer(L.mapbox.styleLayer('mapbox://styles/aliapko/cjz1cclb402md1cmhj270gpwi'));
+        .setView([63.674041, 99.742382], ZOOM)
+        .addLayer(L.mapbox.styleLayer('mapbox://styles/aliapko/cjz3xyd8w6z761cpl5jldcwwr'));
+
+
+    // bounds
+    var district = ''
+
+    document.referrer.split('/').forEach( function (elem) {
+        if (elem === 'dalnevostochnyj') {
+            district = 'dalnevostochnyj'
+        } else if (elem === 'privolzhskij') {
+            district = 'privolzhskij'
+        } else if (elem === 'severo-zapadnyj') {
+            district = 'severo-zapadnyj'
+        } else if (elem === 'severo-kavkazkij') {
+            district = 'severo-kavkazkij'
+        } else if (elem === 'sibirskij') {
+            district = 'sibirskij'
+        } else if (elem === 'uralskij') {
+            district = 'uralskij'
+        } else if (elem === 'czentralnyj') {
+            district = 'czentralnyj'
+        } else if (elem === 'yuzhnyj') {
+            district = 'yuzhnyj'
+        }
+    })
+
+    if (district === 'dalnevostochnyj') {
+        map.fitBounds(BOUNDS_DALNEVOSTOCHNYJ, { padding: [20, 20] });
+    } else if (district === 'privolzhskij') {
+        map.fitBounds(BOUNDS_PRIVOLZHSKIJ, { padding: [20, 20] });
+    } else if (district === 'severo-zapadnyj') {
+        map.fitBounds(BOUNDS_SEVERO_ZAPADNYJ, { padding: [20, 20] });
+    } else if (district === 'severo-kavkazkij') {
+        map.fitBounds(BOUNDS_SEVERO_KAVKAZKIJ, { padding: [20, 20] });
+    } else if (district === 'sibirskij') {
+        map.fitBounds(BOUNDS_SIBIRSKIJ, { padding: [20, 20] });
+    } else if (district === 'uralskij') {
+        map.fitBounds(BOUNDS_URALSKIJ, { padding: [20, 20] });
+    } else if (district === 'czentralnyj') {
+        map.fitBounds(BOUNDS_CZENTRALNYJ, { padding: [20, 20] });
+    } else if (district === 'yuzhnyj') {
+        map.fitBounds(BOUNDS_YUZHNYJ, { padding: [20, 20] });
+    } else {
+        map.fitBounds(BOUNDS_RUSSIA, { padding: [20, 20] });
+    }
+
 
 
     // transform list of places into array of cities with children
@@ -166,7 +215,7 @@ $(function () {
                 // shadowAnchor: [22, 94]
             });
         }
-    }).addTo(map);
+    });
 
     // cities with clusters
     // var layerWithCities = L.markerClusterGroup({
@@ -182,7 +231,7 @@ $(function () {
     // }).addTo(map);
 
     // cities without clusters
-    var layerWithCities = L.mapbox.featureLayer().addTo(map);
+    var layerWithCities = L.mapbox.featureLayer();
 
     function onClick(e) {
         var point = e.target._latlng
@@ -272,7 +321,6 @@ $(function () {
 
 
 
-
     // labelgun
     var totalTime = 0;
     var totalMarkers;
@@ -313,17 +361,21 @@ $(function () {
     map.on("zoomend", function(){
       resetLabels(layerWithCities);
     });
-    // map.fitBounds(layerWithCities.getBounds());
 
-    var cover = document.getElementById("cover");
-    cover.parentNode.removeChild(cover);
+    // var bounds = new L.LatLngBounds([-180.0, 41.2], [180.0, 82.1]);
+    // map.fitBounds(bounds, { padding: [20, 20] });
+    // map.fitBounds(BOUNDS_RUSSIA, { padding: [20, 20] });
+    // map.fitBounds(russiaLayer.getBounds());
+
+    // var cover = document.getElementById("cover");
+    // cover.parentNode.removeChild(cover);
     resetLabels(layerWithCities);
 
 
     function resetLabels(markers) {
 
       var i = 0;
-      layerWithCities.eachLayer(function(label){
+      markers.eachLayer(function(label){
         addLabel(label, ++i);
       });
       labelEngine.update();
@@ -367,5 +419,6 @@ $(function () {
       }
 
     }
+
 
 });

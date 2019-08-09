@@ -1,4 +1,5 @@
 $(function () {
+    
     var addMarkers = function (map, markersArray) {
         console.log(markersArray)
 

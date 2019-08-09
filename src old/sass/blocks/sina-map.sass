@@ -49,6 +49,20 @@
     .container
         // border-top: 2px solid $color-medium-grey
         border-top: 0.104vw solid $color-medium-grey
+    .organizatii__block
+        width: 100%
+
+.sina-map__list
+    margin-top: calc(3.125vw / 2)
+    margin-bottom: 3.125vw
+    .list__link
+        color: #000000
+        &::before
+            border-color: #000000
+        &:hover
+            border-color: #000000
+            &::before
+                border-color: #000000
 
 .sina-map__orgs-title
     // margin-top: 60px
@@ -186,6 +200,10 @@
         .container
             border-top: calc(0.104vw * #{$tablet-gain}) solid $color-medium-grey
 
+    .sina-map__list
+        margin-top: calc(3.125vw * #{$tablet-gain} / 2)
+        margin-bottom: calc(3.125vw * #{$tablet-gain})
+
     .sina-map__orgs-title
         margin-top: calc(3.125vw * #{$tablet-gain})
         margin-bottom: calc(3.125vw * #{$tablet-gain})
@@ -264,6 +282,10 @@
         .container
             border-top: calc(0.104vw * #{$mobile-gain-m}) solid $color-medium-grey
 
+    .sina-map__list
+        margin-top: calc(3.125vw * #{$mobile-gain-m} / 2)
+        margin-bottom: calc(3.125vw * #{$mobile-gain-m})
+
     .sina-map__orgs-title
         margin-top: calc(3.125vw * #{$mobile-gain-m})
         margin-bottom: calc(3.125vw * #{$mobile-gain-m})
@@ -337,6 +359,10 @@
     .sina-map__orgs-wrapper
         .container
             border-top: calc(0.104vw * #{$mobile-gain-m}) solid $color-medium-grey
+
+    .sina-map__list
+        margin-top: calc(3.125vw * #{$mobile-gain-m} / 2)
+        margin-bottom: calc(3.125vw * #{$mobile-gain-m})
 
     .sina-map__orgs-title
         margin-top: calc(3.125vw * #{$mobile-gain-m})

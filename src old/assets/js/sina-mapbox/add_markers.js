@@ -2,19 +2,14 @@ $(function () {
     var addMarkers = function (map, markers) {
 
         var geo = [];
-        var geoCities = [];
 
         Array.prototype.forEach.call(markers, function (markerElem) {
-            // var id = markerElem.getAttribute('id');
-            var parentId = markerElem.getAttribute('parentId');
+            var id = markerElem['id'];
+            var name = markerElem['name'];
+            var address = markerElem['address'];
+            var point = [parseFloat(markerElem['lng']), parseFloat(markerElem['lat'])];
             
-            var name = markerElem.getAttribute('name');
-            var address = markerElem.getAttribute('address');
-            // var type = markerElem.getAttribute('type');
-            var descr = markerElem.getAttribute('descr');
-            var more = markerElem.getAttribute('descrLink');
-            var point = [parseFloat(markerElem.getAttribute('lng')), parseFloat(markerElem.getAttribute('lat'))];
-            
+
             var myGeoJSON = {};
             myGeoJSON.type = "Feature";
 
@@ -23,15 +18,11 @@ $(function () {
             myGeoJSON.geometry.coordinates = point;
 
             myGeoJSON.properties = {};
+            myGeoJSON.properties.id = id;   
             myGeoJSON.properties.name = name;   
-            myGeoJSON.properties.address = address; 
-            myGeoJSON.properties.descr = descr;
-            myGeoJSON.properties.more = more;       
-            myGeoJSON.properties.img = 'images/s1200-3.jpeg';             
+            myGeoJSON.properties.address = address;            
 
-            if (parseInt(parentId) === 0) {
-                geoCities.push(myGeoJSON);
-            } else {
+            if (markerElem['lng'] !== '' || markerElem['lat'] !== '') {
                 geo.push(myGeoJSON);
             }
         });
@@ -54,7 +45,7 @@ $(function () {
         });
    
         map.on('click', 'point', function (e) {
-            var address = e.features[0].properties.name;
+            var address = e.features[0].properties.address;
             var orgs = document.querySelectorAll('.sina-map__org-address .link__text');
             orgs.forEach(function(elem) {
                 if (elem.innerText === address) {

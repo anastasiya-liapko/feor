@@ -197,9 +197,10 @@
     padding: calc(0.677vw / 1.375);
     padding-left: calc(2.083vw / 1.375);
     font-size: calc(1.146vw / 1.375);
-    font-weight: 400;
+    font-weight: 700;
     line-height: 1;
     text-align: left;
+    text-transform: uppercase;
     color: #ffffff !important;
     /* border: 1px solid transparent;
     border-radius: 10px; */
@@ -503,6 +504,17 @@
         margin-top: -160px;
     }
 
+    .map-page__map .popup-menu {
+        width: calc(19.219vw);
+    }
+
+    /* popup-menu */
+    .map-page__map .popup-menu__list-link,
+    .map-page__map .popup-menu__dropdown-link {
+        font-size: calc(1.146vw / 1.375 * 1.2);
+    }
+
+    /* hamburger */
     .map-page__map .hamburger-inner, 
     .map-page__map .hamburger-inner::before, 
     .map-page__map .hamburger-inner::after {
@@ -615,7 +627,7 @@
         /*padding-left: calc(0.625vw * 1.5);*/
         padding: calc(0.677vw * 1.5 / 1.375);
         padding-left: calc(2.083vw * 1.5 / 1.375);
-        font-size: calc(1.146vw * 1.5 / 1.375);
+        font-size: calc(1.146vw * 1.2 / 1.375);
         border: calc(0.052vw * 1.5) solid transparent;
         border-radius: calc(0.521vw * 1.5);
     }
@@ -717,6 +729,7 @@
         margin-top: 265px;
     }
 
+    /* popup-menu */
     .map-page__map .popup-menu {
         top: 39px;
         bottom: 125px;
@@ -868,7 +881,8 @@
         padding-left: calc(0.625vw * 3.6);
         padding: calc(0.677vw * 3.6);
         padding-left: calc(2.083vw * 3.6);
-        font-size: calc(1.146vw * 3.6);
+        /*font-size: calc(1.146vw * 3.6);*/
+        font-size: 16px;
         border: calc(0.052vw * 3.6) solid transparent;
         border-radius: calc(0.521vw * 3.6);
     }
@@ -983,11 +997,14 @@
     height: 48px;
     margin-top: -48px;
     margin-left: -16px;
-    font-size: 7px;
+    font-size: 14px;
     line-height: 35px;
     font-weight: 700;
-    color: #26465f;
-    background-image: url('/wp-content/themes/feor/public/img/map-pin.png');
+    color: #ffffff;
+    background-image: url('/wp-content/themes/feor/public/img/pin-new.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
     text-align: center;
 }
 
@@ -997,15 +1014,18 @@
 }
 
 .map-page__cluster-cities-icon {
-    width: 55px;
+    width: 33px;
     height: 48px;
-    margin-top: -50px;
-    margin-left: -26px;
-    font-size: 7px;
+    margin-top: -48px;
+    margin-left: -16px;
+    font-size: 14px;
     line-height: 35px;
     font-weight: 700;
-    color: #26465f;
-    background-image: url('/wp-content/themes/feor/public/img/map-pin-large.png');
+    color: #ffffff;
+    background-image: url('/wp-content/themes/feor/public/img/pin-new.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
     text-align: center;
 }
 
